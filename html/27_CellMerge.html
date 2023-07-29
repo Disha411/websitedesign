@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- there are 2 attribute to merge cell:
+            colspan & rowspan
+         these attribute are used in only <td> or <th> tag
+         
+         when we used rowspan,it remove columns from next row
+         when we used colspan,it remove column from that particular representing row
+        -->
+     <table border="1" rules="all" style="text-align: center;">
+        <caption><i>A test table with merged cells</i></caption>
+        <!-- 1st  -->
+        <tr>
+            <th rowspan="2"></th>
+            <th colspan="2">Average</th>
+            <th rowspan="2">Red eyes</th>
+        </tr> 
+        <!-- 2nd -->
+        <tr>
+            <th>height</th>
+            <th>weight</th>
+        </tr>
+        <!-- 3rd -->
+        <tr>
+            <th>Males</th>
+            <td>1.9</td>
+            <td>0.003</td>
+            <td>40%</td>
+        </tr>
+        <!-- 4th -->
+        <tr>
+            <th>Females</th>
+            <td>1.7</td>
+            <td>0.002</td>
+            <td>43%</td>
+        </tr>
+        
+    </table>   
+
+
+</body>
+</html>
