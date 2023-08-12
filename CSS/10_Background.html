@@ -6,18 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        input[type="text"]
-        [type="password"]{
-            height: 30px;
-            width: 250px;
-        }
+        .mydiv{
+            height:500px;
+            width: 550px;
+            /* background-color: brown; */
+            
+            /* short hand property : image,repeat,position,attachment,color */
+            background: url(img1.jpg) no-repeat center fixed red;
+            
+            background-image: url(img1.jpg);
+            
+            /* left(default),right,top,bottom,center */
+            background-position: center;
+
+            /* you can set in %,cover,contain */
+            background-size: cover;
+
+            /* repeat(default),no-repeat,repeat-x,repeat-y */
+            background-repeat: no-repeat;
+
+            /* scroll(default),fixed */
+            background-attachment: fixed;
+            }
     </style>
 </head>
 <body>
-    <input type="text" placeholder="Enter name">
-    <input type="password" placeholder="password">
+    <div class="mydiv"></div>
+    
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, est? Vel, et distinctio sit delectus maxime ad accusantium odio molestiae quisquam alias sed est non? Id eius eveniet corrupti ducimus.
+    </div>
 
     <div>
-        <input type="radio">XYZ</div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad molestias corporis vel minus consequuntur, quasi dicta sint animi modi blanditiis eaque numquam suscipit. Ipsum, laudantium esse. Similique velit cupiditate quo.
+    </div>
 </body>
 </html>
