@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Pseudo element start with :: symbol -->
+    <style>
+        h1::after{
+             content: "\1F525"; /* "\1F525 code for emoji */
+        }
+        h1::before{
+            content: "\1F525";
+        }
+        .mydiv{
+            height: auto;
+            /* width: 350px; */
+            border: 2px solid black;
+            padding: 20px;
+        }
+        .mydiv::first-letter{
+            font-size: 40px;
+            color: red;
+        }
+        .mydiv::first-line{
+            color: blue;
+            font-family: 'Courier New', Courier, monospace; 
+        }
+        .mydiv::selection{
+            background-color: red;
+            color: white;
+        }
+        li::marker{
+            color: darkmagenta;
+            font-size: 20px;
+        }
+        input::placeholder{
+            /* font-size: 10px; */
+            color: red;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello User</h1>
+    <div class="mydiv">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates delectus ipsa dolorum, fuga temporibus, corrupti eveniet perferendis ullam architecto id tempore ab iusto. Qui magnam, distinctio ut cumque rem fugiat?
+    </div>
+    <ul>
+        <li>List 1</li>
+        <li>List 2</li>
+    </ul>
+    <div>
+        Enter Any value: <input type="text" placeholder="Enter Value">
+    </div>
+</body>
+</html>
