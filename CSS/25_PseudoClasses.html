@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- pseudo class start with : symbol -->
+    <style>
+        .link1:visited{
+            color: green;
+        }
+        .link2:active{
+            color: aqua;
+        }
+        .link3:hover{
+            color: blue;
+        }
+
+        button{
+            height: 20px;
+            width: 100px;
+            background-color: blue;
+            color: white;
+            border: 2px solid blue;
+        }
+        button:hover{
+            color: blue;
+            background-color: white;
+            border: 2px solid blue;
+        }
+        input{
+            border: 1px solid black;
+        }
+        input:focus-visible{
+            border: 1px solid red;
+            outline: none;
+        }
+        td{
+            padding: 5px;
+        }
+        table{
+            /* border-collapse:separate; */
+            border-collapse: collapse;
+        }
+        td:nth-child(even){
+            background-color: aqua;
+        }
+        td:nth-child(odd){
+            background-color: olive;
+        }
+        a:nth-child(4){
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <a href="" class="link1">click here</a>
+    <a href="" class="link2">click here</a>
+    <a href="" class="link3">click here</a>
+    <a href="" class="link4">click here</a>
+
+    <button>click</button>
+    <div>
+        <input type="text" placeholder="Enter value">
+    </div>
+    <br>
+    <table border="1">
+        <!-- 1st -->
+        <tr>
+            <td>123</td>
+            <td>123</td>
+            <td>123</td>
+            <td>123</td>
+        </tr>
+        <!-- 2nd -->
+        <tr>
+            <td>aaa</td>
+            <td>aaa</td>
+            <td>aaa</td>
+            <td>aaa</td>
+        </tr>
+        <!-- 3rd -->
+        <tr>
+            <td>000</td>
+            <td>000</td>
+            <td>000</td>
+            <td>000</td>
+        </tr>
+        <!-- 4th -->
+        <tr>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+        </tr>
+    </table>
+
+</body>
+</html>
