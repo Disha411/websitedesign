@@ -5,10 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+       .masking{
+            height: 400px;
+            width: 400px;
+            mask-image: url(Images/masking.png);
+            mask-repeat: no-repeat;
+            mask-size: cover;
+            mask-position: center;
+
+            -webkit-mask-image: url(masking.png);
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-size: cover;
+            -webkit-mask-position: center;
+        }
+        img{
+            height: 400px;
+            width: 400px;
+        }
+    </style>
 </head>
 <body>
     <div class="masking">
-        <img src="img1.jpg" alt="">
+        <img src="Images/rose.jpg" alt="">
     </div>
 </body>
 </html>
