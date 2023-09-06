@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* display grid show like table from data */
+        .main{
+            display: grid;
+            /* default it apply in row form */
+            /* grid-template-columns: auto auto auto auto; */
+            /* grid-template-columns: 1fr 1fr 3fr 1fr 1fr; */
+            grid-template-columns: repeat(5,1fr);
+             gap: 20px;
+            justify-items: center; 
+        } 
+        .div1,.div3,.div5,.div7,.div9{
+            height: 100px;
+            width: 100px;
+            background-color: brown;
+        }
+        .div2,.div4,.div6,.div8,.div10{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+        <div class="div4"></div>
+        <div class="div5"></div>
+        <div class="div6"></div>
+        <div class="div7"></div>
+        <div class="div8"></div>
+        <div class="div9"></div>
+        <div class="div10"></div>
+    </div>
+</body>
+</html>

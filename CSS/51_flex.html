@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* flex property is a shorthand of flex-grow, flex-shrink, flex-basis */
+        /* use to set child element width as per parent element */
+        .main{
+            display: flex;
+        }
+        .div1{
+            /* flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 20%; */
+            flex: 1; /*short hand */
+        }
+        .div2{
+            flex-grow: 2;
+            flex-shrink: 1;
+        }
+        .div1,
+        .div3,
+        .div5 {
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+        }
+
+        .div4,
+        .div2 {
+            height: 100px;
+            width: 100px;
+            background-color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+        <div class="div4"></div>
+        <div class="div5"></div>
+    </div>
+</body>
+</html>
