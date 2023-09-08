@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        img {
+            height: auto;
+            max-width: 100%;
+        } 
+        .vimg {
+            height: 100%;
+            width: 100%;
+        }
+
+        .himg {
+            height: 250px;
+            width: 100%;
+        }
+
+        .div1 {
+            grid-row: 1 / span 2;
+            height: 100%;
+        }
+
+        .div2 {
+            grid-column: 2/span 2;
+        }
+
+        .div4 {
+            grid-row: 2 / span 2;
+            grid-column: 2;
+        }
+
+        .div8 {
+            grid-row: 3;
+            grid-column: 3 / span 2;
+        } 
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="div1">
+            <img src="https://images.unsplash.com/photo-1496062031456-07b8f162a322?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80"
+                alt="" class="vimg">
+        </div>
+        <div class="div2">
+            <img src="https://images.pexels.com/photos/1042423/pexels-photo-1042423.jpeg?cs=srgb&dl=pexels-hoang-le-1042423.jpg&fm=jpg"
+                alt="" class="himg">
+        </div>
+        <div class="div3">
+            <img src="https://wallpapercave.com/wp/wp2670841.jpg" alt="" class="himg">
+        </div>
+        <div class="div4">
+            <img src="https://cdn.wallpapersafari.com/9/89/NUlSTw.jpg" alt="" class="vimg">
+        </div>
+        <div class="div5">
+            <img src="https://i.pinimg.com/564x/4f/c6/08/4fc6081d264fe58538a2df527d1a0339.jpg" alt="" class="himg">
+        </div>
+        <div class="div6">
+            <img src="https://static.vecteezy.com/packs/media/photo/hero-800px-9fbe463f.jpg" alt="" class="himg">
+        </div>
+        <div class="div7">
+            <img src="https://images.pexels.com/photos/1198802/pexels-photo-1198802.jpeg?cs=srgb&dl=pexels-yuliya-strizhkina-1198802.jpg&fm=jpg"
+                alt="" class="vimg">
+        </div>
+        <div class="div8">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/009/711/199/small/sumatran-tiger-on-log-free-photo.jpg"
+                alt="" class="himg">
+        </div>
+        <div class="div9">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBPVfFVqmIU6YC0lzjLo5skYzlgNsR83yhiA&usqp=CAU"
+                alt="" class="himg">
+        </div>
+        <div class="div10">
+            <img src="https://www.whoa.in/download/bicycle-hd-wallpapers---background-images--cyclist-1080p-2k-4k-5k-hd-wallpapers-free-download"
+                alt="" class="himg">
+        </div>
+    </div>
+</body>
+
+</html>
