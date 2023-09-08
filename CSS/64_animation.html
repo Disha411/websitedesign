@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            height: 100px;
+            width: 100px;
+            background-color: darkgreen;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation-name: myanimation;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-delay: 2s;
+            /* wait*/
+            animation-iteration-count: 3;
+            animation-direction: alternate-reverse;
+            animation-fill-mode: backwards;
+            /* this property depend on animation delay or direction(alternate-reverse) or reverse */
+        }
+
+        /* create an animation */
+        @keyframes myanimation {
+            from {
+                margin-left: 0;
+            }
+
+            to {
+                margin-left: 150px;
+                margin-top: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1"></div>
+</body>
+
+</html> 
