@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+}
+.main{
+    height: 625px;
+    width: 610px;
+    background-color: rgb(36, 226, 36);
+    margin: auto;
+}
+.mydiv{
+    height: 595px;
+    width: 460px;
+    background-color: white; 
+    margin:auto;
+}
+h2{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+input{
+    height: 25px;
+    width: 205px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;  
+} 
+button{
+    height: 30px;
+    width: 205px;
+    color: white;
+    background-color: blue;
+    border: 1px solid blue;
+    border-radius: 10px;
+    font-weight: bold;
+}

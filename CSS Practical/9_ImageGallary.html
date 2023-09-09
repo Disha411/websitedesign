@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: grid;
+            grid-template-columns:repeat(4,1fr);
+            gap: 20px;
+        }
+        img{
+            height: 150px;
+            max-width: 100%;
+            border: 2px solid green;
+            border-radius: 10px;
+            box-shadow: 2px 4px 9px -3px black;
+        }
+        .div5{
+            transition: 1s ease-in-out all;
+        }
+        .div5:hover {
+            transform: skewY(-30deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="div1">
+            <img src="Images/g1.jpg" alt="" class="himg">
+        </div>
+        <div class="div2">
+            <img src="Images/g2.jpg" alt="" class="himg">
+        </div>
+        <div class="div3">
+            <img src="Images/g3.jpg" alt="" class="himg">
+        </div>
+        <div class="div4">
+            <img src="Images/g4.jpg" alt="" class="himg">
+        </div>
+        <div class="div5">
+            <img src="Images/g5.jpg" alt="" class="himg"> 
+        </div>
+        <div class="div6">
+            <img src="Images/g6.jpg" alt="" class="vimag">
+        </div>
+        <div class="div7">
+            <img src="Images/g7.jpg" alt="" class="vimg">
+        </div>
+        <div class="div8">
+            <img src="Images/g8.jpg" alt="" class="vimg">
+        </div>
+    </div>
+</body>
+</html>
