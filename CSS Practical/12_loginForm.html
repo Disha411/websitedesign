@@ -10,22 +10,26 @@
             margin: 0;
             padding: 0;
         }
-        .main{
-            height: 626px;
-            width: 100%;
+        body{
             background-color: cyan;
+        }
+        .userform{
+            height: 500px;
+            width: 60%;
+            margin:60px auto;
+            /* border: 1px solid black;    */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        .loginform{
-            text-align: center;            
-        }
-        
-        .content{
-            margin-left: 80px;
-            height: 260px;
+        .userform .loginpage{
+            display: flex;
+            align-items: center;
+        }         
+        .userform .loginpage .loginform{
+            flex: 1;
+            height: 350px;
             width: 270px;
-            background-color: white;
-            /* display: flex; */
+            background-color: white; 
+            text-align: center;         
         }
         h3{
             padding-top: 20px;
@@ -39,38 +43,52 @@
         input{
             height: 32px;
             width: 230px;
-            border-radius: 20px;
+            border-radius: 12px;
             border: 1px solid rgb(214, 213, 213);
-            /* background-color: rgb(94, 92, 92); */
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
         button{
             height: 32px;
             width: 230px;
-            border-radius: 20px;
+            border-radius: 12px;
             color: white;
             background-color: blue;
+            border: 1px solid blue;
             font-weight: bold;
-            /* padding-top: 10px; */
+            margin-bottom: 20px;
         }
-        span{
-            color: lightcoral;
+        a{
+             color: lightcoral; 
+             text-decoration: none;
+        } 
+        .image{
+            flex: 1;
+        }
+        img{
+            height: 348px;
+            max-width: 100%;
+
         }
      </style>
     </head>
 <body>
-    <section class="main">
-        <div class="loginform"><h1>Login in Form</h1>
-            <div class="content">
+    <div class="userform">
+        <div class="loginpage">
+            <h1>Login in Form</h1>
+            <div class="loginform">
                 <h3>Log in</h3>
-                <h6>To your account</h6>
+                <h6>To your account</h6>             
                 <input type="text" placeholder="User Name" class="input1">
                 <input type="password" placeholder="Password" class="input2">
                 <button>Log In</button>
-                    <h6>Or connect with social media</h6>
-                    <h6>Don't have an account?<span>Register</span></h6>        
-                <img src="Images/pra12.jpg" alt="" class="img1">
+                <h6>Or connect with social media</h6>
+                <h6>Don't have an account?<a href="">Register</a></h6>
             </div>
+            <div class="image">
+                <img src="Images/pra12.jpg" alt="" class="img1">
+            </div>               
         </div>
-    </section>
+    </div>
 </body>
 </html>
