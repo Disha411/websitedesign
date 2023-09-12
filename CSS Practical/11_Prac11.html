@@ -10,25 +10,13 @@
             margin: 0;
         }
         body{
-            background-image: url(Images/Pra11.jpg);
-           
+            background: url(Images/Pra11.jpg) no-repeat center;
+            background-size: cover;
         }
         .main{
+            margin-left: 80px;
+            margin-right: 80px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        /* img{
-            height: 621px;
-            width: 100%;
-        } */
-        .form{
-            height: 310px;
-            width: 390px;
-            background-color: white;
-            position: fixed;
-            bottom: 165px;
-            right: 25px;    
-            padding: 20px;
-            padding-left: 40px;
         }
         h6{
             color: darkgreen;
@@ -65,13 +53,26 @@
         .Button1{
             padding-top: 10px;
         }
+        .maindiv{
+            padding-top: 145px;
+            padding-bottom: 153px;
+            display: flex;
+        }
+        .maindiv .blank{
+            flex: 1;
+        }
+        .maindiv  .form{
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            padding-left: 40px;
+        }
     </style>
 </head>
 <body>
     <div class="main">
-        <!-- <div class="image">
-            <img src="Images/Pra11.jpg" alt="">
-        </div> -->
+       <div class="maindiv">
+        <div class="blank"></div>
         <div class="form">
             <h6>LANDFARM</h6>
             <h3>Request Call Back Caurses</h3>
@@ -91,6 +92,7 @@
                 <button>Get it Now</button>
             </div>
         </div>
+       </div>
     </div>
 </body>
 </html>

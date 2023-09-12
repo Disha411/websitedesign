@@ -5,8 +5,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(129, 72, 72);
+        }
+        .loading{
+            height: 200px;
+            width: 600px;
+            border: 1px solid black;
+            margin:190px auto;
+        }
+        .text{
+            color: white;
+            text-align: center;
+            font-size: 20px;
+        }
+        .maindiv{
+            border: 1px solid black;
+            /* height: 165px;
+            width: 135px; */
+            /* transform: rotate(0); */
+            margin: auto;
+            /* border-radius: 50%; */
+            display: flex;
+            justify-content: center;
+            /* align-items: flex-end; */
+        }
+        .dot1,.dot2,.dot3,
+        .dot4,.dot5,.dot6,.dot7,
+        .dot8,.dot9,.dot10,.dot11,
+        .dot12{
+            height: 10px;
+            width: 10px;
+            background-color: whitesmoke;
+            margin: 5px;            
+            border-radius: 50%;
+            box-shadow: 0px 4px 5px whitesmoke; 
+            transform: rotate(24deg);
+        }
+        
+        .dot1 {
+            animation: dotmove 0.8s cubic-bezier(1, 0, 0, 1) infinite alternate;
+        }
+        .dot2 {
+            animation: dotmove 0.8s cubic-bezier(1, 0, 0, 1) 0.3s infinite alternate;
+        }
+        .dot3 {
+            animation: dotmove 0.8s cubic-bezier(1, 0, 0, 1) 0.6s infinite alternate;
+        }
+        .dot4 {
+            animation: dotmove 0.8s cubic-bezier(1, 0, 0, 1) 0.9s infinite alternate;
+        }
+        .dot5 {
+            animation: dotmove 0.8s cubic-bezier(1, 0, 0, 1) 0.12s infinite alternate;
+        }
+        .dot6 {
+            animation: dotmove 0.8s cubic-bezier(1, 0, 0, 1) 0.14s infinite alternate;
+        }
+        .dot7 {
+            animation: dotmove 0.8s cubic-bezier(1, 0, 0, 1) 0.18s infinite alternate;
+        }
+        .dot8 {
+            animation: dotmove 0.8s cubic-bezier(1, 0, 0, 1) 0.21s infinite alternate;
+        }
+        .dot9 {
+            animation: dotmove 0.8s cubic-bezier(1, 0, 0, 1) 0.24s infinite alternate;
+        }
+        .dot10 {
+            animation: dotmove 0.8s cubic-bezier(1, 0, 0, 1) 0.27s infinite alternate;
+        }
+        .dot11 {
+            animation: dotmove 0.8s cubic-bezier(1, 0, 0, 1) 0.30s infinite alternate;
+        }
+        .dot12 {
+            animation: dotmove 0.8s cubic-bezier(1, 0, 0, 1) 0.33s infinite alternate;
+        }
+         /* 1st animation */
+         @keyframes dotmove {
+            0% {
+                transform: rotate(180deg)
+            }
+
+            100% {
+                transform: rotate3d(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="loading">
+        <div class="text">Loading</div>
+        <div class="maindiv">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+            <div class="dot3"></div>
+            <div class="dot4"></div>
+            <div class="dot5"></div>
+            <div class="dot6"></div>
+            <div class="dot7"></div>
+            <div class="dot8"></div>
+            <div class="dot9"></div>
+            <div class="dot10"></div>
+            <div class="dot11"></div>
+            <div class="dot12"></div>
+        </div>
+    </div>
 </body>
 </html>

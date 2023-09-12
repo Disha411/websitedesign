@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    /* padding: 0; */
+}
+.menu ul{
+    background-color: rgb(93, 196, 236);
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 10px; 
+}
+.menu ul li{
+    padding: 8px;   
+}
+.menu ul li a{
+    color: blue;
+    text-decoration: none;
+}
+.menu .innermenu{
+    display: none;
+    background-color: cyan;
+    height: 65px;
+    width: 110%;
+    position: absolute;
+}
+.menu .showmenu{
+    position: relative;
+}
+.menu .showmenu:hover .innermenu{
+    display: block;
+}
