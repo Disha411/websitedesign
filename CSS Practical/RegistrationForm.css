@@ -1,8 +1,9 @@
 *{
     margin: 0;
+    padding: 0;
 }
 .main{
-    height: 625px;
+    height: 605px;
     width: 610px;
     background-color: rgb(36, 226, 36);
     margin: auto;
@@ -10,8 +11,8 @@
 }
 
 .mydiv{
-    height: 595px;
-    width: 460px;
+    height: 546px;
+    width: 445px;
     background-color: white; 
     margin:auto;
     box-shadow: 0px 6px 35px 5px black;
@@ -27,8 +28,7 @@ input{
     width: 205px;
     border-radius: 5px;
     margin-bottom: 10px;
-    margin-left: 10px;  
-    
+    margin-left: 10px;   
 } 
 button{
     height: 30px;
@@ -37,7 +37,9 @@ button{
     background-color: blue;
     border: 1px solid blue;
     border-radius: 10px;
-    font-weight: bold;    
+    font-weight: bold;  
+    margin-left: 110px;
+    
 }
 .row{
     display: flex;
@@ -51,7 +53,12 @@ button{
 }
 select{
     height: 26px;
-    width: 211px;
+    width: 208px;
     border: 1px solid black;
     border-radius: 5px;
+    margin-bottom: 10px;
+}
+input[type="radio"]{
+    height: 14px;
+    width: 70px;
 }
