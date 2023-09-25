@@ -1,0 +1,562 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ========= common css ====== */
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+/* ============== header ============== */
+header {
+    background-color: rgba(0, 0, 0, 0.355);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 111;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0px 3px 5px 0px black;
+}
+
+
+header .header-p {
+    padding: 15px 0px;
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .navbar .logo h1 {
+    color: white;
+}
+
+header .navbar .logo span {
+    color: #ff5b83;
+    font-weight: 300;
+}
+
+header .navbar .nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+header .navbar .nav ul li {
+    padding: 5px;
+}
+
+header .navbar .nav ul a {
+    color: white;
+}
+
+header .navbar .nav ul a:hover {
+    color: #ff5b83;
+}
+
+header .navbar .nav ul a:hover span {
+    color: #ff5b83;
+}
+
+header .navbar .nav ul span {
+    color: white;
+    font-size: 12px;
+}
+
+header .navbar .bars {
+    display: none;
+}
+
+header .navbar .resbtn span {
+    font-size: 21px;
+    color: white;
+}
+
+/* ============== homepage ========== */
+.homepage {
+    background: url(images/home.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.homepage::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.homepage .homepage-p {
+    padding-top: 150px;
+    padding-bottom: 70px;
+}
+
+.homepage .hometext {
+    width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.homepage .hometext h1 {
+    font-size: 55px;
+    color: white;
+    padding-bottom: 30px;
+}
+
+.btnpink {
+    height: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #ff5b83;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: 0.5s ease all;
+}
+
+.btnpink:hover {
+    background-color: #1447d4;
+}
+
+.homepage .animate {
+    padding-top: 50px;
+}
+
+.homepage .animate .outerdiv {
+    height: 60px;
+    width: 35px;
+    border: 2px solid #ff5b83;
+    margin: auto;
+    border-radius: 40px;
+    padding-top: 5px;
+}
+
+.homepage .animate .outerdiv .circle {
+    height: 10px;
+    width: 10px;
+    background-color: #ff5b83;
+    border-radius: 50%;
+    margin: auto;
+    animation: circlemove 1s linear infinite;
+}
+
+@keyframes circlemove {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+}
+
+.homepage .angles {
+    display: grid;
+    padding: 10px;
+    color: #ff5b83;
+}
+
+.homepage .angles span:nth-child(1) {
+    animation: angleBlink 1s ease infinite;
+}
+
+.homepage .angles span:nth-child(2) {
+    animation: angleBlink 1s ease 0.3s infinite;
+}
+
+.homepage .angles span:nth-child(3) {
+    animation: angleBlink 1s ease 0.5s infinite;
+}
+
+@keyframes angleBlink {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* ============= experience================  */
+
+.experience .exp-p {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.experience .main-exp-div {
+    display: flex;
+    gap: 20px
+}
+
+.experience .main-exp-div .exp-details {
+    flex: 1;
+}
+
+.experience .main-exp-div .exp-details h1 {
+    font-size: 35px;
+    color: #03031a;
+}
+
+.experience .main-exp-div p {
+    color: gray;
+    padding: 10px 0px;
+}
+
+.experience .main-exp-div .exp-content {
+    flex: 1.5;
+}
+
+.experience .main-exp-div .exp-person {
+    display: flex;
+    gap: 30px;
+}
+
+.experience .main-exp-div .exp-person img {
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.experience .main-exp-div .exp-person h3 {
+    padding-bottom: 13px;
+}
+
+.experience .main-exp-div .exp-person a {
+    color: #03031a;
+}
+
+.experience .main-exp-div .exp-person a:hover {
+    color: #ff5b83;
+}
+
+/* ================================  */
+.designSec {
+    background-color: rgb(237, 255, 255);
+}
+
+.designSec .designp {
+    padding: 70px 0px;
+}
+
+.designSec .title {
+    text-align: center;
+}
+
+.designSec .title h1 {
+    font-size: 40px;
+}
+
+.designSec .title p {
+    width: 800px;
+    margin: auto;
+    color: gray
+}
+
+.designSec .designBox {
+    padding: 50px 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.designSec .designBox .dBox {
+    text-align: center;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    border-bottom: 4px solid #ff5b83;
+    transition: 0.5s ease all;
+}
+
+.designSec .designBox .dBox span {
+    color: #ff5b83;
+    font-size: 40px;
+}
+
+.designSec .designBox .dBox h3 {
+    padding-top: 15px;
+    color: #03031a;
+}
+
+.designSec .designBox .dBox p {
+    color: gray;
+    padding: 5px 0px;
+}
+
+.designSec .designBox .dBox a {
+    color: #ff5b83;
+    font-weight: bold;
+}
+
+.designSec .designBox .dBox:hover {
+    background-color: #ff5b83;
+}
+
+.designSec .designBox .dBox:hover span {
+    color: white;
+}
+
+.designSec .designBox .dBox:hover p {
+    color: white;
+}
+
+.designSec .designBox .dBox:hover h3 {
+    color: white;
+}
+
+.designSec .designBox .dBox:hover a {
+    color: white;
+}
+
+/* ===================== offerSec ============== */
+.offerSec {
+    background: url(images/home.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.offerSec::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #17449e, #000000cf);
+    z-index: -1;
+}
+
+.offerSec .offerp {
+    padding: 70px 0px;
+}
+
+.offerSec .title {
+    text-align: center;
+    color: white;
+    padding-bottom: 30px;
+}
+
+.offerSec .title h1 {
+    font-size: 40px;
+}
+
+.offerSec .title p {
+    width: 800px;
+    margin: 5px auto;
+    font-size: 13px;
+}
+
+.offerSec .offerFlex {
+    display: flex;
+    gap: 30px;
+}
+
+.offerSec .offerFlex .offerSer {
+    flex: 1;
+}
+
+.offerSec .offerFlex .offerSer h1 {
+    font-size: 35px;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.offerSec .offerFlex .offerSer p {
+    color: white;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.offerSec .offerFlex .offerSer .Counting {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 10px 0px;
+}
+
+.offerSec .offerFlex .offerSer .Counting h2 {
+    color: white;
+    font-size: 30px;
+}
+
+.offerSec .offerFlex .offerSer .Counting p {
+    font-size: 19px;
+}
+
+.offerSec .offerFlex .offerSerList {
+    flex: 1.5;
+}
+
+.offerSec .offerFlex .offergrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.offerSec .offerFlex .offergrid .offergridbox {
+    background-color: #17449eaa;
+    border-radius: 5px;
+    padding: 30px;
+    transition: 0.5s ease all;
+}
+
+.offerSec .offerFlex .offergrid .offergridbox span {
+    color: #ff5b83;
+    font-size: 30px;
+}
+
+.offerSec .offerFlex .offergrid .offergridbox a {
+    color: white;
+}
+
+.offerSec .offerFlex .offergrid .offergridbox h3 {
+    padding: 10px 0px;
+}
+
+.offerSec .offerFlex .offergrid .offergridbox p {
+    color: gray;
+    font-size: 14px;
+}
+
+.offerSec .offerFlex .offergrid .offergridbox:hover {
+    background-color: white;
+}
+
+.offerSec .offerFlex .offergrid .offergridbox:hover a {
+    color: black;
+}
+
+.offerSec .offerFlex .offergrid .offergridbox a:hover {
+    color: rgb(26, 26, 26);
+}
+
+/* ============================= blog section ================= */
+.blogsec .blogp {
+    padding: 50px 0px;
+}
+
+.blogsec .title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.blogsec .title h1 {
+    font-size: 40px;
+}
+
+.blogsec .title p {
+    width: 800px;
+    margin: auto;
+}
+
+.blogsec .GridBlog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.blogsec .GridBlog .blogbox {
+    background-color: white;
+    box-shadow: 0px 3px 4px 0px #e4dcdc;
+}
+
+.blogsec .GridBlog .blogbox .card-img {
+    overflow: hidden;
+    height: 260px;
+}
+
+.blogsec .GridBlog .blogbox img {
+    height: auto;
+    max-width: 100%;
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out all;
+}
+
+.blogsec .GridBlog .blogbox:hover img {
+    transform: scale(1);
+}
+
+.blogsec .GridBlog .blogbox .card-text {
+    padding: 30px 15px;
+}
+
+.blogsec .GridBlog .blogbox .links a:nth-child(1) {
+    color: #17449e;
+    font-weight: bold;
+}
+
+.blogsec .GridBlog .blogbox .links a:nth-child(2) {
+    color: #17449e;
+    font-weight: bold;
+}
+
+.blogsec .GridBlog .blogbox .links a:nth-child(1):hover {
+    color: #ff5b83;
+}
+
+.blogsec .GridBlog .blogbox .links a:nth-child(2):hover {
+    color: #ff5b83;
+}
+
+.blogsec .GridBlog .blogbox .card-text .date {
+    color: #ff5b83;
+    font-style: italic;
+}
+
+.blogsec .GridBlog .blogbox .card-text h4 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.blogsec .GridBlog .blogbox .card-text h4 a {
+    color: black;
+    font-size: 24px;
+}
+
+.blogsec .GridBlog .blogbox .card-text h4 a:hover {
+    color: #ff5b83
+}
+
+.blogsec .GridBlog .blogbox .card-text p {
+    color: gray;
+}
+
+.blogsec .GridBlog .blogbox .card-text .divider {
+    height: 1px;
+    width: 100%;
+    background-color: rgb(215, 213, 213);
+    margin: 20px 0px;
+}
+
+.blogsec .GridBlog .blogbox .card-text .btn a {
+    color: #17449e;
+    font-weight: bold;
+}
+
+.blogsec .GridBlog .blogbox .card-text .btn a:hover {
+    color: #ff5b83;
+}

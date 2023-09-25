@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .homepage{
+            margin: 115px auto;
+            padding: 0px 40px;
+            display: flex;
+        }
+        .homepage .servicesec{
+            flex: 1;
+            margin:auto;
+            padding: 50px;
+        }
+        .homepage .servicesec h4{
+            color: #d60f0fd5;
+        }
+        .homepage .servicesec h1{
+            font-size: 35px;  
+            margin-bottom: 20px;         
+        }
+        .homepage .servicesec p{
+            color: gray;
+            font-size: small;
+        }
+        .homepage .loansec {
+            flex: 2;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .homepage .loansec .Loan{
+            height: 140px;
+            width: 140px;
+            font-weight: bold;
+            font-size: 13px;
+            color: rgb(138, 146, 146);
+            text-align: center;
+            box-shadow: 0px 1px 8px 0px gray;
+        }
+        .homepage .loansec .Loan .icon span{
+            font-size: large;
+            padding-top: 30px;
+            margin: 10px;
+        }
+        .homepage .loansec .Loan .users{
+            color: rgba(54, 196, 231, 0.938);
+        }
+        .homepage .loansec .Loan .business{
+            color: red;
+        }
+        .homepage .loansec .Loan .Auto{
+            color: skyblue;
+        }
+        .homepage .loansec .Loan .home{
+            color: green;
+        }
+        .homepage .loansec .Loan .health{
+            color: rgba(209, 19, 146, 0.89);
+        }
+        .homepage .loansec .Loan .education{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <section class="homepage">
+        <div class="servicesec">
+            <h4>WHAT WE PROVIDE</h4>
+            <h1>Services we're Provided</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam deserunt eum harum error numquam magni beatae ad in corrupti fugit, deleniti aliquid, rem animi, id iusto. Iusto expedita ipsum adipisci!</p>
+        </div>
+        <div class="loansec">
+            <div class="Loan">
+                <div class="icon users">
+                    <span class="fa-solid fa-users"></span>
+                </div>Personal Loan
+            </div>
+            <div class="Loan">
+                <div class="icon business">
+                    <span class="fa-regular fa-handshake"></span>
+                </div>Business Loan
+            </div>
+            <div class="Loan">
+                <div class="icon Auto">
+                    <span class="fa-solid fa-car"></span>
+                </div>Auto Loan
+            </div>
+            <div class="Loan">
+                <div class="icon home">
+                    <span class="fa-solid fa-house-chimney"></span>
+                </div>Home Loan
+            </div>
+            <div class="Loan">
+                <div class="icon health">
+                    <span class="fa-solid fa-stethoscope"></span>
+                </div>Health Loan
+            </div>
+            <div class="Loan">
+                <div class="icon education">
+                    <span class="fa-solid fa-graduation-cap"></span>
+                </div>Education Loan
+            </div>
+
+        </div>
+
+    </section>
+</body>
+</html>
