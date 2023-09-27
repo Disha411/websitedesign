@@ -24,6 +24,7 @@
         }
         .homepage .servicesec h4{
             color: #d60f0fd5;
+            letter-spacing: 2px;
         }
         .homepage .servicesec h1{
             font-size: 35px;  
@@ -37,8 +38,25 @@
             flex: 2;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
+            gap: 20px;
         }
+        
+        .homepage .loansec .firstblock{
+            margin: auto;
+        }
+        .homepage .loansec .secondblock{
+            margin: auto;
+        }
+        .homepage .loansec .secondblock .sblock1{
+            margin-bottom: 20px;
+        }
+        .homepage .loansec .thirdblock .tblock1{
+            margin-bottom: 20px;
+        }
+        .homepage .loansec .thirdblock .tblock2{
+            margin-bottom: 20px;
+        }
+
         .homepage .loansec .Loan{
             height: 140px;
             width: 140px;
@@ -71,6 +89,40 @@
         .homepage .loansec .Loan .education{
             color: yellow;
         }
+        .homepage .positionsec{
+            flex: 1;
+            height: 318px;
+            width: 78px;
+            border-top-left-radius: 7px;
+            border-bottom-left-radius: 7px;
+            position: fixed;
+            right: 0;
+            background-color: rgb(29, 29, 59);
+            border: 1px solid black;  
+            display: grid;
+            justify-items: center;  
+            align-items: center;
+        }
+        .homepage .positionsec .hr{
+            height: 1px;
+            width: 100%;
+            background-color: rgba(199, 188, 188, 0.404);
+        }
+        .homepage .positionsec span{
+            color: rgb(218, 213, 213);
+        }
+        .homepage .positionsec p{
+            color: rgb(218, 213, 213);
+        }
+        .homepage .positionsec .div1{
+            text-align: center;
+        }
+        .homepage .positionsec .arrow{
+            padding-top: 10px;
+        }
+        .homepage .positionsec .buy{
+            padding-bottom: 30px;
+        }
     </style>
 </head>
 <body>
@@ -81,39 +133,62 @@
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam deserunt eum harum error numquam magni beatae ad in corrupti fugit, deleniti aliquid, rem animi, id iusto. Iusto expedita ipsum adipisci!</p>
         </div>
         <div class="loansec">
-            <div class="Loan">
-                <div class="icon users">
-                    <span class="fa-solid fa-users"></span>
-                </div>Personal Loan
+            <div class="firstblock">
+                <div class="Loan">
+                    <div class="icon users">
+                        <span class="fa-solid fa-users"></span>
+                    </div>Personal Loan
+                </div>
             </div>
-            <div class="Loan">
-                <div class="icon business">
-                    <span class="fa-regular fa-handshake"></span>
-                </div>Business Loan
+            <div class="secondblock">
+                <div class="Loan sblock1">
+                    <div class="icon business">
+                        <span class="fa-regular fa-handshake"></span>
+                    </div>Business Loan
+                </div>    
+                <div class="Loan">
+                    <div class="icon home">
+                        <span class="fa-solid fa-house-chimney"></span>
+                    </div>Home Loan
+                </div>
             </div>
-            <div class="Loan">
-                <div class="icon Auto">
-                    <span class="fa-solid fa-car"></span>
-                </div>Auto Loan
-            </div>
-            <div class="Loan">
-                <div class="icon home">
-                    <span class="fa-solid fa-house-chimney"></span>
-                </div>Home Loan
-            </div>
-            <div class="Loan">
-                <div class="icon health">
-                    <span class="fa-solid fa-stethoscope"></span>
-                </div>Health Loan
-            </div>
-            <div class="Loan">
-                <div class="icon education">
-                    <span class="fa-solid fa-graduation-cap"></span>
-                </div>Education Loan
-            </div>
-
+            <div class="thirdblock">
+                <div class="Loan tblock1">
+                    <div class="icon Auto">
+                        <span class="fa-solid fa-car"></span>
+                    </div>Auto Loan
+                </div>    
+                <div class="Loan tblock2">
+                    <div class="icon health">
+                        <span class="fa-solid fa-stethoscope"></span>
+                    </div>Health Loan
+                </div>
+                <div class="Loan">
+                    <div class="icon education">
+                        <span class="fa-solid fa-graduation-cap"></span>
+                    </div>Education Loan
+                </div>
+            </div>    
         </div>
-
+        <div class="positionsec">
+            <div class="div1 arrow">
+                <span class="fa-solid fa-angles-right"></span>
+            </div>
+                <div class="hr">
+                </div>
+            <div class="div1 back">
+                <span class="fa-solid fa-arrow-left"></span>
+                <p>Back</p>
+            </div>
+            <div class="div1 download">
+                <span class="fa-solid fa-download"></span>
+                <p>Download</p>
+            </div>
+            <div class="div1 buy">
+                <span class="fa-solid fa-cart-shopping"></span>
+                <p>Buy</p>
+            </div>
+        </div>
     </section>
 </body>
 </html>
