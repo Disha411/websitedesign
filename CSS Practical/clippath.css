@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.main .index{
+    background: url(Images/clippathEx.webp) no-repeat center ;
+    background-size: cover;
+    clip-path: polygon(-312% 0%, 50% 91%, 353% 0%);
+    position: relative;
+    z-index: 1;
+    padding-bottom: 150px;
+}
+.main .index::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.322);
+    z-index: -1;
+}
+/* =============== flex ================= */
+.main .index .header1{
+    padding: 25px 76px;
+    display: flex;
+    gap: 170px;
+    justify-content: center;
+    align-items: center;
+}
+.main .index .header1 .logo .logo1{
+    height: 25px;
+    width: 65px;
+    border: 2px solid white;
+    text-align: center;
+} 
+.main .index .header1 .logo .logo1 .L{
+    border: 2px solid white;
+    background-color: white;
+}    
+.main .index .header1 .logo .logo2{
+    color: white;
+}
+
+/* =============== Hover ============== */
+
+.main .index .header1 .menubar .home:hover{
+    color: red;
+    text-decoration: underline;
+}
+.main .index .header1 .menubar .aboutus:hover{
+    color: red;
+    text-decoration: underline;
+}
+.main .index .header1 .menubar .portfolio:hover{
+    color: red;
+    text-decoration: underline;
+}
+.main .index .header1 .menubar .pricing:hover{
+    color: red;
+    text-decoration: underline;
+}
+.main .index .header1 .menubar .team:hover{
+    color: red;
+    text-decoration: underline;
+}
+.main .index .header1 .menubar .blog:hover{
+    color: red;
+    text-decoration: underline;
+}
+.index .header1 .menubar .contact:hover{
+    color: red;
+    text-decoration: underline;
+}
+/* ========== menubar =========== */
+.main .index .header1 .menubar ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.main .index .header1 .menubar li a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+/* ======== service ========== */
+.main .index .service{
+    text-align: center;
+    margin-top: 125px;
+}
+.main .index .service h5{
+    color: white;
+}
+.main .index .service h1{
+    font-size: 38px;
+    letter-spacing: 2px;
+    padding: 12px 0px;
+    color: white;
+}
+.main .index .service p{
+    color: white;
+    padding: 0px 310px;
+    font-size: small;
+    padding-bottom: 30px;
+}
+.main .index .service .btn1{
+    height: 35px;
+    width: 170px;
+    color: white;
+    background-color: rgba(240, 81, 19, 0.904);
+    border: 1px solid rgba(240, 81, 19, 0.904);
+    border-radius: 3px;
+}
+.main .index .service .btn2{
+    height: 35px;
+    width: 170px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+.main{
+    position: relative;
+}
+.main .circle{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgb(236 234 234);
+    position: absolute;
+    right: 486px;
+    bottom: 232px;
+    z-index: 2;
+    display: grid;
+    place-content: center;
+}
+.main .circle span{
+    color: red;
+}
+
+.main .Design{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.main .Design .mydiv{
+    height: 160px;
+    width: 210px;
+    text-align: center;
+    padding: 20px 7px;
+}
+.main .Design .mydiv .icon1{
+    border: 1px solid red;
+    transform: rotate(45deg);
+}
+.main .Design .mydiv .icon{
+    height: 55px;
+    width: 55px;
+    margin: auto;
+    border: 1px solid rgb(224, 215, 215);
+}
+.main .Design .mydiv .div1{
+    color: red;
+}
+.main .Design .mydiv h5{
+    margin: 16px 10px;
+}
+.main .Design .mydiv .line{
+    height: 1px;
+    width: 100%;
+    color: black;
+}
+.main .Design .mydiv p{
+    font-size: small;
+    color: grey;
+}
+.main .Design .mydiv .infinity1{
+    margin: 20px;
+    color: red;
+    transform: rotate(135deg);
+}
+.main .Design .mydiv .heart1{
+    margin: 20px;
+}
+.main .Design .mydiv .infinity2{
+    margin: 20px;
+}

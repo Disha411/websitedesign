@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .index{
+            position: relative;
+        }
+        .main{
+            display: flex;  
+            margin-top: 100px;
+            padding: 0px 20px;
+        }
+        .main .panel1{
+            flex: 1;
+            padding: 65px 35px;
+            background-color: rgb(64 61 61);
+            display: grid;
+            gap: 20px;
+            text-align: right;
+            position: relative;
+        }
+        .main .panel1 h4{
+            color: white;
+        }
+        .main .panel1 .hr{
+            height: 2px;
+            width: 100%;
+            color: red;
+        }
+        .main .panel1 h5{
+            color: rgb(190, 46, 46);
+        }
+        .main .panel1 p{
+            color: rgb(180, 177, 173);
+            font-size: small;
+        }
+        .main .panel2{
+            flex: 1;
+        }
+        .main .panel2 img{
+            height: 100%;
+            width: 100%;
+            filter: sepia(70%);
+        }
+        
+        .index .icon{
+            position: relative;
+        }
+        .icon1{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: white;
+            display: grid;
+            place-content: center;
+        }
+        .index .icon .icon1 span{
+            color: red;
+        }
+        .index .icon .desktop{
+            position: absolute;
+            top: -212px;
+            left: 464px;
+            z-index: 1;
+        }
+           
+        .index .icon .printpaper{
+            position: absolute;
+            top: -137px;
+            left: 520px;
+        } 
+        .index .icon .camera{
+            position: absolute;
+            top: -62px;
+            left: 520px;
+        }
+    </style>
+</head>
+<body>
+    <section class="index">
+        <div class="main">
+            <div class="panel1">
+            <h4>OUR SERVICES <div class="hr"></div></h4>
+            <div class="div1">
+                <h5>WEB DESIGN</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolore praesentium ipsam unde nihil eaque, repellendus aperiam quaerat</p>
+            </div>
+            <div class="div2">
+                <h5>PRINT DESIGN</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolore praesentium ipsam unde nihil eaque, repellendus</p>
+            </div>
+            <div class="div3">
+                <h5>PHOTOGRAPHY</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolore praesentium ipsam unde nihil eaque, repellendus aperiam quaerat</p>
+            </div>
+
+            <div class="icon">
+                <div class="icon1 desktop">
+                    <span class="fa-solid fa-desktop"></span>
+                </div>
+                <div class="icon1 printpaper">
+                    <span class="fa-solid fa-print"></span>
+                </div>
+                <div class="icon1 camera">
+                    <span class="fa-light fa-camera"></span>
+                </div>
+            </div>
+            </div>
+            <div class="panel2">
+                <img src="Images/prac17.jpg" alt="">
+            </div>
+        </div>    
+        
+    </section>
+</body>
+</html>
