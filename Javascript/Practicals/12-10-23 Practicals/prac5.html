@@ -8,8 +8,44 @@
 </head>
 <body>
     <!-- to perform mathematical(+,-,*,/,%) operation using switch case -->
+    <!--------------- Arithmetic Operations ------------------>
     <script>
+        var selnum ="Module";
+        var a=40, b=2 , result ;
         
+        document.write("You Select : "+selnum)
+        document.write("<br>----------------<br>")
+
+        switch (selnum) {
+            case "Addition":
+                result = a+b;
+                document.write("Addition is :"+result)                
+                break;
+            
+            case "Subtraction":
+                result = a-b;
+                document.write("Subtraction is :"+result)                
+                break;    
+
+            case "Multiplication":
+                result = a*b;
+                document.write("Multiplication is :"+result)                
+                break;        
+
+            case "Division":
+                result = a/b;
+                document.write("Division is :"+result)                
+                break; 
+        
+            case "Module":
+                result = a%b;
+                document.write("Division is :"+result)                
+                break;
+
+            default:
+                document.write("Select Arithmetic Operation")
+                break;
+        }
     </script>
 </body>
 </html>
