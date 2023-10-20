@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="addvalue">
+        <button onclick="addlist()">Add in List</button>
+    </div>
+    <ol></ol>
+    <!-- program to add list dynamically -->
+    <!-- append used whn you want to replace string -->
+    <script>
+        function addlist() {
+            let List = document.createElement("li")
+            let ListText = document.getElementById("addvalue").value; 
+            if(ListText == ""){
+                alert("add value first")
+            }else{
+                List.append(ListText) ;
+                document.querySelector("ol").append(List) ; 
+                document.getElementById("addvalue").value = ""
+            }
+        }    
+    </script>
+</body>
+</html>

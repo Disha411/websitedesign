@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addlist()">Click to Add</button>
+    <ol></ol>
+    <!-- program of create structure dynamically but word is static -->
+    <script>
+        // appenChild() => add value at the end of the elemment
+
+        function addlist() {
+            let list = document.createElement("li")
+            let listText = document.createTextNode("myNewList")
+            list.appendChild(listText)
+            document.querySelector("ol").appendChild(list)            
+        }
+    </script>
+</body>
+</html>
