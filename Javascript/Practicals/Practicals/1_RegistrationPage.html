@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registration.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action=" ">
+        <div class="main">
+            <div class="mydiv">
+                <h1>Registration for Job</h1>
+                
+                <div class="row">
+                    <div class="label1">
+                        <label for="First Name">First Name</label>
+                    </div>
+                    <div class="input1">
+                        <input type="text" placeholder="Enter First name">
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="label1">
+                        <label for="Middle Name">Middle Name</label>
+                    </div>
+                    <div class="input1">
+                        <input type="text" placeholder="Enter Middle Name">
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="label1">
+                        <label for="Last Name">Last Name</label>
+                    </div>
+                    <div class="input1">
+                        <input type="text" placeholder="Enter Last Name">
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="label1">
+                        <label for="Address">Address</label>
+                    </div>
+                    <div class="input1">
+                        <textarea name="" id="" cols="26" rows="5" placeholder="Enter Address"></textarea>
+                    </div>
+                </div>
+              
+                <div class="row">
+                    <div class="label1">
+                        <label for="Date of Birth">Date of Birth</label>
+                    </div>
+                    <div class="input1">
+                        <input type="date">
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="label1">
+                        <label for="Gender">Gender</label>
+                    </div>
+                    <div class="input1">
+                        <input type="radio" name="gen">Male
+                        <input type="radio" name="gen">Female
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="label1">
+                        <label for="Experience">Experience</label>
+                    </div>
+                    <div class="input1">
+                        <select name="" id="" class="select">
+                            <option value="">---select---</option>
+                        </select>
+                    </div>    
+                </div>
+    
+                <div class="row">
+                    <div class="label1">
+                        <label for="Mobile No">Mobile No</label>
+                    </div>
+                    <div class="input1">
+                        <input type="tel" placeholder="Enter Mobile No">
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="label1">
+                        <label for="Email id">Email id</label>
+                    </div>
+                    <div class="input1">
+                        <input type="email" placeholder="Enter email">
+                    </div>
+                </div>
+    
+                <div class="row"> 
+                    <div class="label1">
+                        <label for="password">Create Password</label>
+                    </div>
+                    <div class="input1">
+                        <input type="password" placeholder="Enter password" id="pass">
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="input1">
+                        <input type="checkbox" class="checkbox1" onclick="showPassword()">Show Password
+                    </div>
+                </div>  
+                         
+                <div class="btn">
+                <button>Register</button>
+                </div>
+        </div>
+    </form>  
+
+    <script>
+        function showPassword(){  
+            var pwd=document.getElementById("pass");
+            
+            if(pwd.type == "password"){
+                pwd.type="text"
+            }else{
+                pwd.type="password"
+            }
+            
+        }
+    </script>   
+</body>
+</html>
