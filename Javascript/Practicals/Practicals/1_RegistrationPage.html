@@ -18,7 +18,7 @@
                         <label for="First Name">First Name</label>
                     </div>
                     <div class="input1">
-                        <input type="text" placeholder="Enter First name">
+                        <input type="text" placeholder="Enter First name" id="addvalue">
                     </div>
                 </div>
     
@@ -27,7 +27,7 @@
                         <label for="Middle Name">Middle Name</label>
                     </div>
                     <div class="input1">
-                        <input type="text" placeholder="Enter Middle Name">
+                        <input type="text" placeholder="Enter Middle Name" id="addvalue">
                     </div>
                 </div>
     
@@ -36,7 +36,7 @@
                         <label for="Last Name">Last Name</label>
                     </div>
                     <div class="input1">
-                        <input type="text" placeholder="Enter Last Name">
+                        <input type="text" placeholder="Enter Last Name" id="addvalue">
                     </div>
                 </div>
     
@@ -45,7 +45,7 @@
                         <label for="Address">Address</label>
                     </div>
                     <div class="input1">
-                        <textarea name="" id="" cols="26" rows="5" placeholder="Enter Address"></textarea>
+                        <textarea name="" id="" cols="26" rows="5" placeholder="Enter Address" id="addvalue"></textarea>
                     </div>
                 </div>
               
@@ -54,7 +54,7 @@
                         <label for="Date of Birth">Date of Birth</label>
                     </div>
                     <div class="input1">
-                        <input type="date">
+                        <input type="date" id="addvalue">
                     </div>
                 </div>
     
@@ -73,7 +73,7 @@
                         <label for="Experience">Experience</label>
                     </div>
                     <div class="input1">
-                        <select name="" id="" class="select">
+                        <select name="" id="" class="select" >
                             <option value="">---select---</option>
                         </select>
                     </div>    
@@ -84,7 +84,7 @@
                         <label for="Mobile No">Mobile No</label>
                     </div>
                     <div class="input1">
-                        <input type="tel" placeholder="Enter Mobile No">
+                        <input type="tel" placeholder="Enter Mobile No" id="addvalue">
                     </div>
                 </div>
     
@@ -93,7 +93,7 @@
                         <label for="Email id">Email id</label>
                     </div>
                     <div class="input1">
-                        <input type="email" placeholder="Enter email">
+                        <input type="email" placeholder="Enter email" id="addvalue">
                     </div>
                 </div>
     
@@ -102,7 +102,7 @@
                         <label for="password">Create Password</label>
                     </div>
                     <div class="input1">
-                        <input type="password" placeholder="Enter password" id="pass">
+                        <input type="password" placeholder="Enter password" id="pass" id="addvalue">
                     </div>
                 </div>
             
@@ -113,12 +113,19 @@
                 </div>  
                          
                 <div class="btn">
-                <button>Register</button>
+                <button onclick="blankAlert()">Register</button>
                 </div>
         </div>
     </form>  
 
     <script>
+        function blankAlert() {
+            var AddData= document.getElementById("addvalue").value;
+            if(AddData == ""){
+                alert("Enter value first")
+            }
+        }
+
         function showPassword(){  
             var pwd=document.getElementById("pass");
             
