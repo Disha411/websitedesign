@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- onmouseover => When mouse enter on element area also effect in child 
+         element area 
+         onmouseentter => When mouse enter on element area
+         onmousemove => same
+         onmousedown => When user click on element
+         onmouseleave & onmouseout => cursor remove from element
+         onmouseup => When user released mouse key
+         onmousewheel => When user scroll down using mouse 
+        -->
+    <h1 class="heading" onmouseover="msgChange()">Hello</h1>
+
+    <script>
+        function msgChange() {
+            document.querySelector(".heading").innerHTML="Welcome User"
+
+        }
+    </script>
+</body>
+</html>
