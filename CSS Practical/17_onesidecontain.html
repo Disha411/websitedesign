@@ -13,17 +13,17 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         .index{
+            margin: 120px 0px;
             position: relative;
         }
         .main{
             display: flex;  
             margin-top: 100px;
-            padding: 0px 20px;
+            margin: 0px 20px;
+            background-color: rgb(64 61 61);
         }
         .main .panel1{
-            flex: 1;
             padding: 65px 35px;
-            background-color: rgb(64 61 61);
             display: grid;
             gap: 20px;
             text-align: right;
@@ -52,9 +52,14 @@
             width: 100%;
             filter: sepia(70%);
         }
-        
-        .index .icon{
+        .index .flexbox{
             position: relative;
+            flex: 1;
+        }
+        .index .icon{
+            position: absolute;
+            top: 0;
+            right: 0;
         }
         .icon1{
             height: 40px;
@@ -69,41 +74,51 @@
         }
         .index .icon .desktop{
             position: absolute;
-            top: -212px;
-            left: 464px;
+            top: 111px;
+            right: -22px;
             z-index: 1;
         }
            
         .index .icon .printpaper{
             position: absolute;
-            top: -137px;
-            left: 520px;
+            top: 187px;
+            right: -24px;
+            z-index: 1;
+
         } 
         .index .icon .camera{
             position: absolute;
-            top: -62px;
-            left: 520px;
+            top: 253px;
+            right: -24px;
+            z-index: 1;
+        }
+        .index .main .flexbox .panel1 h4 .hr{
+            /* height: 100%;
+            width: 2px; */
+            border: 1px solid yellow;
+            background-color: red;
         }
     </style>
 </head>
 <body>
     <section class="index">
         <div class="main">
-            <div class="panel1">
-            <h4>OUR SERVICES <div class="hr"></div></h4>
-            <div class="div1">
-                <h5>WEB DESIGN</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolore praesentium ipsam unde nihil eaque, repellendus aperiam quaerat</p>
+            <div class="flexbox">
+                <div class="panel1">
+                <h4>OUR SERVICES <span class="hr"></span></h4>
+                <div class="div1">
+                    <h5>WEB DESIGN</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolore praesentium ipsam unde nihil eaque, repellendus aperiam quaerat</p>
+                </div>
+                <div class="div2">
+                    <h5>PRINT DESIGN</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolore praesentium ipsam unde nihil eaque, repellendus</p>
+                </div>
+                <div class="div3">
+                    <h5>PHOTOGRAPHY</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolore praesentium ipsam unde nihil eaque, repellendus aperiam quaerat</p>
+                </div>
             </div>
-            <div class="div2">
-                <h5>PRINT DESIGN</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolore praesentium ipsam unde nihil eaque, repellendus</p>
-            </div>
-            <div class="div3">
-                <h5>PHOTOGRAPHY</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolore praesentium ipsam unde nihil eaque, repellendus aperiam quaerat</p>
-            </div>
-
             <div class="icon">
                 <div class="icon1 desktop">
                     <span class="fa-solid fa-desktop"></span>

@@ -89,7 +89,7 @@
     text-align: center;
     margin-top: 125px;
 }
-.main .index .service h5{
+.main .index .service h6{
     color: white;
 }
 .main .index .service h1{
@@ -154,7 +154,7 @@
     padding: 20px 7px;
 }
 .main .Design .mydiv .icon1{
-    border: 1px solid red;
+    border: 1px solid red !important;
     transform: rotate(45deg);
 }
 .main .Design .mydiv .icon{
@@ -171,21 +171,29 @@
 }
 .main .Design .mydiv .line{
     height: 1px;
-    width: 100%;
-    color: black;
+    width: 40%;
+    background-color: #6e6666;
+    margin-bottom: 10px;
 }
+
 .main .Design .mydiv p{
     font-size: small;
     color: grey;
 }
-.main .Design .mydiv .infinity1{
-    margin: 20px;
+.main .Design .mydiv span{
     color: red;
+}
+.main .Design .mydiv .infinity{
+    margin: 20px;
     transform: rotate(135deg);
 }
 .main .Design .mydiv .heart1{
     margin: 20px;
 }
-.main .Design .mydiv .infinity2{
+.main .Design .mydiv .lightbulb{
     margin: 20px;
 }
+.main .Design .mydiv .messages{
+    margin: 20px;
+}
+

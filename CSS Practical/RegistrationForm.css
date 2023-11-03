@@ -52,7 +52,7 @@ button{
 .input1{
     flex: 2;
 }
-select{
+.select{
     height: 26px;
     width: 208px;
     border: 1px solid black;
@@ -67,6 +67,4 @@ input[type="radio"]{
     height: 12px;
     width: 45px;
 } 
-/* input::placeholder{
-    text-align: center;
-} */
+
