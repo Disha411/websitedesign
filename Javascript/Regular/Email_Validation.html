@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <label for="">Enter Email :</label>
+        <input type="text" name="email" id="mail" onblur="return emailCheck()" onkeyup="return checkEmailexp()">
+        <span id="msg"></span>
+
+        <div>
+            <button onclick="return emailCheck()" type="submit">Click</button>
+        </div>    
+    </form>
+
+    <script>
+        function emailCheck() {
+            let user_mail = document.getElementById("mail").value;
+            
+            if (user_mail== "" || user_mail == null ) {
+                document.getElementById("msg").innerHTML="Enter Email"   
+                return false          
+            }
+        }
+
+        // expression
+        // Website : https://www.w3resource.com/javascript/form/
+
+        function checkEmailexp() {
+            let user_mail = document.getElementById("mail").value;
+            let emailEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
+            if (emailEx.test(user_mail)) {
+             
+                document.getElementById("msg").innerHTML=""
+                return false                
+            } else {
+
+                document.getElementById("msg").innerHTML= "Enter Proper Email"
+                return false               
+            }
+        }
+    </script>
+</body>
+</html>

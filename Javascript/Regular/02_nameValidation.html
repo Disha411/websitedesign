@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <div style="padding: 5px;">
+            <label for="">First Name :</label>
+            <input type="text" name="firstname" id="fname" onblur="return checkInputField(this, 'msg1')" onkeyup="return nameEx(this, 'msg1')">
+            <span id="msg1"></span>
+        </div>
+
+        <div style="padding: 5px;">
+            <label for="">Middle Name :</label>
+            <input type="text" name="middlename" id="mname" onblur="return checkInputField(this, 'msg2')" onkeyup="return nameEx(this, 'msg2')">
+            <span id="msg2"></span>
+        </div>
+
+        <div style="padding: 5px;">
+            <label for="">Last Name :</label>
+            <input type="text" name="lastname" id="lname" onblur="return checkInputField(this, 'msg3')" onkeyup="return nameEx(this, 'msg3')">
+            <span id="msg3"></span>
+        </div>
+
+        <div>
+            <button onclick="return checkName()" type="submit">click</button>
+        </div>
+    </form>
+
+    <script>
+        function checkName() {
+            let fn = document.getElementById("fname").value;
+            let mn = document.getElementById("mname").value;
+            let ln = document.getElementById("lname").value;
+            if (fn == "" || fn == null) {
+                document.getElementById("msg1").innerHTML="Enter first Name";
+                return false;
+                
+            }else if (mn == "" || mn == null) {
+                document.getElementById("msg2").innerHTML="Enter middle Name";
+                return false;
+                
+            } else if (ln == "" || ln == null) {
+                document.getElementById("msg3").innerText = "Enter Last name";
+                return false;
+            }            
+        }
+
+        // parameterized or argument function 
+        function checkInputField(blank, msg) {
+            if (blank.value == "" || blank.value == null) {
+                document.getElementById(msg).innerHTML = "Please, fill this field"
+                return false
+            }
+        }
+
+
+
+        
+        function nameEx(user,msg) {
+            var nameregEx = /^[a-zA-Z]*$/
+            if (!(user.value.match(nameregEx))) {
+                document.getElementById(msg).innerText = "enter proper name"
+            } else if (user.value.length < 2) {
+                document.getElementById(msg).innerText = "name has atleast 2 words"
+            } else {
+                document.getElementById(msg).innerText = ""
+            }
+        }
+    </script>
+</body>
+</html>

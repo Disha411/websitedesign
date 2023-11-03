@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <label for="">Enter Mobile No</label>
+        <input type="text" name="mobileno" id="mobno" onblur="return mobileCheck()" onkeyup="return checkMobileEx()" maxLength="10">
+        
+        <span id="msg"></span>
+
+        <div>
+            <button onclick="return mobileCheck()" type="submit">Click</button>
+        </div>    
+    </form>
+
+
+    <script>
+        function mobileCheck() {
+            let no = document.getElementById("mobno").value;
+
+            if (no =="" || no == null) {
+                document.getElementById("msg").innerHTML="Enter number"
+                return false               
+            }
+        }
+
+        // regular expression
+        function checkMobileEx(){
+            let no = document.getElementById("mobno").value;
+            let regEx = /^[0-9]*$/;
+            let start = /^[6-9]/
+
+            if (!(regEx.test(no)) || !(start.test(no))) {
+                document.getElementById("msg").innerHTML="Enter Proper Number"   
+                return false
+            } else if (no.length<10) {
+                document.getElementById("msg").innerHTML="Enter 10 digit number"
+                return false                
+            }else{
+                document.getElementById("msg").innerHTML=""  
+                return false
+            }
+        }
+    </script>
+    
+</body>
+</html>
