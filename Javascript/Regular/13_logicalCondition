@@ -1,0 +1,13 @@
+(1) logical and(&&)
+        condition1              condition2              result 
+    (1)   true                      true                true
+    (2)   false                     true                false 
+    (3)   true                      false               false 
+    (4)   false                     false               false 
+
+(2) logical or(||)
+        condition1              condition2              result 
+    (1)   true                      true                true
+    (2)   false                     true                true 
+    (3)   true                      false               true 
+    (4)   false                     false               false 
