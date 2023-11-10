@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
 }
 .main .index{
     background: url(Images/clippathEx.webp) no-repeat center ;
@@ -34,13 +35,17 @@
     width: 65px;
     border: 2px solid white;
     text-align: center;
+    display: flex;
 } 
 .main .index .header1 .logo .logo1 .L{
     border: 2px solid white;
     background-color: white;
+    padding: 0px 5px;
+    
 }    
 .main .index .header1 .logo .logo2{
     color: white;
+    padding: 0px 5px;
 }
 
 /* =============== Hover ============== */
@@ -124,76 +129,82 @@
 .main{
     position: relative;
 }
+.main .maindivcircle{
+    position: absolute;
+    bottom: 27px;
+    width: 100%;
+    z-index: 2;
+}
 .main .circle{
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    background-color: rgb(236 234 234);
-    position: absolute;
-    right: 486px;
-    bottom: 232px;
-    z-index: 2;
+    background-color: rgb(236 234 234); 
+    z-index: 2; 
     display: grid;
     place-content: center;
-}
+    margin: auto;
+} 
 .main .circle span{
     color: red;
 }
 
-.main .Design{
+.Design{
     margin-left: 40px;
     margin-right: 40px;
     margin-bottom: 30px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
 }
-.main .Design .mydiv{
+.Design .mydiv{
     height: 160px;
     width: 210px;
     text-align: center;
     padding: 20px 7px;
 }
-.main .Design .mydiv .icon1{
+.Design .mydiv .icon1{
     border: 1px solid red !important;
     transform: rotate(45deg);
 }
-.main .Design .mydiv .icon{
+.Design .mydiv .icon{
     height: 55px;
     width: 55px;
     margin: auto;
     border: 1px solid rgb(224, 215, 215);
 }
-.main .Design .mydiv .div1{
+.Design .mydiv .div1{
     color: red;
 }
-.main .Design .mydiv h5{
+.Design .mydiv h5{
     margin: 16px 10px;
 }
-.main .Design .mydiv .line{
+.Design .mydiv .line{
     height: 1px;
     width: 40%;
     background-color: #6e6666;
     margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.main .Design .mydiv p{
+.Design .mydiv p{
     font-size: small;
     color: grey;
 }
-.main .Design .mydiv span{
+.Design .mydiv span{
     color: red;
 }
-.main .Design .mydiv .infinity{
+.Design .mydiv .infinity{
     margin: 20px;
     transform: rotate(135deg);
 }
-.main .Design .mydiv .heart1{
+.Design .mydiv .heart1{
     margin: 20px;
 }
-.main .Design .mydiv .lightbulb{
+.Design .mydiv .lightbulb{
     margin: 20px;
 }
-.main .Design .mydiv .messages{
+.Design .mydiv .messages{
     margin: 20px;
 }
 

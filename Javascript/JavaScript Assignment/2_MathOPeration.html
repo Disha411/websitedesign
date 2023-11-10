@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        .main{
+            padding: 10px 10px;
+            height: auto;
+            width: 400px;
+            border: 1px solid black;
+        }
+        .main p{
+            text-align: center;
+        }
+
+        .Answer{
+            color: rgb(97, 97, 207);
+        }  
+        
+        
+    </style>
+</head>
+<body>
+    <form action="#">
+    <div class="main">
+       <p>Maths Operation</p>
+       
+       <div class="first" style="padding: 10px 0px;">
+         <label for="">Enter 1st number :</label>
+         <input type="text"id="fno" onblur="return mathOperation()">
+         <!-- <span id="msg1" style="color: red;"></span> -->
+       </div>
+
+       <div class="second" style="padding: 10px 0px;">
+        <label for="">Enter 2nd number :</label>
+        <input type="text" id="sno" onblur="return mathOperation()">
+        <!-- <span id="msg2" style="color:red;"></span> -->
+      </div>
+
+      <button onclick="return mathOperation()"><span class="fa-solid fa-plus"></span></button>
+      
+      <button onclick="return mathOperation()"><span class="fa-solid fa-minus"></span></button>
+      
+      <button onclick="return mathOperation()"><span class="fa-solid fa-multiply"></span></button>
+
+      <button onclick="return mathOperation()"><span class="fa-solid fa-slash fa-rotate-90"></span></button>
+      
+      <button onclick="return mathOperation()"><span class="fa-solid fa-percent"></span></button>
+      
+      <h3>Answer is : <span class="Answer"></span></h3>
+
+    </div>
+</form>
+<script src="mathoperation.js"></script>
+</body>
+</html>
