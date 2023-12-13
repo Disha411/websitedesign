@@ -5,10 +5,9 @@ function Addval() {
     var num2 = Number(document.getElementById("sno").value);
     
     document.querySelector(".Answer").innerHTML = num1 + num2;    
-    // (num1 + num2) = document.querySelector(".Answer").innerHTML ;    
 
-    // document.getElementById(".fno").innerHTML="" 
-    // document.getElementById(".sno").innerHTML="" 
+    document.getElementById("fno").value="" 
+    document.getElementById("sno").value="" 
     return false 
 }
 
@@ -19,6 +18,9 @@ function Subval() {
     var num2 = Number(document.getElementById("sno").value);
     
     document.querySelector(".Answer").innerHTML = num1 - num2;
+
+    document.getElementById("fno").value="" 
+    document.getElementById("sno").value="" 
     return false 
 }
 
@@ -30,6 +32,9 @@ function Mulval() {
     var num2 = Number(document.getElementById("sno").value);
     
     document.querySelector(".Answer").innerHTML = num1 * num2;
+
+    document.getElementById("fno").value="" 
+    document.getElementById("sno").value="" 
     return false 
 }
 
@@ -40,6 +45,9 @@ function Divval() {
     var num2 = Number(document.getElementById("sno").value);
     
     document.querySelector(".Answer").innerHTML = num1 / num2;
+    
+    document.getElementById("fno").value="" 
+    document.getElementById("sno").value="" 
     return false 
 }
 
@@ -50,6 +58,9 @@ function Modval() {
     var num2 = Number(document.getElementById("sno").value);
     
     document.querySelector(".Answer").innerHTML = num1 % num2;
+    
+    document.getElementById("fno").value="" 
+    document.getElementById("sno").value="" 
     return false 
 }
 
