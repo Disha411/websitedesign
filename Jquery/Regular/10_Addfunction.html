@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- addfunctions are : append() ,prepend(), before(), after() -->
+
+    <button id="btn1">append</button>
+    <button id="btn2">prepend</button>
+    <button id="btn3">before</button>
+    <button id="btn4">after</button>
+
+    <hr>
+    <!-- <h1>Hello User</h1> -->
+
+    <ul>
+        <li>List 1</li>
+    </ul>
+
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        // $(document).ready(function(){
+        //     $("#btn1").click(function(){
+        //         $("h1").append("!!!")
+        //     })
+        //     $("#btn2").click(function(){
+        //         $("h1").prepend("!!!")
+        //     })
+        //     $("#btn3").click(function(){
+        //         $("h1").before("!!!")
+        //     })
+        //     $("#btn4").click(function(){
+        //         $("h1").after("!!!")
+        //     })
+        // })
+
+
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("ul").append("<li><b>New list</b></li>")
+            })
+            $("#btn2").click(function(){
+                $("ul").prepend("<li><b>New list</b></li>")
+            })
+            $("#btn3").click(function(){
+                $("b").before("&lt;")
+            })
+            $("#btn4").click(function(){
+                $("b").after("&gt;")
+            })
+        })
+    </script>
+
+
+</body>
+</html>

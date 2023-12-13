@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- fadeTo() use to set element opacity -->
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS66G0x18wPqSpBdWowT5JYKno9bE7cAAuO6A&usqp=CAU" alt="" height="300PX" width="400px">
+
+    <!-- jquery cdn -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $("img").mouseover(function(){
+                $("img").fadeTo(1000,1)
+            })
+            $("img").mouseout(function(){
+                $("img").fadeTo(1000,0.5)
+            })
+        })
+
+    </script>
+</body>
+</html>
