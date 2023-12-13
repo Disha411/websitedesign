@@ -18,11 +18,10 @@
         }
 
         .Answer{
-            color: rgb(97, 97, 207);
-        }  
-        
-        
+            color: rgb(4, 4, 223);
+        }    
     </style>
+    
 </head>
 <body>
     <form action="#">
@@ -32,29 +31,30 @@
        <div class="first" style="padding: 10px 0px;">
          <label for="">Enter 1st number :</label>
          <input type="text"id="fno" onblur="return mathOperation()">
-         <!-- <span id="msg1" style="color: red;"></span> -->
        </div>
 
        <div class="second" style="padding: 10px 0px;">
         <label for="">Enter 2nd number :</label>
         <input type="text" id="sno" onblur="return mathOperation()">
-        <!-- <span id="msg2" style="color:red;"></span> -->
       </div>
 
-      <button onclick="return mathOperation()"><span class="fa-solid fa-plus"></span></button>
+      <button onclick="return Addval()"><span class="fa-solid fa-plus"></span></button>
       
-      <button onclick="return mathOperation()"><span class="fa-solid fa-minus"></span></button>
+      <button onclick="return Subval()"><span class="fa-solid fa-minus"></span></button>
       
-      <button onclick="return mathOperation()"><span class="fa-solid fa-multiply"></span></button>
+      <button onclick="return Mulval()"><span class="fa-solid fa-multiply"></span></button>
 
-      <button onclick="return mathOperation()"><span class="fa-solid fa-slash fa-rotate-90"></span></button>
+      <button onclick="return Divval()"><span class="fa-solid fa-slash fa-rotate-90"></span></button>
       
-      <button onclick="return mathOperation()"><span class="fa-solid fa-percent"></span></button>
+      <button onclick="return Modval()"><span class="fa-solid fa-percent"></span></button>
       
       <h3>Answer is : <span class="Answer"></span></h3>
 
     </div>
 </form>
+
+
 <script src="mathoperation.js"></script>
+
 </body>
 </html>

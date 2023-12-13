@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            padding: 10px;
+            height: auto;
+            width: 450px;
+            border: 2px solid black;
+        }
+        .main p{
+            text-align: center;
+        }
+        .div1{
+            display: grid;
+            grid-template-columns:repeat(2,1fr);
+        }
+        .div1 .left{
+            display: grid;
+        }
+        .div1 .right{
+            display: grid;
+            gap: 10px;
+        }
+        .last{
+            display: grid;
+            /* grid-template-columns: repeat(1,1fr); */
+        }
+        span{
+            color: blue;
+        }
+        button{
+            height: 23px;
+            width: 75px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2>Marksheet for Information Technology</h2>
+        <p>Enter Marks</p>
+    
+        <div class="div1">
+            <div class="left">
+                <label for="">1.C Launguage</label>
+                <label for="">2.C++ Launguage</label>
+                <label for="">3.Database</label>
+                <label for="">4.HTML</label>
+                <label for="">5.CSS</label>
+                <label for="">6.php</label>
+                <label for="">7.Core java</label>
+            </div>    
+    
+            <div class="right">
+                <input type="text" name="" id="1">
+                <input type="text" name="" id="2">
+                <input type="text" name="" id="3">
+                <input type="text" name="" id="4">
+                <input type="text" name="" id="5">
+                <input type="text" name="" id="6">
+                <input type="text" name="" id="7">
+                <button onclick="return Calval()">Result</button>
+            </div>    
+
+            <div class="last">
+                <p>Total is: <span class="Total"></span>/350</p>
+                <p>Percentage is: <span class="Percentage"></span>%</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        function Calval() {
+            var num1 = Number(document.getElementById("1").value);  
+            var num2 = Number(document.getElementById("2").value);
+            var num3 = Number(document.getElementById("3").value);  
+            var num4 = Number(document.getElementById("4").value);
+            var num5 = Number(document.getElementById("5").value);  
+            var num6 = Number(document.getElementById("6").value);
+            var num7 = Number(document.getElementById("7").value);  
+        
+           document.querySelector(".Total").innerHTML = num1 + num2 + num3 +num4 +num5 +num6 + num7;
+
+           var total = Number(document.querySelector(".Total").value); 
+           document.querySelector(".Percentage").innerHTML = (total/350)*100
+        }   
+
+    </script>    
+</body>
+</html>
