@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 400px;
+            width: 400px;
+            border: 2px solid black;
+            padding: 10px;
+            /* display: flex; */
+        }
+        .main .insidediv{
+            margin: 30px 0px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <label for="">Enter any number :</label>
+        <input type="text" id="input">
+
+        <button onclick="return Mathtable()">Display</button>
+
+        <div class="insidediv">
+
+        </div>
+    </div>
+
+    <script>
+        function Mathtable() {
+            let num = document.getElementById("input").value
+            let div = document.querySelector(".insidediv")
+
+            if (i = 1, i <= 10 ,i++) {
+                (num + "&Cross;" + i + "=" + num * i + "<br>")                
+            }else{
+                alert("Enter valid Value")
+            }
+        //    div.innerHTML = num
+        } 
+    </script>
+</body>
+</html>
