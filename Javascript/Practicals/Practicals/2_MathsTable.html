@@ -7,24 +7,28 @@
     <title>Document</title>
     <style>
         .main{
-            height: 400px;
-            width: 400px;
+            height: 350px;
+            width: 330px;
             border: 2px solid black;
             padding: 10px;
-            /* display: flex; */
         }
         .main .insidediv{
             margin: 30px 0px;
+            height: auto;
+            width: 200px;
             border: 1px solid black;
         }
     </style>
 </head>
+
 <body>
     <div class="main">
         <label for="">Enter any number :</label>
         <input type="text" id="input">
 
-        <button onclick="return Mathtable()">Display</button>
+        <div>
+            <button onclick="return Mathtable()">Display</button>
+        </div>    
 
         <div class="insidediv">
 
@@ -35,13 +39,13 @@
         function Mathtable() {
             let num = document.getElementById("input").value
             let div = document.querySelector(".insidediv")
+            div.innerHTML="<p>"+num + "&Cross;" + i + "=" + num*i+"</p>"
+                            
 
-            if (i = 1, i <= 10 ,i++) {
-                (num + "&Cross;" + i + "=" + num * i + "<br>")                
-            }else{
-                alert("Enter valid Value")
+            for (i = 1; i <=10 ; i++) {
+                
+                
             }
-        //    div.innerHTML = num
         } 
     </script>
 </body>
