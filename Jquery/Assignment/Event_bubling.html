@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,span{
+            border: 1px solid rgb(189, 186, 186);
+            margin: 10px;
+            padding: 10px;
+        }
+        .change{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <div>body(great-great-grandparent)
+        <div>(great-grandparent)
+            <div>ul(grandparent)
+                <div>li(direct parent)
+                    <div class="span">span</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("html").hover(function () {
+                $(".span").parentsUntil("html").addClass("change")
+              })
+        })
+    </script>
+</body>
+</html>
