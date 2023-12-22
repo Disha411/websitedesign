@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        .main{
+            padding: 10px 10px;
+            height: auto;
+            width: 380px;
+            border: 1px solid black;
+        }
+        .main p{
+            text-align: center;
+        }
+
+        .Answer{
+            color: rgb(4, 4, 223);
+        }    
+        .mathOperation{
+            display: flex;
+        }
+        .mathOperation .h3{
+            flex: 2;
+            text-align: center;
+        }
+        .inside{
+            margin-top: 10px;
+        }
+        button{
+            height: 27px;
+            width: 34px;
+        }
+    </style>
+    
+</head>
+<body>
+    <form action="#">
+    <div class="main">
+        <p>Maths Operations</p>
+       
+        <div class="first" style="padding: 10px 0px;">
+            <label for="">Enter 1st number :</label>
+            <input type="text"id="fno">
+        </div>
+
+        <div class="second" style="padding: 10px 0px;">
+            <label for="">Enter 2nd number :</label>
+            <input type="text" id="sno">
+        </div>
+
+        <div class="mathOperation">
+            <div>
+                <button onclick="return Addval()"><span class="fa-solid fa-plus"></button></span></button>
+      
+                <button onclick="return Subval()"><span class="fa-solid fa-minus"></span></button>
+      
+                <button onclick="return Mulval()"><span class="fa-solid fa-multiply"></span></button>
+
+            <div class="inside">
+                <button onclick="return Divval()"><span class="fa-solid fa-slash fa-rotate-90"></span></button>
+      
+                <button onclick="return Modval()"><span class="fa-solid fa-percent"></span></button>
+            </div>
+
+            </div>
+
+            <div class="h3">
+                <p>Answer is : <span class="Answer"></span></p>
+            </div>
+        </div>
+</form>
+
+
+<script src="mathoperation.js"></script>
+
+</body>
+</html>
