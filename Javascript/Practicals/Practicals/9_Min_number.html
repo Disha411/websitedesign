@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            border: 2px solid black;
+            height: auto;
+            width: 350px;
+            font-size: 20px;
+            padding: 10px;
+        }
+        .main .Data .row{
+            display: flex;
+            gap: 40px;
+        }
+        .main .Data .row .label{
+            flex: 1;
+        }
+        .main .Data .row .input{
+            flex: 2;
+            margin: 4px;
+        }
+    </style>
+</head>
+<body>
+    <section class="main">
+        <p>Enter any two number to display which number is minimum from them</p>
+        <div class="Data">
+            <div class="row">
+                <div class="label">
+                   <label for="">1st Number</label>
+                </div>
+                <div class="input">
+                   <input type="text" id="1">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="label">
+                   <label for="">2nd Number</label>
+                </div>
+                <div class="input">
+                   <input type="text" id="2">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="label"></div>
+                <div class="input">
+                   <button type="submit" onclick="return minVal()">Display</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="label"></div>
+                <div class="input">
+                   <span id="result"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function minVal() {
+            var a,b;
+            var a = Number(document.getElementById("1").value);
+            var b = Number(document.getElementById("2").value);
+
+            if(a<b){
+                document.querySelector("#result").innerHTML = a+ " is minimum number";
+            }else if(b<a){
+                document.querySelector("#result").innerHTML = b+ " is minimum number";
+            }           
+            else{
+                document.querySelector("#result").innerHTML = "Both are equal";
+            }
+        }
+    </script>
+</body>
+</html>
