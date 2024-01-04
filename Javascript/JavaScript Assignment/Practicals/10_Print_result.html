@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            padding: 10px;
+            height: auto;
+            width: 450px;
+            border: 2px solid black;
+        }
+        .main p{
+            text-align: center;
+        }
+        
+        .main .div1 .row{
+            display: flex;
+        }
+        .main .div1 .row .label{
+            flex: 2;
+        }
+        .main .div1 .row .input{
+            flex: 2;
+            margin: 4px;
+        }
+        
+        .main .last{
+            display: flex;
+        } 
+        .main .last .last1{
+            flex: 1;
+        }
+        .main .last .last2{
+            flex: 2;
+        }
+        span{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h3>Marksheet for Information Technology</h3>
+        <p>Enter Marks</p>
+    
+        <div class="div1">
+            <div class="row">
+                <div class="label">
+                    <label for="">1.C Launguage</label>
+                </div>
+                <div class="input">
+                    <input type="text" name="" id="1">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="label">            
+                    <label for="">2.C++ Launguage</label>
+                </div>
+                <div class="input">
+                    <input type="text" name="" id="2">
+                </div>    
+            </div>    
+
+            <div class="row">
+                <div class="label">                    
+                    <label for="">3.Database</label>
+                </div>
+                <div class="input">    
+                    <input type="text" name="" id="3">
+                </div>    
+            </div>
+
+            <div class="row">
+                <div class="label">    
+                    <label for="">4.HTML</label>
+                </div>    
+                <div class="input">
+                    <input type="text" name="" id="4">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="label">    
+                    <label for="">5.CSS</label>
+                </div>
+                <div class="input">    
+                    <input type="text" name="" id="5">
+                </div>    
+            </div>
+
+            <div class="row">
+                <div class="label">    
+                    <label for="">6.php</label>
+                </div>
+                <div class="input">    
+                    <input type="text" name="" id="6">
+                </div>    
+            </div>
+
+            <div class="row">
+                <div class="label">   
+                    <label for="">7.Core java</label>
+                </div>
+                <div class="input">    
+                    <input type="text" name="" id="7">
+                </div>    
+            </div>
+
+            <div class="row">
+                <div class="label"></div>
+                <div class="input">
+                    <button onclick="return Calval()">Result</button>
+                </div>
+            </div>
+        </div>                    
+        
+        <div class="last">
+            <div class="last1">
+                <p>Total is: <span class="Total"></span>/350</p>
+            </div> 
+            <div class="last2">
+                <p>Percentage is: <span id="Percentage"></span>%</p>
+            </div> 
+        </div>
+        
+    </div>
+
+
+    <script>
+
+        function Calval() {
+            var num1 = Number(document.getElementById("1").value);  
+            var num2 = Number(document.getElementById("2").value);
+            var num3 = Number(document.getElementById("3").value);  
+            var num4 = Number(document.getElementById("4").value);
+            var num5 = Number(document.getElementById("5").value);  
+            var num6 = Number(document.getElementById("6").value);
+            var num7 = Number(document.getElementById("7").value);  
+
+            var total = num1 + num2 + num3 +num4 +num5 +num6 + num7;
+            document.querySelector(".Total").innerHTML = total;
+
+           var per = Number((total*100)/350);
+           document.querySelector("#Percentage").innerHTML = per;
+
+           document.getElementById("1").value="" 
+           document.getElementById("2").value="" 
+           document.getElementById("3").value="" 
+           document.getElementById("4").value="" 
+           document.getElementById("5").value="" 
+           document.getElementById("6").value="" 
+           document.getElementById("7").value="" 
+        }   
+
+    </script>    
+</body>
+</html>

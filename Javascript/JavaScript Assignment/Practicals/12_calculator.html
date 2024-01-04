@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 365px;
+            width: 355px;
+            border: 2px solid black;
+        }
+        input{
+            height: 30px;
+            width: 300px;
+            border: 2px solid black;
+            margin-left: 5px;
+            margin-bottom: 10px;
+        }
+        /* .calc{
+            padding: 7px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 7px;
+        } */
+        button{
+            font-size: 20px;
+            height: 45px;
+            width: 80px;
+            background-color: blue;
+            color: white;
+            border: 1px solid blue;
+        }
+        th{
+            background-color: blue;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <section class="main">
+        <h2>calculator</h2>
+        <div class="display">    
+            <input type="text">       
+        </div>
+
+        <div class="calc"> 
+            <table border="1" rules="all" >
+                <!-- 1st -->
+                <tr>
+                    <th colspan="2"><button>CE</button></th>
+                    <td>
+                        <button><i class="fa-solid fa-percent"></i></button>
+                    </td>
+                    <td>
+                        <button>/</button>
+                    </td>
+                </tr>
+                <!-- 2nd -->
+                <tr>
+                    <td>
+                        <button>7</button>
+                    </td>
+                    <td>
+                        <button>8</button>
+                    </td>
+                    <td>
+                        <button>9</button>
+                    </td>
+                    <td>
+                        <button>+</button>
+                    </td>
+                </tr>
+                <!-- 3rd -->
+                <tr>
+                    <td>
+                        <button>4</button>
+                    </td>
+                    <td>
+                        <button>5</button>
+                    </td>
+                    <td>
+                        <button>6</button>
+                    </td>
+                    <td>
+                        <button>-</button>
+                    </td>
+                </tr>
+                <!-- 4th -->
+                <tr>
+                    <td>
+                        <button>1</button>
+                    </td>
+                    <td>
+                        <button>2</button>
+                    </td>
+                    <td>
+                        <button>3</button>
+                    </td>
+                    <td>
+                        <button>*</button>
+                    </td>
+
+                </tr>
+                <!-- 5th -->
+                <tr>
+                    <td>
+                        <button>00</button>
+                    </td>
+                    <td>
+                        <button>0</button>
+                    </td>
+                    <td>
+                        <button>.</button>
+                    </td>
+                    <td>
+                        <button>=</button>
+                    </td>
+                </tr>
+            </table>                
+        </div>
+    </section>
+</body>
+</html>
