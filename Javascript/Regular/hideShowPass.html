@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .mydiv {
+            border: 2px solid black;
+            width: 500px;
+            padding: 20px;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            padding: 5px;
+            align-items: center;
+        }
+
+        input {
+            height: 25px;
+            width: 100%;
+            border-top: 1px solid gray;
+            border-left: 1px solid gray;
+            border-bottom: 1px solid gray;
+            border-right: 0;
+        }
+
+        input:focus-visible {
+            outline: none;
+        }
+
+        .col2 {
+            display: flex;
+            align-items: center;
+        }
+
+        .col2 .icon {
+            border-top: 1px solid gray;
+            border-right: 1px solid gray;
+            border-bottom: 1px solid gray;
+            border-left: 0;
+            height: 27px;
+            display: flex;
+            align-items: center;
+            padding-right: 9px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mydiv">
+        <div class="row">
+            <div class="col">Password : </div>
+            <div class="col col2">
+                <input type="password" name="" id="pass">
+                <div class="icon">
+                    <i class="fa-regular fa-eye" id="icon1" onclick="hideShowPass('pass','icon1')"></i>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">Confirm Password : </div>
+            <div class="col col2">
+                <input type="password" name="" id="cpass">
+                <div class="icon">
+                    <i class="fa-regular fa-eye" id="icon2" onclick="hideShowPass('cpass','icon2')"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function hideShowPass(password, icon) {
+            let pss = document.getElementById(password)
+            let icn = document.getElementById(icon);
+            if (pss.type == "password" && icn.classList.contains("fa-eye") == true) {
+                pss.type = "text"
+                icn.classList.remove("fa-eye")
+                icn.classList.add("fa-eye-slash")
+            } else {
+                pss.type = "password"
+                icn.classList.remove("fa-eye-slash")
+                icn.classList.add("fa-eye")
+            }
+        }
+    </script>
+</body>
+
+</html>

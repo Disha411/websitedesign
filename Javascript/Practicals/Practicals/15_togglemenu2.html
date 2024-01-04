@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            background-image: url('image1.jpg')no-repeat cover;
+        }
+        .main .menu{
+            height: 400px;
+            width: 200px;
+            background-color: rgb(15, 90, 151);
+            color: beige;
+            display: none;
+        }
+        ul{
+            list-style: none;
+            padding: 20px;
+        }
+        .icon{
+            /* display: block; */
+        }
+        
+    </style>
+</head>
+<body>
+    <section class="main">
+        <button class="icon">
+            <span class="fa-solid fa-bars"></span>
+        </button>
+        
+        <div class="menu">
+            <button class="crossbtn">
+                <span class="fa-solid fa-xmark" id="cross"></span>
+            </button>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Services</li>
+                <li>Pages</li>
+                <li>Registration</li>
+                <li>Login</li>
+            </ul>
+        </div>    
+    </section>
+
+    <script>
+        
+       // create a variable
+       let btn = document.querySelector(".icon")
+       let menu = document.querySelector(".crossbtn")
+       
+       btn.addEventListener("click", function () {
+           if (menu.classList.contains("icon") == true) {
+               i.classList.remove("icon")
+               i.classList.add("crossbtn")
+           } 
+       })
+       
+    </script>
+</body>
+</html>

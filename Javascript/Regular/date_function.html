@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <script>
+        var dt = new Date();
+        document.getElementById("p1").innerHTML = dt;
+
+        // in js month function count 0 to 11 month
+        document.getElementById("p2").innerHTML = dt.getDate() + "-" + (dt.getMonth() + 1) + "-" + dt.getFullYear();
+
+        document.getElementById("p3").innerHTML = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds() + ":" + dt.getMilliseconds()
+
+        // dt.getDay()
+    </script>
+</body>
+
+</html>

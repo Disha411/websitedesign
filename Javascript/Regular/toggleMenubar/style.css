@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+header{
+    /* background-color: #07609c; */
+    background-color: transparent;
+    position: fixed;
+    top :0;
+    width: 100%;
+    z-index: 111;
+    transition: 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+/* create header replacing class which is not include in structure. */
+.topheader{
+    background-color: #07609c;
+    position: fixed;
+    top :0;
+    width: 100%;
+    z-index: 111;
+    transition: 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+header .headerp{
+    padding: 10px;
+}
+header .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .navbar .logo {
+    color: white;
+}
+header .navbar .nav ul{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+header .navbar .nav li{
+    padding: 5px;
+}
+header .navbar .nav li a{
+    color: white;
+}
+header .navbar .togglebtn{
+    display: none;
+}
+header .navbar .togglebtn button{
+    height: 37px;
+    width: 37px;
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px black;
+    transition: 0.5s ease;
+}
+header .navbar .togglebtn button:hover{
+    transform: scale(0.9);
+}
+img{
+    width: 100%;
+    filter: brightness(50%);
+}
+/* =========== create a replacing class for nav to show menu =============== */
+/* ============== which is not include on html structure ============= */
+header .navbar .navigation{
+    background-color: #07609c;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    width: 100%;
+}
+header .navbar .navigation ul{
+    display: flex;
+    flex-direction: column;
+    align-items: unset;
+    text-align: center;
+}
+header .navbar .navigation li{
+    padding: 5px;
+}
+header .navbar .navigation li a{
+    color: white;
+}
+/* ===================================================================== */
+@media (max-width:576px) {
+    header .navbar .togglebtn{
+        display: block;
+    }
+    header .navbar .nav{
+        display: none;
+    }
+     header .navbar .navigation{
+        display: block;
+    }
+}
+@media (min-width:576px) {
+    header .navbar .togglebtn{
+        display: block;
+    }
+    header .navbar .nav{
+        display: none;
+    }
+     header .navbar .navigation{
+        display: block;
+    }
+}
+@media (min-width:992px) {
+    header .navbar .togglebtn{
+        display: none;
+    }
+    header .navbar .nav{
+        display: block;
+    }
+}
