@@ -1,0 +1,19 @@
+bootstrap is a library or framework of css.
+it also some js library.
+
+version :
+ bootstrap5 = 5.3.2 
+
+=> totally ready mate component are available, also has js plugin.
+
+bootstrp 4                          bootstrap 5
+(1) it has 5 responsive         (1) it has 6 responsive tiers.
+tiers.
+(2) components are made in      (2) old components are removed from 
+jquery.                             jquery function and new components 
+                                    are made in vanilla js.
+
+use cdn 
+or offline package.
+
+website : getbootstrap.com
