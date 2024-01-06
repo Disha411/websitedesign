@@ -12,20 +12,27 @@
             padding: 0  ;
         }
         .menubar{
+            padding: 2px;
             background-color: palevioletred;
             display: flex;
-            /* gap: 200px; */
         }
         .logo{
             flex: 1;
+            padding-left: 20PX;
         }
         .logo span{
             color: rgb(56, 3, 124);
-            font-size: 20px;
+            font-size: 25px;
         }
         .anchortag{
             display: flex;
-            gap: 20px;  
+            gap: 30px;  
+        }
+        .tbtn{
+            background-color: palevioletred;
+            border: 1px solid black;
+            font-size: 25px;
+            border-radius: 12%;
         }
         a{
             text-decoration: none;                        
@@ -33,21 +40,28 @@
         .togglebtn{
             display: none;
         }
-        /* ===================================================================== */
+        .newMenubar{
+            background-color: black;
+            color: #ffffff;
+        }
+        .anchor{
+            flex-direction: column;
+            background-color: black;
+            color: white;
+        }
+        /* =================================================================== */
         @media (max-width:576px) {
             .togglebtn{
-                display: block;
-            }
-            .menubar{
-                /* display: none; */
+                display: none;
             }
         }
+
         @media (min-width:576px) {
             .togglebtn{
-                display: block;
+                display:block;
             }
-            .menubar{
-                /* display: none; */
+            .anchortag{
+                display: block;
             }
         }
 
@@ -59,20 +73,23 @@
             <div class="logo">
                 <span class="fa-brands fa-css3-alt"></span>
             </div>
-            <div class="anchortag">
+            <div class="anchortag anchor">
                 <a href="">Home</a>
                 <a href="">About</a>
                 <a href="">Contact</a>
                 <a href="">Help</a>
             </div>
             <div class="togglebtn">
-                <button class="tbtn">
-                    <i class="fa-solid fa-chart-simple" id="icon"></i>
+                <button class="tbtn" onclick="return toggle()">
+                    <i class="fa-solid fa-xmark" id="icon"></i>
                 </button>
             </div>
+           
         </div>        
     </section>
 
     <script src="togglemenubar.js"></script>
+
+    
 </body>
 </html>

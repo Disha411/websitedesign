@@ -33,18 +33,27 @@
 <body>
     <div class="main">
         <div class="icon">
-            <span class="fa-solid fa-moon"></span>
+            <span class="fa-solid fa-moon" onclick="return myfunction()" id="icon1"></span>
         </div>
 
         <div class="iconchange">
-            <span class="fa-solid fa-sun"></span>
+            <span class="fa-solid fa-sun" ></span>
         </div>
     </div>
 
     <script>
         function myfunction(){
-            var element = document.main;
+            var element = document.querySelector(".main");
+            let i = document.getElementById("icon1")
             element.classList.toggle("dark-mode")
+
+            if(element.classList.contains("dark-mode")==true){
+                i.classList.remove("fa-moon")
+                i.classList.add("fa-sun")
+            } else {
+                i.classList.remove("fa-sun")
+                i.classList.add("fa-moon")
+            }
         }
     </script>
 </body>

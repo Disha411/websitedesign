@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            /* box-sizing: border-box; */
+        }
+        header{
+            background-color: transparent;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            transition: 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        }
+        header .headerp{
+            padding: 10px;
+        }
+        .container{
+            /* max-width: 1100px;   */
+            /* margin: auto; */
+            /* position: relative; */
+        }
+        header .navbar{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header .navbar .logo{
+            color: white;
+        }
+        header .navbar .nav ul{
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        header .navbar .nav li{
+            padding: 5px;
+        }
+        header .navbar .nav li a{
+            text-decoration: none;
+            color: white;
+        }
+        img{
+            width: 100%;
+            filter: brightness(60%);
+        }
+
+        /* header replacing class which is not including in html structure  */
+        .topheader{
+            background-color: rgb(177, 192, 91);
+            position: fixed;
+            top :0;
+            width: 100%;
+            transition: 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container headerp">
+            <div class="navbar">
+                <div class="logo">
+                    <h1>Photo<i class="fa-solid fa-camera-retro"></i></h1>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Pages</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Account</a></li>
+                    </ul>
+               </div>
+            </div>   
+        </div>
+    </header>
+
+    <div>
+        <img src="https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    </div>
+
+
+    <script>
+        let newTop = document.querySelector("header")
+        window.addEventListener("scroll",function(){
+            let current = this.window.scrollY;
+            if(current > 0){
+                newTop.classList.add("topheader")
+            }else{
+                newTop.classList.remove("topheader")
+            }
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,18 +1,12 @@
-// perform element = tbtn
-// for change icon = icon id
+var crossicon = document.getElementById("icon")
+var link = document.querySelector("anchortag")
 
-// create a variable
-let btn = document.querySelector(".tbtn")
-let menu = document.querySelector(".nav")
-let i = document.getElementById("icon")
-btn.addEventListener("click", function () {
-    menu.classList.toggle("navigation");
+function toggle(){
+    crossicon.classList.toggle("fa-solid fa-xmark")
+    anchortag.classList.toggle("anchor");
 
-    if (menu.classList.contains("navigation") == true) {
-        i.classList.remove("fa-chart-simple")
-        i.classList.add("fa-xmark")
-    } else {
-        i.classList.remove("fa-xmark")
-        i.classList.add("fa-chart-simple")
-    }
-})
+
+}
+// crossicon.addEventListener('click',function(){
+//     toggle();
+// });
