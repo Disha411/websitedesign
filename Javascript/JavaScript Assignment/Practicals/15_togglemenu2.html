@@ -11,9 +11,12 @@
             margin: 0;
             padding: 0;
         }
-        .main{
-            background-image: url('image1.jpg')no-repeat cover;
+        header{
+            position: fixed;
+            top: 0;
+            width: 100%;
         }
+        
         .main .menu{
             height: 400px;
             width: 200px;
@@ -21,48 +24,80 @@
             color: beige;
             display: none;
         }
-        ul{
+        .menu .crossbtn{
+            height: 30px;
+            width: 30px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: white;
+            border: none;
+        }
+        ul{ 
+            display: grid;
+            gap: 20px;
             list-style: none;
             padding: 20px;
         }
-       
+        img{
+            height: 624px;
+            width: 100%;
+        }
+        .main .icon{
+            height: 45px;
+            width: 38px;
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+           
     </style>
 </head>
 <body>
-    <section class="main">
-        <button class="icon">
-            <span class="fa-solid fa-bars"></span>
-        </button>
-        
-        <div class="menu">
-            <button class="crossbtn">
-                <span class="fa-solid fa-xmark" id="cross"></span>
+    <header>
+        <section class="main">
+            <button class="icon" onclick="myfunction()">
+                 <span class="fa-solid fa-bars"></span>
             </button>
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-                <li>Services</li>
-                <li>Pages</li>
-                <li>Registration</li>
-                <li>Login</li>
-            </ul>
-        </div>    
-    </section>
+        
+            <div class="menu">
+                <button class="crossbtn">
+                    <span class="fa-solid fa-xmark" id="cross"></span>
+                </button>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Services</li>
+                    <li>Pages</li>
+                    <li>Registration</li>
+                    <li>Login</li>
+                </ul>
+            </div>    
+        </section>
+    </header>
+
+    <div>
+        <img src="https://img.freepik.com/premium-photo/landscape-nature-wallpaper_882954-925.jpg" alt="">
+    </div>
 
     <script>
         
        // create a variable
-       let btn = document.querySelector(".icon")
-       let menu = document.querySelector(".crossbtn")
        
-       btn.addEventListener("click", function () {
-           if (menu.classList.contains("icon") == true) {
-               i.classList.remove("icon")
-               i.classList.add("crossbtn")
-           } 
-       })
-       
+       function myfunction(){
+            var element = document.querySelector(".icon");
+            let i = document.getElementById("cross")
+            element.classList.toggle("menu")
+
+            if(element.classList.contains("menu")==true){
+                i.classList.remove("fa-solid fa-bars")
+                i.classList.add("fa-solid fa-xmark")
+            }else{
+               i.classList.remove("fa-solid fa-xmark")
+               i.classList.add("fa-solid fa-bars")
+            } 
+        }
     </script>
 </body>
 </html>
