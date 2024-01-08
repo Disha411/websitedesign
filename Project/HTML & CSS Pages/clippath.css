@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+.main .index{
+    background: url(Images/clippathEx.webp) no-repeat center ;
+    background-size: cover;
+    clip-path: polygon(-312% 0%, 50% 91%, 353% 0%);
+    position: relative;
+    z-index: 1;
+    padding-bottom: 150px;
+}
+.main .index::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.322);
+    z-index: -1;
+}
+/* =============== flex ================= */
+.main .index .header1{
+    padding: 25px 76px;
+    display: flex;
+    gap: 170px;
+    justify-content: center;
+    align-items: center;
+}
+.main .index .header1 .logo .logo1{
+    height: 25px;
+    width: 65px;
+    border: 2px solid white;
+    text-align: center;
+    display: flex;
+} 
+.main .index .header1 .logo .logo1 .L{
+    border: 2px solid white;
+    background-color: white;
+    padding: 0px 5px;
+    
+}    
+.main .index .header1 .logo .logo2{
+    color: white;
+    padding: 0px 5px;
+}
+
+/* =============== Hover ============== */
+
+.main .index .header1 .menubar .home:hover{
+    color: red;
+    text-decoration: underline;
+}
+.main .index .header1 .menubar .aboutus:hover{
+    color: red;
+    text-decoration: underline;
+}
+.main .index .header1 .menubar .portfolio:hover{
+    color: red;
+    text-decoration: underline;
+}
+.main .index .header1 .menubar .pricing:hover{
+    color: red;
+    text-decoration: underline;
+}
+.main .index .header1 .menubar .team:hover{
+    color: red;
+    text-decoration: underline;
+}
+.main .index .header1 .menubar .blog:hover{
+    color: red;
+    text-decoration: underline;
+}
+.index .header1 .menubar .contact:hover{
+    color: red;
+    text-decoration: underline;
+}
+/* ========== menubar =========== */
+.main .index .header1 .menubar ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.main .index .header1 .menubar li a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+/* ======== service ========== */
+.main .index .service{
+    text-align: center;
+    margin-top: 125px;
+}
+.main .index .service h6{
+    color: white;
+}
+.main .index .service h1{
+    font-size: 38px;
+    letter-spacing: 2px;
+    padding: 12px 0px;
+    color: white;
+}
+.main .index .service p{
+    color: white;
+    padding: 0px 310px;
+    font-size: small;
+    padding-bottom: 30px;
+}
+.main .index .service .btn1{
+    height: 35px;
+    width: 170px;
+    color: white;
+    background-color: rgba(240, 81, 19, 0.904);
+    border: 1px solid rgba(240, 81, 19, 0.904);
+    border-radius: 3px;
+}
+.main .index .service .btn2{
+    height: 35px;
+    width: 170px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+.main{
+    position: relative;
+}
+.main .maindivcircle{
+    position: absolute;
+    bottom: 27px;
+    width: 100%;
+    z-index: 2;
+}
+.main .circle{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgb(236 234 234); 
+    z-index: 2; 
+    display: grid;
+    place-content: center;
+    margin: auto;
+} 
+.main .circle span{
+    color: red;
+}
+
+.Design{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.Design .mydiv{
+    height: 160px;
+    width: 210px;
+    text-align: center;
+    padding: 20px 7px;
+}
+.Design .mydiv .icon1{
+    border: 1px solid red !important;
+    transform: rotate(45deg);
+}
+.Design .mydiv .icon{
+    height: 55px;
+    width: 55px;
+    margin: auto;
+    border: 1px solid rgb(224, 215, 215);
+}
+.Design .mydiv .div1{
+    color: red;
+}
+.Design .mydiv h5{
+    margin: 16px 10px;
+}
+.Design .mydiv .line{
+    height: 1px;
+    width: 40%;
+    background-color: #6e6666;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Design .mydiv p{
+    font-size: small;
+    color: grey;
+}
+.Design .mydiv span{
+    color: red;
+}
+.Design .mydiv .infinity{
+    margin: 20px;
+    transform: rotate(135deg);
+}
+.Design .mydiv .heart1{
+    margin: 20px;
+}
+.Design .mydiv .lightbulb{
+    margin: 20px;
+}
+.Design .mydiv .messages{
+    margin: 20px;
+}
+
