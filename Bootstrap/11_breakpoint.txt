@@ -1,0 +1,18 @@
+css breakpoint                          bootstrap breakpoint (class)
+(1) max-width :576px                            - 
+(2) min-width:576px                             sm 
+(3) min-width:768px                             md 
+(4) min-width:992px                             lg 
+(5) min-width:1200px                            xl 
+(6) min-width:1400px                            xxl 
+
+===========================================================
+for layout there is 2 class available :
+(1) container 
+(2) container-fluid 
+
+===========================================================
+for responsive bootstrap provide one powerful grid system.
+(1) row 
+(2) col-* 
+ we set max 12 column system 
