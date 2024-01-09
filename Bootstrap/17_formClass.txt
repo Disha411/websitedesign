@@ -1,0 +1,21 @@
+description                                     bootstrap class 
+=====================================================================
+(1) for label                                    form-label 
+(2) for input type = text, password, date,      form-control 
+datetime-local, time, month, email, number,
+etc 
+    textarea tag
+
+(3) select-option                               form-select 
+(4) input type = range                          form-range 
+(5) input type = color                          form-control-color form-control
+(6) input type = radio / checkbox               
+    in parent div (vertically)                  form-check 
+    in parent div (horizontally)                form-check-inline 
+    in input type                               form-check-input 
+    in input label                              form-check-label
+
+(7) for input group 
+    parent div                                  input-group 
+    input type                                  form-control 
+    label/ button                               input-group-text 
