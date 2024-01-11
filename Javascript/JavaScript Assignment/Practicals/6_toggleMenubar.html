@@ -11,77 +11,115 @@
             margin: 0;
             padding: 0  ;
         }
-        .menubar{
-            padding: 2px;
+        .main .container{
+            padding: 10px;
             background-color: palevioletred;
             display: flex;
+            align-items: center;
+            position: relative;
         }
-        .logo{
+        .main .container .logo{
             flex: 1;
             padding-left: 20PX;
         }
-        .logo span{
+        .main .container .logo span{
             color: rgb(56, 3, 124);
-            font-size: 25px;
+            font-size: 30px;
         }
-        .anchortag{
+        .main .container .menubar{
+            flex: 1;
             display: flex;
-            gap: 30px;  
+            gap: 20px;  
         }
-        .tbtn{
-            background-color: palevioletred;
-            border: 1px solid black;
-            font-size: 25px;
-            border-radius: 12%;
-        }
-        a{
+        .main .container .menubar a{
+            color: white;
             text-decoration: none;                        
         }
-        .togglebtn{
+        .main .container .togglebtn{
             display: none;
         }
-        .newMenubar{
-            background-color: black;
-            color: #ffffff;
-        }
-        .anchor{
-            flex-direction: column;
-            background-color: black;
+        .main .container .togglebtn .tbtn{
+            background-color: transparent;
+            border: 1px solid white;
             color: white;
+            font-size: 25px;
+            font-weight: lighter;
+            border-radius: 12%;
         }
+        
+        
+        /* =============creating replacing class to show anchoetag ,which is not include in html structure ========================== */
+        .main .container .anchor{
+            font-size: larger;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            top: 35px;  
+        }
+        
+        .main .container .anchor a{
+            color: white;
+            text-decoration: none;                        
+        }
+
         /* =================================================================== */
         @media (max-width:576px) {
-            .togglebtn{
-                display: none;
+            .main .container .togglebtn{
+                display: block;
+            }
+            .main .container .menubar{
+                display: none; 
+            }
+            .main .container .anchor{
+                display: block;
             }
         }
 
         @media (min-width:576px) {
-            .togglebtn{
-                display:block;
+            .main .container .togglebtn{
+                display: none;
             }
-            .anchortag{
+            .main .container .menubar{
+                display: block; 
+            }
+            .main .container .anchor{
                 display: block;
             }
         }
+
+        @media (min-width:1400px) {
+            .main .container .togglebtn{
+                display: none;
+            }
+            .main .container .menubar{
+                display: block; 
+            }
+            .main .container .anchor{
+                display: block;
+            }
+
+        }
+        
 
     </style>
 </head>
 <body>
     <section class="main">
-        <div class="menubar">
+        <div class="container">
             <div class="logo">
                 <span class="fa-brands fa-css3-alt"></span>
             </div>
-            <div class="anchortag anchor">
+            <div class="menubar">
                 <a href="">Home</a>
                 <a href="">About</a>
                 <a href="">Contact</a>
                 <a href="">Help</a>
             </div>
             <div class="togglebtn">
-                <button class="tbtn" onclick="return toggle()">
-                    <i class="fa-solid fa-xmark" id="icon"></i>
+                <button class="tbtn" >
+                    <i class="fa-solid fa-chart-simple" id="icon"></i>
                 </button>
             </div>
            
@@ -90,6 +128,6 @@
 
     <script src="togglemenubar.js"></script>
 
-    
+   
 </body>
 </html>

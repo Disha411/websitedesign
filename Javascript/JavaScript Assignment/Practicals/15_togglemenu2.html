@@ -42,7 +42,7 @@
             height: 624px;
             width: 100%;
         }
-        .main .icon{
+        .main .tbtn{
             height: 45px;
             width: 38px;
             background-color: transparent;
@@ -50,16 +50,20 @@
             font-size: 20px;
             cursor: pointer;
         }
+        
+        
            
     </style>
 </head>
 <body>
     <header>
         <section class="main">
-            <button class="icon" onclick="myfunction()">
-                 <span class="fa-solid fa-bars"></span>
-            </button>
-        
+            <div class="togglebtn">
+                <button class="tbtn">
+                    <span class="fa-solid fa-bars"></span>
+                </button>
+            </div>
+
             <div class="menu">
                 <button class="crossbtn">
                     <span class="fa-solid fa-xmark" id="cross"></span>
@@ -82,22 +86,19 @@
     </div>
 
     <script>
-        
-       // create a variable
-       
-       function myfunction(){
-            var element = document.querySelector(".icon");
-            let i = document.getElementById("cross")
-            element.classList.toggle("menu")
+      
+     //target element => menu class
+     //perform element => togglebtn
 
-            if(element.classList.contains("menu")==true){
-                i.classList.remove("fa-solid fa-bars")
-                i.classList.add("fa-solid fa-xmark")
-            }else{
-               i.classList.remove("fa-solid fa-xmark")
-               i.classList.add("fa-solid fa-bars")
-            } 
-        }
+       //create a varible
+       let btn = document.querySelector(".tbtn")
+       let menu = document.querySelector(".menu")
+       
+       btn.addEventListener("click",function(){
+       main.classList.add("menu")
+
+      })
+       
     </script>
 </body>
 </html>

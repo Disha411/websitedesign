@@ -1,12 +1,19 @@
-var crossicon = document.getElementById("icon")
-var link = document.querySelector("anchortag")
+//target element => menubar class
+//Perform elemnt => tbtn
 
-function toggle(){
-    crossicon.classList.toggle("fa-solid fa-xmark")
-    anchortag.classList.toggle("anchor");
+//create a varible
 
+let btn = document.querySelector(".tbtn")
+let menu = document.querySelector(".menubar")
+let i = document.getElementById("icon")
+btn.addEventListener("click",function(){
+    menu.classList.toggle("anchor")
 
-}
-// crossicon.addEventListener('click',function(){
-//     toggle();
-// });
+    if (menu.classList.contains("anchor") == true) {
+        i.classList.remove("fa-chart-simple")
+        i.classList.add("fa-xmark")
+    } else {
+        i.classList.remove("fa-xmark")
+        i.classList.add("fa-chart-simple")
+    }
+})
