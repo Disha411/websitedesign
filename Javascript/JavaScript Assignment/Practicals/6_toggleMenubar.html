@@ -9,7 +9,8 @@
     <style>
         *{
             margin: 0;
-            padding: 0  ;
+            padding: 0 ;
+            font-family: 'Times New Roman', Times, serif;
         }
         .main .container{
             padding: 10px;
@@ -32,7 +33,6 @@
             gap: 20px;  
         }
         .main .container .menubar a{
-            color: white;
             text-decoration: none;                        
         }
         .main .container .togglebtn{
@@ -45,10 +45,13 @@
             font-size: 25px;
             font-weight: lighter;
             border-radius: 12%;
+            cursor: pointer;            
         }
         
         
-        /* =============creating replacing class to show anchoetag ,which is not include in html structure ========================== */
+        /* ======== creating replacing class to show menubar ============ */
+        /* ======== which is not include in html structure ============== */
+
         .main .container .anchor{
             font-size: larger;
             background-color: black;
@@ -56,7 +59,8 @@
             flex-direction: column;
             width: 100%;
             position: absolute;
-            top: 35px;  
+            top: 51px;  
+            left: 0;
         }
         
         .main .container .anchor a{
@@ -73,7 +77,8 @@
                 display: none; 
             }
             .main .container .anchor{
-                display: block;
+                display: flex;
+                text-align: center;
             }
         }
 
@@ -82,29 +87,33 @@
                 display: none;
             }
             .main .container .menubar{
-                display: block; 
+                display: flex;
+                gap: 50px;
             }
             .main .container .anchor{
-                display: block;
+                display: flex;
+                text-align: center;
             }
         }
 
-        @media (min-width:1400px) {
+        @media (min-width:776px) {
             .main .container .togglebtn{
                 display: none;
             }
             .main .container .menubar{
-                display: block; 
+                display: flex; 
+                text-align: center;
             }
             .main .container .anchor{
                 display: block;
             }
 
-        }
-        
+        }   
 
     </style>
 </head>
+
+
 <body>
     <section class="main">
         <div class="container">

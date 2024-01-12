@@ -10,39 +10,14 @@
         *{
             margin: 0;
             padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
         header{
             position: fixed;
             top: 0;
             width: 100%;
         }
-        
-        .main .menu{
-            height: 400px;
-            width: 200px;
-            background-color: rgb(15, 90, 151);
-            color: beige;
-            display: none;
-        }
-        .menu .crossbtn{
-            height: 30px;
-            width: 30px;
-            font-size: 20px;
-            cursor: pointer;
-            background-color: white;
-            border: none;
-        }
-        ul{ 
-            display: grid;
-            gap: 20px;
-            list-style: none;
-            padding: 20px;
-        }
-        img{
-            height: 624px;
-            width: 100%;
-        }
-        .main .tbtn{
+        header .main .togglebtn .tbtn{
             height: 45px;
             width: 38px;
             background-color: transparent;
@@ -51,10 +26,66 @@
             cursor: pointer;
         }
         
+        header .main .menu{
+            height: 400px;
+            width: 200px;
+            background-color: rgb(15, 90, 151);
+            color: beige;
+            display: none;
+        }
+        header .main .menu .crossbtn{
+            height: 30px;
+            width: 30px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: white;
+            border: none;
+        }
+        header .main .menu ul{ 
+            display: grid;
+            gap: 20px;
+            list-style: none;
+            padding: 20px;
+        }
+        img{
+            height: 621px;
+            width: 100%;
+        }
         
-           
+        /* ================ New class =========== */
+
+        header .main .newmenu{
+            height: 400px;
+            width: 200px;
+            background-color: rgb(15, 90, 151);
+            color: beige;
+            display: block;
+            /* transition: 0.5s ease-in-out; */
+        }
+        header .main .newmenu .crossbtn{
+            height: 30px;
+            width: 30px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: white;
+            border: none;
+        }
+        header .main .newmenu ul{ 
+            display: grid;
+            gap: 20px;
+            list-style: none;
+            padding: 20px;
+        }  
+        header .main .newmenu a{ 
+            color: white;
+            text-decoration: none;       
+        }   
+
+ 
     </style>
 </head>
+
+
 <body>
     <header>
         <section class="main">
@@ -69,13 +100,13 @@
                     <span class="fa-solid fa-xmark" id="cross"></span>
                 </button>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                    <li>Services</li>
-                    <li>Pages</li>
-                    <li>Registration</li>
-                    <li>Login</li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Pages</a></li>
+                    <li><a href="">Registration</a></li>
+                    <li><a href="">Login</a></li>
                 </ul>
             </div>    
         </section>
@@ -88,17 +119,18 @@
     <script>
       
      //target element => menu class
-     //perform element => togglebtn
+     //perform element => tbtn
 
        //create a varible
        let btn = document.querySelector(".tbtn")
        let menu = document.querySelector(".menu")
-       
+             
        btn.addEventListener("click",function(){
-       main.classList.add("menu")
+       menu.classList.toggle("newmenu")
+     })
 
-      })
-       
+    
+
     </script>
 </body>
 </html>
