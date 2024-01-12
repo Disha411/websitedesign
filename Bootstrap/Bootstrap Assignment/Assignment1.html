@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header .topheader{
+            background-color: rgb(41, 40, 40);
+        }
+        header .topheader .container-fluid .menubar a{
+            color: rgb(151, 150, 150);
+            text-decoration: none;
+        }
+        header .topheader .container-fluid .menubar a:hover{
+            color: white;
+        }
+
+        input[type="text"]{
+            height: 30px;
+            width: 280px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="topheader">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="menubar d-flex gap-3">
+                            <div><a href="">Carousel</a></div>
+                            <div><a href="">Home</a></div>
+                            <div><a href="">Link</a></div>
+                            <div><a href="">Disabled</a></div>
+                        </div>
+                    </div>
+                    <div class="col-6 d-flex gap-2 justify-content-end">
+                        <input type="text" placeholder="Search" class="form-control m-1">
+                        <button class="btn btn-outline-success">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-secondary">
+            <section class="homepage-slider">
+                <div id="homeSlider" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="banner1 banner">
+                                <div class="container mt-5" style="width: 700px;text-align: right;">
+                                    <p class="h3 text-white">One more for good measure.</p>
+                                    <p class="text-white pb-3 fw-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora quibusdam itaque voluptate animi quis nemo cupiditate rem adipisci sint dicta illo esse in minima earum dolore, explicabo nostrum autem.</p>
+                                    <button class="btn btn-primary">Browse gallery</button>
+                                </div>
+                            </div>
+                        </div>
+                   </div>    
+                    <button class="carousel-control-prev" type="button" data-bs-target="#homeSlider" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#homeSlider" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+        
+        </div>
+  
+        <div class="row d-flex justify-content-center gap-5 mt-5">
+            <div class="card text-center" style="width: 18rem;">
+                <!-- <div class="bg-secondary rounded-circle" style="height:150px; width:150px;" ></div> -->
+            <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top rounded-circle" alt="..." style="height:250px" >
+            <div class="card-body">
+              <h5 class="h2 text-secondary card-title">Heading</h5>
+              <p class="text-secondary card-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum aliquam, officia accusantium odio vero sint voluptates commodi deleniti quibusdam explicabo vitae reprehenderit</p>
+              <a href="#" class="btn btn-secondary">View details <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708"/>
+                <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708"/>
+              </svg></a>
+            </div>
+            </div>
+            <div class="card text-center" style="width: 18rem;">
+                <!-- <div class="bg-secondary rounded-circle" style="height:150px; width:150px;" ></div> -->
+                <img src="https://i.pinimg.com/236x/72/be/42/72be42c1a0988932ea3cc969f4d6f4e7.jpg" class="card-img-top rounded-circle" alt="..." style="height:250px">
+                <div class="card-body">
+                  <h5 class="h2 text-secondary card-title">Heading</h5>
+                  <p class="text-secondary card-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum aliquam, officia accusantium odio vero sint voluptates commodi deleniti quibusdam explicabo vitae reprehenderit</p>
+                  <a href="#" class="btn btn-secondary">View details <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708"/>
+                    <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708"/>
+                  </svg></a>
+                </div>
+            </div>
+            <div class="card text-center" style="width: 18rem;">
+                <!-- <div class="bg-secondary rounded-circle" style="height:150px; width:150px;" ></div> -->
+                <img src="https://i.pinimg.com/originals/23/93/1c/23931cec40eee9526c3d89206070e7af.jpg" class="card-img-top rounded-circle" alt="..." style="height:250px">
+                <div class="card-body">
+                  <h5 class="h2 text-secondary card-title">Heading</h5>
+                  <p class="text-secondary card-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum aliquam, officia accusantium odio vero sint voluptates commodi deleniti quibusdam explicabo vitae reprehenderit</p>
+                  <a href="#" class="btn btn-secondary">View details <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708"/>
+                    <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708"/>
+                  </svg></a>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <div class="card mb-3 " style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-8">
+                    <div class="text-secondary card-body">
+                      <h5 class="card-title">First featurette heading.It'll blow your mind.</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias harum eos nesciunt nam? Dolore repellat velit qui aut ipsa </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://iso.500px.com/wp-content/uploads/2019/11/Man-doing-postproduction-of-his-photos-on-laptop-at-night-By-Carina-Konig-1500x1000.jpg" class="img-fluid rounded-start" alt="...">
+                      </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <div>
+            <div class="card mb-3 " style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                      <img src="https://enwpgo.files.wordpress.com/2018/01/a0359-509005.jpg?w=900" class="img-fluid  rounded-start" alt="...">
+                    </div>
+                  <div class="col-md-8">
+                    <div class="text-secondary card-body">
+                      <h5 class="card-title">Oh yeah,it's that good.See for yourself.</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias harum eos nesciunt nam? Dolore repellat velit qui aut ipsa </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <div>
+            <div class="card mb-3 " style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-8">
+                    <div class="text-secondary card-body">
+                      <h5 class="card-title">And lastly,this one.Checkmate.</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias harum eos nesciunt nam? Dolore repellat velit qui aut ipsa </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://www.shutterstock.com/image-photo/concept-antibribery-corruption-businessmen-refuse-260nw-1752878927.jpg" class="img-fluid rounded-start" alt="...">
+                      </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </header>
+</body>
+</html>
