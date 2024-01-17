@@ -9,7 +9,7 @@
     background-size: cover;
     clip-path: polygon(-312% 0%, 50% 91%, 353% 0%);
     position: relative;
-    z-index: 1;
+    z-index: 1; 
     padding-bottom: 150px;
 }
 .main .index::after{
