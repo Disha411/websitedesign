@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+         }
+        .main .index img{
+            position: relative;
+            width: 100%;
+        }
+        .main .index .text{
+            position: absolute;
+            top: 325px;
+            left: 259px;
+        }
+        .main .index .text p{
+            background-color: rgb(24, 22, 22);
+            color: white;
+            font-size: 35px;
+            letter-spacing: 10px;
+            font-weight: light;
+        }
+        
+        .main .index .header{
+            display: flex;
+            position: fixed;
+            top: 0;
+            background-color: transparent;
+            box-shadow: 0px 0px 21px black;
+        }
+        .main .index .header .menubar ul{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            list-style-type: none ;
+        }
+        .main .index .header .menubar ul li a{
+            text-decoration: none;
+            color: rgb(85, 80, 80);
+        }
+        .main .index .header .searchbar{
+            color:rgb(85, 80, 80) ; 
+            display: flex;
+            /* justify-content: space-between; */
+            /* align-items: center; */
+        }
+        .main .index .header .searchbar:hover{
+            color: white;
+            background-color: red;
+        }
+        .index2 h2{
+            margin-top: 100px;
+            margin-left: 425px;
+            font-weight: lighter;
+            color: rgb(145, 145, 145);
+        }
+        .index2 p{
+            color: rgb(145, 145, 145);
+        }
+        .index2 .p1{
+            margin: 23px 415px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+        }
+        .index2 .p2{
+            font-size: 15px;
+            align-items: center;
+            margin: 0px 15px;
+            line-height: 25px;
+        }
+        .index3{
+            margin-top: 60px;
+            display: flex;
+        }
+        .index3 .bio{
+            flex: 1;
+            color: rgb(85, 80, 80);
+        }
+        .index3 .bio .p3{
+            text-align: center;
+        }
+        .index3 .info{
+            flex: 1;
+            color: rgb(145, 145, 145);
+        }
+        .index3 .image2{
+            height: 340px;
+            width: 425px;
+            margin: 35px 30px;
+        }
+        .p4{
+            line-height: 27px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <section class="main">
+        <div class="index">
+            <img src="images/image1.jpg" alt="">
+            <div class="text">
+                <p>MY WEBSITE LOGO</p>
+            </div>
+            
+            <div class="header">
+                <div class="menubar">
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href=""><i class="fa-solid fa-user"></i>ABOUT</a></li>
+                        <li><a href=""><i class="fa fa-th"></i>PORTFOLIO</a></li>
+                        <li><a href=""><i class="fa-solid fa-envelope"></i>CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="searchbar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="index2">
+        <h2>ABOUT ME</h2>
+        <p class="p1"><i>I love photography</i></p>
+        <p class="p2">We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </section>
+
+    <section class="index3">
+        <div class="bio">
+            <p class="p3"><i class="fa-solid fa-user"></i> My Name</p>
+            <img src="images/image2.avif" alt="" class="image2">
+        </div>
+        <div class="info">
+            <p class="p4">Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </section>
+
+</body>
+</html>
