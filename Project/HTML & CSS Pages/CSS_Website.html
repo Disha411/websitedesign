@@ -12,15 +12,7 @@
             padding: 0;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
          }
-        .main .index img{
-            position: relative;
-            width: 100%;
-        }
-        .main .index .text{
-            position: absolute;
-            top: 325px;
-            left: 259px;
-        }
+        
         .main .index .text p{
             background-color: rgb(24, 22, 22);
             color: white;
@@ -30,11 +22,16 @@
         }
         
         .main .index .header{
+            align-items: center;
+            padding-left: 10px;
             display: flex;
             position: fixed;
             top: 0;
             background-color: transparent;
             box-shadow: 0px 0px 21px black;
+            width: 100%;
+            justify-content: space-between;
+            z-index: 10;
         }
         .main .index .header .menubar ul{
             display: flex;
@@ -42,22 +39,47 @@
             align-items: center;
             list-style-type: none ;
         }
+        .main .index .header .menubar .list:hover{
+            background-color: rgb(173, 167, 167);
+        }
         .main .index .header .menubar ul li a{
             text-decoration: none;
             color: rgb(85, 80, 80);
         }
         .main .index .header .searchbar{
             color:rgb(85, 80, 80) ; 
+            cursor: pointer;
             display: flex;
-            /* justify-content: space-between; */
-            /* align-items: center; */
         }
-        .main .index .header .searchbar:hover{
+        .main .index .header .searchbar .searchbaricon{
+            height: 25px;
+            width: 25px;
+            text-align: center;
+            padding: 10px;
+            margin-right: 5px;
+        }
+        .main .index .header .searchbar .searchbaricon:hover{
             color: white;
             background-color: red;
         }
+
+        .imagepart .image1{
+            padding-top: 765px;
+            background: url(images/image1.jpg) no-repeat center;
+            background-size: cover;
+        }
+        .imagepart .text{
+            position: absolute;
+            top: 325px; 
+            left: 259px;
+            background-color: black;
+            color: white;
+            letter-spacing: 10px;
+            font-size: 30px;
+            padding: 10px;
+        }
         .index2 h2{
-            margin-top: 100px;
+            margin-top: 70px;
             margin-left: 425px;
             font-weight: lighter;
             color: rgb(145, 145, 145);
@@ -94,38 +116,189 @@
             height: 340px;
             width: 425px;
             margin: 35px 30px;
+            opacity: 0.7;
         }
-        .p4{
+        .index3 .info .p4{
             line-height: 27px;
         }
-
-
+        .index4 .p5{
+            color: rgb(145, 145, 145);
+            text-align: center;
+        }
+        .index4 .photography{
+            color: rgb(145, 145, 145);
+            letter-spacing: 10px;
+        }
+        .index4 .Webdesign{
+            color: rgb(145, 145, 145);
+            letter-spacing: 10px;
+        }
+        .index4 .photoshop{
+            color: rgb(145, 145, 145);
+            letter-spacing: 10px;            
+        }
+        .index4 .divp{
+            height: 35px;
+            width: 100%;
+            margin: 15px;
+            color: white;
+            text-align: center;
+            letter-spacing: normal;
+            background-color: rgb(235, 235, 235);
+            border: 1px solid rgb(218, 218, 218);
+        }
+        .index4 .innerDiv1{
+            width: 90%;
+            height: 35px;
+            background-color: gray;
+        }
+        .index4 .innerDiv2{
+            width: 85%;
+            height: 35px;
+            background-color: gray;
+        }
+        .index4 .innerDiv3{
+            width: 75%;
+            height: 35px;
+            background-color: gray;
+        }
+        
+        .index4 .work .workdiv1{
+            margin-top: 90px;
+            height: 100px;
+            background-color: gray;
+            color: white;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            font-size: 20px;
+            text-align: center;
+            padding-top: 35px;
+        }
+        .index4 .work .workdiv2 .portfolioimage{
+            padding-top: 200px;
+            padding-bottom: 200px;
+            background: url(images/image3.avif) no-repeat center;
+            background-size: cover;
+            position: relative;
+            z-index: 1;
+        }
+        .index4 .work .workdiv2 .portfolioimage::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: gray;
+            opacity: 0.5;
+            z-index: -1;
+        }
+        .index4 .work .workdiv2 .portfoliotext{
+            position: absolute;
+            color: white;
+            letter-spacing: 10px;
+            font-size: 30px;
+            left: 370px;
+        }
+        .index5 .p1i5{
+            margin-top: 70px;
+            font-size: 25px;
+            text-align: center;
+            color: rgb(145, 145, 145)
+        }
+        .index5 .p2i5{
+            color: rgb(145, 145, 145);
+            text-align: center;
+            margin: 32px;
+            font-size: 15px;
+            line-height: 25px;
+        }
+        .index5 .imageGallery{
+            margin: 10px 25px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+        }
+        .index5 .imageGallery .gallery{
+            height: 150px;
+            width: 225px;            
+        }
+        .index5 .imageGallery .gallery:hover{
+            opacity: 0.5;
+        }
+        .index5 .btn{
+            text-align: center;
+        }
+        .index5 .btn .btn1{
+            margin-top: 40px;
+            margin-bottom: 40px;
+            height: 45px;
+            width: 110px;
+            font-size: 15px;
+            border: 1px solid #f3f3f3;
+            background-color: #f3f3f3;
+        }
+        .index5 .btn .btn1:hover{
+            border-color: grey;
+            background-color: grey;
+        }
+        .index5 .Contactimg .contactimage{
+            background: url(images/image4.webp) no-repeat center;
+            background-size: cover;
+            padding-top: 200px;
+            padding-bottom: 200px;
+            position: relative;
+            z-index: 1;
+        }
+        .index5 .Contactimg .contactimage::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: gray;
+            opacity: 0.5;
+            z-index: -1;
+        }
+        .index5 .Contactimg .contactimage .contact_text{
+            position: absolute;
+            color: white;
+            letter-spacing: 10px;
+            font-size: 30px;
+            left: 435px;
+        }
     </style>
 
 </head>
 <body>
     <section class="main">
-        <div class="index">
-            <img src="images/image1.jpg" alt="">
-            <div class="text">
-                <p>MY WEBSITE LOGO</p>
-            </div>
-            
+        <div class="index">            
             <div class="header">
                 <div class="menubar">
                     <ul>
-                        <li><a href="">HOME</a></li>
-                        <li><a href=""><i class="fa-solid fa-user"></i>ABOUT</a></li>
-                        <li><a href=""><i class="fa fa-th"></i>PORTFOLIO</a></li>
-                        <li><a href=""><i class="fa-solid fa-envelope"></i>CONTACT</a></li>
+                        <li class="list"><a href="">HOME</a></li>
+                        <li class="list"><a href=""><i class="fa-solid fa-user"></i>ABOUT</a></li>
+                        <li class="list"><a href=""><i class="fa fa-th"></i>PORTFOLIO</a></li>
+                        <li class="list"><a href=""><i class="fa-solid fa-envelope"></i>CONTACT</a></li>
                     </ul>
                 </div>
                 <div class="searchbar">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <div class="searchbaricon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>    
                 </div>
             </div>
+        </div>   
         </div>
-        
+    </section>
+
+    <section class="imagepart">
+        <div class="image1">
+            <div class="text">
+                <p>MY WEBSITE LOGO</p>
+            </div>
+        </div>
     </section>
 
     <section class="index2">
@@ -141,6 +314,78 @@
         </div>
         <div class="info">
             <p class="p4">Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </section>
+
+    <section class="index4">
+        <p class="p5">Im really good at:</p>
+        <div class="photography">
+            <p><i class="fa-solid fa-camera"></i>Photography</p>
+            <div class="divp">
+                <div class="innerDiv1">90%</div>
+            </div>
+        </div>
+        <div class="Webdesign">
+            <p><i class="fa-solid fa-laptop"></i>Web Design</p>
+            <div class="divp">
+                <div class="innerDiv2">85%</div>
+            </div>    
+        </div>
+        <div class="photoshop">
+            <p><i class="fa-regular fa-image"></i>Photoshop</p>
+            <div class="divp">
+                <div class="innerDiv3">75%</div>
+            </div>
+        </div>
+
+
+        <div class="work">
+            <div class="workdiv1">
+                <div>14<i class="fa-solid fa-plus"></i>
+                    <div>Partners</div>
+                </div>
+                <div>55<i class="fa-solid fa-plus"></i>
+                    <div>Projects Done</div>
+                </div>
+                <div>89<i class="fa-solid fa-plus"></i>
+                    <div>Happy Clients</div>
+                </div>
+                <div>150<i class="fa-solid fa-plus"></i>
+                    <div>Meetings</div>
+                </div>                
+            </div>
+
+            <div class="workdiv2">
+                <div class="portfolioimage">
+                    <p class="portfoliotext">PORTFOLIO</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="index5">
+        <p class="p1i5">MY WORK</p>
+        <P class="p2i5"><i>Here are some of my latest lorem work ipsum tipsum.<br>Click on the images to make them bigger</i></P>
+
+        <div class="imageGallery">
+            <div><img src="images/g1.jpg" class="gallery" alt=""></div>
+            <div><img src="images/g2.jpg" class="gallery" alt=""></div>
+            <div><img src="images/g3.jpg" class="gallery" alt=""></div>
+            <div><img src="images/g4.jpg" class="gallery" alt=""></div>
+            <div><img src="images/g5.jpg" class="gallery" alt=""></div>
+            <div><img src="images/g6.jpg" class="gallery" alt=""></div>
+            <div><img src="images/g7.jpg" class="gallery" alt=""></div>
+            <div><img src="images/g8.jpg" class="gallery" alt=""></div>
+        </div>
+
+        <div class="btn">
+            <button class="btn1">LOAD MORE</button>
+        </div>
+
+        <div class="Contactimg">
+            <div class="contactimage">
+                <p class="contact_text">CONTACT</p>
+            </div>
         </div>
     </section>
 
