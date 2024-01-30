@@ -5,367 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-         }
-        
-        .main .index .text p{
-            background-color: rgb(24, 22, 22);
-            color: white;
-            font-size: 35px;
-            letter-spacing: 10px;
-            font-weight: light;
-        }
-        
-        .main .index .header{
-            align-items: center;
-            padding-left: 10px;
-            display: flex;
-            position: fixed;
-            top: 0;
-            background-color: white;
-            box-shadow: 0px 0px 21px black;
-            width: 100%;
-            justify-content: space-between;
-            z-index: 10;
-        }
-        .main .index .header .menubar ul{
-            display: flex;
-            gap: 20px;
-            align-items: center;
-            list-style-type: none ;
-        }
-        .main .index .header .menubar .list:hover{
-            background-color: rgb(173, 167, 167);
-        }
-        .main .index .header .menubar ul li a{
-            text-decoration: none;
-            color: rgb(85, 80, 80);
-        }
-        .main .index .header .searchbar{
-            color:rgb(85, 80, 80) ; 
-            cursor: pointer;
-            display: flex;
-        }
-        .main .index .header .searchbar .searchbaricon{
-            height: 25px;
-            width: 25px;
-            text-align: center;
-            padding: 10px;
-            margin-right: 5px;
-        }
-        .main .index .header .searchbar .searchbaricon:hover{
-            color: white;
-            background-color: red;
-        }
-
-        .imagepart .image1{
-            padding-top: 765px;
-            background: url(images/image1.jpg) no-repeat center;
-            background-size: cover;
-        }
-        .imagepart .text{
-            position: absolute;
-            top: 325px; 
-            left: 259px;
-            background-color: black;
-            color: white;
-            letter-spacing: 10px;
-            font-size: 30px;
-            padding: 10px;
-        }
-        .index2 h2{
-            margin-top: 70px;
-            margin-left: 425px;
-            font-weight: lighter;
-            color: rgb(145, 145, 145);
-        }
-        .index2 p{
-            color: rgb(145, 145, 145);
-        }
-        .index2 .p1{
-            margin: 23px 415px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-        }
-        .index2 .p2{
-            font-size: 15px;
-            align-items: center;
-            margin: 0px 15px;
-            line-height: 25px;
-        }
-        .index3{
-            margin-top: 60px;
-            display: flex;
-        }
-        .index3 .bio{
-            flex: 1;
-            color: rgb(85, 80, 80);
-        }
-        .index3 .bio .p3{
-            text-align: center;
-        }
-        .index3 .info{
-            flex: 1;
-            color: rgb(145, 145, 145);
-        }
-        .index3 .image2{
-            height: 340px;
-            width: 425px;
-            margin: 35px 30px;
-            opacity: 0.7;
-        }
-        .index3 .info .p4{
-            line-height: 27px;
-        }
-        .index4 .p5{
-            color: rgb(145, 145, 145);
-            text-align: center;
-        }
-        .index4 .photography{
-            color: rgb(145, 145, 145);
-            letter-spacing: 10px;
-        }
-        .index4 .Webdesign{
-            color: rgb(145, 145, 145);
-            letter-spacing: 10px;
-        }
-        .index4 .photoshop{
-            color: rgb(145, 145, 145);
-            letter-spacing: 10px;            
-        }
-        .index4 .divp{
-            height: 35px;
-            width: 100%;
-            margin: 15px;
-            color: white;
-            text-align: center;
-            letter-spacing: normal;
-            background-color: rgb(235, 235, 235);
-            border: 1px solid rgb(218, 218, 218);
-        }
-        .index4 .innerDiv1{
-            width: 90%;
-            height: 35px;
-            background-color: gray;
-        }
-        .index4 .innerDiv2{
-            width: 85%;
-            height: 35px;
-            background-color: gray;
-        }
-        .index4 .innerDiv3{
-            width: 75%;
-            height: 35px;
-            background-color: gray;
-        }
-        
-        .index4 .work .workdiv1{
-            margin-top: 90px;
-            height: 100px;
-            background-color: gray;
-            color: white;
-            display: grid;
-            grid-template-columns: repeat(4,1fr);
-            font-size: 20px;
-            text-align: center;
-            padding-top: 35px;
-        }
-        .index4 .work .workdiv2 .portfolioimage{
-            padding-top: 200px;
-            padding-bottom: 200px;
-            background: url(images/image3.avif) no-repeat center;
-            background-size: cover;
-            position: relative;
-            z-index: 1;
-        }
-        .index4 .work .workdiv2 .portfolioimage::after{
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            background-color: gray;
-            opacity: 0.5;
-            z-index: -1;
-        }
-        .index4 .work .workdiv2 .portfoliotext{
-            position: absolute;
-            color: white;
-            letter-spacing: 10px;
-            font-size: 30px;
-            left: 370px;
-        }
-        .index5 .p1i5{
-            margin-top: 70px;
-            font-size: 25px;
-            text-align: center;
-            color: rgb(145, 145, 145)
-        }
-        .index5 .p2i5{
-            color: rgb(145, 145, 145);
-            text-align: center;
-            margin: 32px;
-            font-size: 15px;
-            line-height: 25px;
-        }
-        .index5 .imageGallery{
-            margin: 10px 25px;
-            display: grid;
-            grid-template-columns: repeat(4,1fr);
-            gap: 10px;
-        }
-        .index5 .imageGallery .gallery{
-            height: 150px;
-            width: 225px;            
-        }
-        .index5 .imageGallery .gallery:hover{
-            opacity: 0.5;
-        }
-        .index5 .btn{
-            text-align: center;
-        }
-        .index5 .btn .btn1{
-            margin-top: 40px;
-            margin-bottom: 40px;
-            height: 45px;
-            width: 110px;
-            font-size: 15px;
-            border: 1px solid #f3f3f3;
-            background-color: #f3f3f3;
-        }
-        .index5 .btn .btn1:hover{
-            border-color: grey;
-            background-color: grey;
-        }
-        .index5 .Contactimg .contactimage{
-            background: url(images/image4.webp) no-repeat center;
-            background-size: cover;
-            padding-top: 200px;
-            padding-bottom: 200px;
-            position: relative;
-            z-index: 1;
-        }
-        .index5 .Contactimg .contactimage::after{
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            background-color: gray;
-            opacity: 0.5;
-            z-index: -1;
-        }
-        .index5 .Contactimg .contactimage .contact_text{
-            position: absolute;
-            color: white;
-            letter-spacing: 10px;
-            font-size: 30px;
-            left: 435px;
-        }
-        .index6{
-            padding-bottom: 90px;
-        }
-        .index6 .p1i6{
-            margin-top: 70px;
-            font-size: 23px;
-            text-align: center;
-            color: rgb(145, 145, 145);
-        }
-        .index6 .p2i6{
-            color: rgb(145, 145, 145);
-            text-align: center;
-            margin: 28px;
-            font-size: 14px;
-        }
-        .index6 .details{
-            display: flex;
-        }
-        .index6 .details .map{
-            margin: 0px 45px;
-        }
-        .index6 .details .map .mapimg{
-            height: 185px;
-            width: 300px;
-            border-radius: 4%;
-        }
-        .index6 .details1{
-            color: rgb(145, 145, 145);
-        }
-        .index6 .details1 .input1{
-            height: 35px;
-            width: 245px;
-            border: 1px solid rgb(173, 167, 167);
-        }
-        .index6 .details1 .input2{
-            height: 35px;
-            width: 498px;
-            border: 1px solid rgb(173, 167, 167);
-        }
-        .index6 .details1 .i6btn{
-            height: 43px;
-            width: 160px;
-            background-color: black;
-            color: white;
-            font-size: 15px;
-        }
-        .index6 .details1 .i6btn:hover{
-            background-color: grey;
-            border: 1px solid grey;
-            color: black;
-        }
-        .footer{
-            background-color: gray;
-            padding: 100px 50px;
-            text-align: center;
-        }
-        .footer:hover{
-           background-color: black;
-           color: black;
-        }
-        
-        .footer .footerclass .footerbtn{
-            height: 40px;
-            width: 120px;
-            font-size: 14px;
-            background-color: rgb(248, 247, 247);
-            border: 1px solid rgb(248, 247, 247);
-            color: gray;
-        }
-        .footer .footerclass .footerbtn:hover{
-            background-color: grey;
-            color: black;
-            border: 1px solid grey;
-        }
-        .footer .footerclass .icons{
-            margin-top: 20px;
-            display: flex;
-            gap: 5px;
-            justify-content: center;
-            font-size: 24px;
-            color: rgb(248, 247, 247);
-        }
-        .footer .footerclass .icons .ficon:hover{
-            color: grey;            
-        }
-
-    </style>
 </head>
 <body>
-    <section class="main">
+    <section class="main" id="home">
         <div class="index">            
             <div class="header">
                 <div class="menubar">
                     <ul>
                         <li class="list"><a href="">HOME</a></li>
-                        <li class="list"><a href=""><i class="fa-solid fa-user"></i>ABOUT</a></li>
-                        <li class="list"><a href=""><i class="fa fa-th"></i>PORTFOLIO</a></li>
-                        <li class="list"><a href=""><i class="fa-solid fa-envelope"></i>CONTACT</a></li>
+                        <li class="list"><a href="#aboutme"><i class="fa-solid fa-user"></i>ABOUT</a></li>
+                        <li class="list"><a href="#portfolio"><i class="fa fa-th"></i>PORTFOLIO</a></li>
+                        <li class="list"><a href="#workdetail"><i class="fa-solid fa-envelope"></i>CONTACT</a></li>
                     </ul>
                 </div>
                 <div class="searchbar">
@@ -386,7 +38,7 @@
         </div>
     </section>
 
-    <section class="index2">
+    <section class="index2" id="aboutme">
         <h2>ABOUT ME</h2>
         <p class="p1"><i>I love photography</i></p>
         <p class="p2">We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -448,7 +100,7 @@
         </div>
     </section>
     
-    <section class="index5">
+    <section class="index5" id="portfolio">
         <p class="p1i5">MY WORK</p>
         <P class="p2i5"><i>Here are some of my latest lorem work ipsum tipsum.<br>Click on the images to make them bigger</i></P>
 
@@ -474,7 +126,7 @@
         </div>
     </section>
 
-    <section class="index6">
+    <section class="index6" id="workdetail">
         <p class="p1i6">WHERE I WORK</p>
         <p class="p2i6"><i>I'd love your feedback!</i></p>
         <div class="details">
@@ -486,17 +138,19 @@
                 <p class="pi6"><i class="fa-solid fa-phone"></i>Phone: +00 151515</p>
                 <p class="pi6"><i class="fa-solid fa-envelope"></i>Email: mail@mail.com</p>
                 <p class="pi6">Swing by for a cup of <i class="fa-solid fa-mug-saucer"></i>, or leave me a note:</p>
-                <input type="text" placeholder="Name" class="input1">
-                <input type="text" placeholder="Email" class="input1">
-                <input type="text" placeholder="Message" class="input2">
-                <button class="i6btn"><i class="fa-solid fa-paper-plane"></i>SEND MESSAGE</button>
+                <div>
+                    <input type="text" placeholder="Name" class="input1">
+                    <input type="text" placeholder="Email" class="input1">
+                    <input type="text" placeholder="Message" class="input2">
+                    <button class="i6btn"><i class="fa-solid fa-paper-plane"></i>SEND MESSAGE</button>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="footer">
         <div class="footerclass">
-            <button class="footerbtn"><i class="fa-solid fa-arrow-up"></i>To the top</button>
+            <a href="#home"><button class="footerbtn"><i class="fa-solid fa-arrow-up"></i>To the top</button></a>
             <div class="icons">
                 <div class="ficon"><i class="fa-brands fa-square-facebook"></i></div>
                 <div class="ficon"><i class="fa-brands fa-instagram"></i></div>
@@ -508,5 +162,10 @@
         </div>
     </section>
 
+
+
+<script>
+    
+</script>
 </body>
 </html>
