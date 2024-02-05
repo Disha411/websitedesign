@@ -4,14 +4,6 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
  }
 
-.main .index .text p{
-    background-color: rgb(24, 22, 22);
-    color: white;
-    font-size: 35px;
-    letter-spacing: 10px;
-    font-weight: light;
-}
-
 .main .index .header{
     align-items: center;
     padding-left: 10px;
@@ -24,7 +16,7 @@
     justify-content: space-between;
     z-index: 10;
 }
-.main .index .header .menubar ul{
+.main .index .header .menubar .ul{
     display: flex;
     gap: 20px;
     align-items: center;
@@ -33,7 +25,7 @@
 .main .index .header .menubar .list:hover{
     background-color: rgb(173, 167, 167);
 }
-.main .index .header .menubar ul li a{
+.main .index .header .menubar .ul li a{
     text-decoration: none;
     color: rgb(85, 80, 80);
 }
@@ -52,6 +44,19 @@
 .main .index .header .searchbar .searchbaricon:hover{
     color: white;
     background-color: red;
+}
+.main .index .togglebtn{
+    display: none;
+    text-align: end;
+}
+.main .index .togglebtn .tbtn{
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    font-size: 25px;
+    font-weight: lighter;
+    border-radius: 12%;
+    cursor: pointer;   
 }
 
 .imagepart .image1{
@@ -131,7 +136,7 @@
 .index4 .divp{
     height: 35px;
     width: 100%;
-    margin: 15px;
+    margin: 15px 20px;
     color: white;
     text-align: center;
     letter-spacing: normal;
@@ -353,8 +358,77 @@
 }
 
 
+/* ======== creating replacing class to show menubar ============ */
+/* ======== which is not include in html structure ============== */
+.main .index .newheader{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color:rgb(173, 167, 167);
+    position: absolute;
+    top: 35px; 
+}
+
+
 
 /* ========================================= */
 @media(max-width:576px) {
-    
+    .main .index .header{
+        display: none;
+    }
+    .main .index .togglebtn{
+        display: block;
+    }
+    .main .index .newheader{
+        display: flex;
+        flex-direction: column;
+    }
+    .main .index .newheader .ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .imagepart .text{
+        position: absolute;
+        top: 355px; 
+        left: 130px;
+        font-size: 15px;
+    }
+    .index2 h2{
+        margin-left: 225px;
+    }
+    .index2 .p1{
+        margin: 23px 194px;
+    }
+    .index3 .image2{
+        width: 225px;
+    }
+    .index4 .work .workdiv1{
+        gap: 8px;
+    }
+    .index4 .work .workdiv2 .portfoliotext{
+        left: 170px;
+    }
+    .index5 .imageGallery {
+        grid-template-columns: repeat(3,1fr);
+    }
+    .index5 .imageGallery .gallery{
+        width: 175px;            
+    }
+    .index5 .Contactimg .contactimage .contact_text {
+        left: 235px;
+    }
+    .index6 .details .map .mapimg {
+        height: 135px;
+        width: 220px;
+    }
+    .index6 .details .details1{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .index6 .details1 .input1 {
+        width: 230px;
+        margin-bottom: 5px;
+    }
+    .index6 .details1 .input2 {
+        width: 230px;
+    }
 }

@@ -13,7 +13,7 @@
         <div class="index">            
             <div class="header">
                 <div class="menubar">
-                    <ul>
+                    <ul class="ul">
                         <li class="list"><a href="">HOME</a></li>
                         <li class="list"><a href="#aboutme"><i class="fa-solid fa-user"></i>ABOUT</a></li>
                         <li class="list"><a href="#portfolio"><i class="fa fa-th"></i>PORTFOLIO</a></li>
@@ -25,6 +25,11 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>    
                 </div>
+            </div>
+            <div class="togglebtn">
+                <button class="tbtn" >
+                    <i class="fa-solid fa-chart-simple" id="icon"></i>
+                </button>
             </div>
         </div>   
         </div>
@@ -168,7 +173,27 @@
 
 
 <script>
+    //target element => header class
+    //Perform elemnt => tbtn
+
+    //create a varible
+
+    let btn = document.querySelector(".tbtn")
+    let menu = document.querySelector(".header")
+    let i = document.getElementById("icon")
+    btn.addEventListener("click",function(){
+        menu.classList.toggle("newheader")
+
+    if (menu.classList.contains("newheader") == true) {
+        i.classList.remove("fa-chart-simple")
+        i.classList.add("fa-xmark")
+    } else {
+        i.classList.remove("fa-xmark")
+        i.classList.add("fa-chart-simple")
+    }
+    })
     
 </script>
+
 </body>
 </html>
