@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="setDiv()">click to set div</button>
+    <div class="div1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam magnam consequuntur dignissimos obcaecati
+        quae perspiciatis sunt commodi, doloribus illo asperiores quasi, vitae reiciendis iste culpa ducimus,
+        repudiandae blanditiis at officia!
+    </div>
+
+    <script>
+        function setDiv() {
+            // document.body.style.height
+            let d = document.querySelector(".div1");
+            d.style.height = "auto"
+            d.style.width = "300px"
+            d.style.border = "2px solid black"
+            d.style.backgroundColor = "pink"
+            d.style.padding = "20px"
+            d.style.margin = "50px"
+            d.style.fontFamily = "Arial"
+        }
+    </script>
+</body>
+
+</html>

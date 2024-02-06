@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* create a class for js
+           create a class which is not include in html structure.
+        */
+        .head1 {
+            font-size: 40px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: red;
+            letter-spacing: 4px;
+            background-color: lightsalmon;
+        }
+
+        .head2 {
+            font-size: 50px;
+            color: blue;
+            background-color: pink;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="addClass()">Add Function</button>
+    <button onclick="removeClass()">Remove Function</button>
+    <button onclick="toggleClass()">Toggle Function</button>
+    <hr>
+
+    <h1 class="heading1">Hello User</h1>
+    <h1 class="heading2">Hello User</h1>
+
+    <script>
+        function addClass() {
+            // let hd = document.getElementById("heading1")
+            let hd = document.querySelector(".heading1")
+            hd.classList.add("head1")
+        }
+        function removeClass() {
+            // let hd = document.getElementById("heading1")
+            let hd = document.querySelector(".heading1")
+            hd.classList.remove("head1")
+        }
+        function toggleClass() {
+            // let hd = document.getElementById("heading2")
+            let hd = document.querySelector(".heading2")
+            hd.classList.toggle("head2")
+        }
+    </script>
+</body>
+
+</html>

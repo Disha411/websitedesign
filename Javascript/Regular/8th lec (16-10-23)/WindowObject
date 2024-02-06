@@ -1,0 +1,17 @@
+BOM = Browser Object Model 
+DOM = Document Object Model
+
+DOM is a part of BOM.
+
+4 type of window object :
+(1) window object 
+    alert(), prompt(), confirm(), open(), close() 
+
+    alert(), prompt(), confirm() = also called as popup boxes.
+    
+(2) history object 
+    back(), go(), forward()
+
+(3) navigator object 
+(4) screen object 
+    = given only properties 
