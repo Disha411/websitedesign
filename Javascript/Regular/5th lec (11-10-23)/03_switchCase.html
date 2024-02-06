@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- arithmetic operations -->
+    <script>
+        var selNum = "Multiplication";
+        var a = 45, b = 35, res;
+        document.write("You select : " + selNum)
+        document.write("<br>=================== <br>")
+        switch (selNum) {
+            case "addition":
+                res = a + b;
+                document.write("Addition is " + res);
+                break;
+            case "substraction":
+                res = a - b;
+                document.write("substraction is " + res);
+                break;
+            case "Multiplication":
+                res = a * b;
+                document.write("Multiplication is " + res);
+                break;    
+            default:
+                document.write("select arithmetic operation")
+                break;
+        }
+    </script>
+</body>
+
+</html>
