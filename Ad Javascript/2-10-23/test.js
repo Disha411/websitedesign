@@ -3,9 +3,9 @@ function print(num1) {
     // return "return data";
 }
 
-// let rerturnMsg = print(10);
-// console.log("-----------  rerturnMsg----------->", rerturnMsg);
-// print();
+let rerturnMsg = print(10);
+console.log("-----------  rerturnMsg----------->", rerturnMsg);
+print();
 
 // const print2 = (no1, no2, no3) => {
 //   console.log("-----------  no1----------->", no1);
