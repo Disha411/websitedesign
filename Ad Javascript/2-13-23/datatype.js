@@ -50,3 +50,8 @@ let userDetails = [
 ];
 
 console.log(userDetails[2].age);
+
+for (let i = 0; i < userDetails.length; i++) {
+  // console.log(userDetails[i]);
+  console.log(`My name is ${userDetails[i].name} & My age is ${userDetails[i].age}. ` );
+}

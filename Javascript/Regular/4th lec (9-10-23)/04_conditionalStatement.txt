@@ -50,7 +50,7 @@ switch(number of case){
     ....
     case N :
         statement
-        break 
+        break;
     default:
         statement:
         break;

@@ -8,4 +8,4 @@ javascript selector :
 
 use two properties to print value in html structure 
 (1) innerHTML 
-(2) innerText
+(2) innerText 

@@ -21,9 +21,3 @@ let productData = {
   console.log(productData.color[1]);
   console.log(productData.category[1]);
   
-
-
-//print title , price, black color, 3g category
-//
-///
-////hduyufv
