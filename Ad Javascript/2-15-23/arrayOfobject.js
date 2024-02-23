@@ -19,6 +19,8 @@ let userDetails = [
     console.log(`my name is ${userDetails[i].name}`);
   }
   
+  // ===================================
+  
   let data = [
     {
       city: "Delhi",

@@ -10,14 +10,28 @@
 // }
 // }
 
-function findMinMax() {
-  let arr = [1, 2, 4, 7, 2, 3, 4];
+// function findMinMax() {
+//   let arr = [1, 2, 4, 7, 2, 3, 4];
 
-  let minValue = Math.min(...arr);
-  let maxValue = Math.max(...arr);
+//   let minValue = Math.min(...arr);
+//   let maxValue = Math.max(...arr);
    
-  console.log("Minimum element is:" + minValue);
-  console.log("Maximum Element is:" + maxValue);
-}
+//   console.log("Minimum element is:" + minValue);
+//   console.log("Maximum Element is:" + maxValue);
+// }
 
-findMinMax()
+// findMinMax()
+
+var arr = [1, 2, 4, 7, 2, 3, 4];
+var max = arr[0];
+let i; 
+
+for (i = 1; i < arr.length; i++) { 
+  if (arr[i] > max) 
+      max = arr[i]; 
+      console.log("big number is:"+max);
+} 
+
+
+
+
