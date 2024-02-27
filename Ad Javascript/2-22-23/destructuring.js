@@ -1,7 +1,69 @@
-data ={brandname : "lenovo", model:"rizen",price : 23400};
+// ===============Object=====================
 
-function laptopdata({brandname,model,price}){
-  
-  console.log(`my laptop name ${brandname} and model is ${model} an price is ${price}`);
+// let obj = {
+//   a: 20,
+//   b: 30,
+// };
+
+// let a = obj.a;
+// let b = obj.b;
+// let { a, c, b } = obj;
+// console.log("-----------  c----------->", c);
+// console.log("-----------  a----------->", a);
+// console.log("-----------  b----------->", b);
+
+
+
+// ================array========================
+
+// let arr = [1, 2, 3];
+
+// let x = arr[0];
+// let y = arr[1];
+// let z = arr[2];
+// let [x, y, z, m] = arr;
+// console.log("-----------  m----------->", m);
+// console.log("-----------  x----------->", x);
+// console.log("-----------  y----------->", y);
+// console.log("-----------  z----------->", z);
+
+function personalData(params) {
+  return {
+    name: "urvish",
+    age: 23,
+    city: "surat",
+  };
 }
-laptopdata(data)
+
+function returnHobby(params) {
+  return ["reading", "traveling"];
+}
+
+function printData(params) {
+  let data = personalData();
+  console.log("-----------  data----------->", data);
+  console.log(`My name is ${data.name}. i'm ${data.age} year old and i live in ${data.city}`
+  );
+}
+
+function printData({ a, b }) {
+  console.log("-----------  a----------->", a);
+  console.log("-----------  b----------->", b);
+//   let { name, city, age } = personalData();
+//   console.log(`My name is ${name}. i'm ${age} year old and i live in ${city}`);
+
+//   let [hob1, hob2] = returnHobby();
+//   console.log(`i have two hobby 1st is ${hob1} and 2nd is ${hob2}`);
+}
+// printData({ a: 20, b: 30 });
+
+
+
+// data ={brandname : "lenovo", model:"rizen",price : 23400};
+
+// function laptopdata({brandname,model,price}){
+  
+//   console.log(`my laptop name ${brandname} and model is ${model} an price is ${price}`);
+// }
+// laptopdata(data)
+// */
