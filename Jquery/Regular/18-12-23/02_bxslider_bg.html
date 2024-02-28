@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bxslider css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .bx-wrapper {
+            background: none;
+            border: none;
+            box-shadow: none;
+        }
+
+        .image1 {
+            background: url(https://img.freepik.com/free-photo/glowing-lines-human-heart-3d-shape-dark-background-generative-ai_191095-1435.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1702771200&semt=ais) no-repeat center;
+            background-size: cover;
+            height: 550px;
+        }
+
+        .image2 {
+            background: url(https://t3.ftcdn.net/jpg/05/62/54/02/360_F_562540214_unXDmpcHlTdImYhQE7dPBXZEWfFyAeeH.jpg) no-repeat center;
+            background-size: cover;
+            height: 550px;
+        }
+
+        .image3 {
+            background: url(https://img.freepik.com/premium-photo/abstract-fantasy-wonderland-springs-flowers-blurry-background-seasoning-floral-generative-ai_106651-6892.jpg) no-repeat center;
+            background-size: cover;
+            height: 550px;
+        }
+
+        .image4 {
+            background: url(https://t3.ftcdn.net/jpg/05/24/43/88/360_F_524438877_PZFzwc5OWJ3MTWQVFfHKwu1DRVMaSgPx.jpg) no-repeat center;
+            background-size: cover;
+            height: 550px;
+        }
+
+        .image {
+            font-size: 40px;
+            color: white;
+            display: grid;
+            place-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="bxslider">
+        <div class="image image1">
+            <h1>Image 1</h1>
+        </div>
+        <div class="image image2">
+            <h1>Image 2</h1>
+        </div>
+        <div class="image image3">
+            <h1>Image 3</h1>
+        </div>
+        <div class="image image4">
+            <h1>Image 4</h1>
+        </div>
+    </div>
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- bxslider js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.bxslider').bxSlider();
+        })
+    </script>
+</body>
+
+</html>

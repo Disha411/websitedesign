@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bxslider css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
+    <style>
+        * {
+            margin: 0;
+        }
+
+        img {
+            height: 550px;
+            width: 100%;
+        }
+
+        .bx-wrapper .bx-pager {
+            bottom: 43px;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            background: rgb(44, 93, 199);
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a.active {
+            background: red;
+        }
+
+        .bx-wrapper {
+            background: none;
+            border: none;
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="bxslider">
+        <div class="image">
+            <img src="https://img.freepik.com/free-photo/glowing-lines-human-heart-3d-shape-dark-background-generative-ai_191095-1435.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1702771200&semt=ais"
+                alt="" title="image1">
+        </div>
+        <div class="image">
+            <img src="https://t3.ftcdn.net/jpg/05/62/54/02/360_F_562540214_unXDmpcHlTdImYhQE7dPBXZEWfFyAeeH.jpg" alt=""
+                title="image 2">
+        </div>
+        <div class="image">
+            <img src="https://img.freepik.com/premium-photo/abstract-fantasy-wonderland-springs-flowers-blurry-background-seasoning-floral-generative-ai_106651-6892.jpg"
+                alt="" title="image 3">
+        </div>
+        <div class="image">
+            <img src="https://t3.ftcdn.net/jpg/05/24/43/88/360_F_524438877_PZFzwc5OWJ3MTWQVFfHKwu1DRVMaSgPx.jpg" alt=""
+                title="image 4">
+        </div>
+    </div>
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- bxslider js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/vendor/jquery.easing.1.3.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.bxslider').bxSlider({
+                mode: "horizontal",
+                speed: 1000,
+                slideMargin: 0,
+                // randomStart: true,
+                // infiniteLoop: false,
+                // hideControlOnEnd: true,
+                easing: "cubic-bezier(1,0,0,1)",
+                captions: true,
+                // pager: true,
+                // pagerType: "short"
+                controls: false,
+                auto: true,
+                pause: 6000,
+            });
+        })
+    </script>
+</body>
+
+</html>
