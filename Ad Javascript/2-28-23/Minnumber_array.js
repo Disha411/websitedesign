@@ -17,7 +17,6 @@ console.log("Maximum number is:" + max);
 
 
 
-
 // let minVal = Math.min(...arr);
 
 // console.log(minVal);

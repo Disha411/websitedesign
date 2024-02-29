@@ -3,7 +3,7 @@
 
 let today = new Date();
 let dayNum = today.getDay();
-let monthnum = today.getMonth()
+let month_num = today.getMonth()
 
 
 let weekDay = [
@@ -22,6 +22,6 @@ let month = [
 
 
 function printday(params) {
-    console.log(`today is ${today.getDate()},${month[monthnum]} ${today.getFullYear()} - ${weekDay[dayNum]}`);
+    console.log(`Today is ${today.getDate()},${month[month_num]} ${today.getFullYear()} - ${weekDay[dayNum]}`);
 }
 printday()
