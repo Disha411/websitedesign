@@ -20,13 +20,17 @@ let obj = {
 //   console.log("-----------  z----------->", z);
 //   console.log("-----------  y, x----------->", y, x);
   
-  // ... =>spred
+ 
+
+
+
+// ... =>spred
   
-//   console.log(...arr);
+  console.log(...arr);
   
   // copy
   let arr1 = [...arr, 10];
-//   console.log("-----------  arr1----------->", arr1);
+  console.log("-----------  arr1----------->", arr1);
   
   let maxVal = Math.max(...arr);
 //   console.log("-----------  maxVal----------->", maxVal);
