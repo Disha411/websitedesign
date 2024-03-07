@@ -17,5 +17,5 @@ for (let i = 0; i < arr.length; i++) {
         totalEven = totalEven + arr[i]
     }
 }
-console.log("total of Odd numbers is" +totalOdd);
+console.log("total of Odd numbers is" +totalOdd)
 console.log("total of Even numbers is" +totalEven)

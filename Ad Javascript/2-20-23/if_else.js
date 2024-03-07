@@ -36,9 +36,9 @@ if (marks <= 33) {
 
 
 
-let marks = 32
+let marks = 65
 
-switch (marks) {
+switch (true) {
     case (marks <= 33):
         console.log("Student is failed")
         break;
@@ -47,8 +47,12 @@ switch (marks) {
         console.log("Student is below average")
         break;
 
+    case (marks <= 70):
+        console.log("Student average");
+        break;
+        
     default:
-        console.log("Student is good")
+        console.log("Student is brillient")
         break;
 }
 
