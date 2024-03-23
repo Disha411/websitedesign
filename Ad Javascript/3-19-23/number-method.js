@@ -20,11 +20,12 @@ let n4 = "Rs. 1200";
 // console.log("n3", +n3);
 // console.log("n4", +n4); // NAN -> not a number
 
-console.log(+"100" + +"100");
+// console.log(+"100" + +"100");
 
 let no = 12.213123123;
 let no2 = 12.45352545;
 let no3 = 12.9
+
 console.log("----no1",+no.toFixed(3))
 console.log("----no2",no2.toFixed(3))
 console.log("----no3",no3.toFixed(5))

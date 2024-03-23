@@ -13,7 +13,7 @@ let obj = {
   let entries = Object.entries(obj);
   // console.log("-----------  entries----------->", entries);
   
-  let user = {};
+  let user = {name:"disha"};
   let kArr = Object.keys(user);
   console.log("-----------  kArr----------->", kArr);
   if (kArr.length === 0) {
