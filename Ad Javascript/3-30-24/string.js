@@ -46,8 +46,7 @@ console.log("-----------  replaceStr----------->", replaceStr)
 
 // slice = give sub string by index exept nagative value
 
-// let sliceStr = str.slice(1, 5);
-let sliceStr = str.slice(1, -2);
+// let sliceStr = str.slice(1, 5)let sliceStr = str.slice(1, -2);
 console.log("-----------  sliceStr----------->", sliceStr)
 
 // subString = give sub string by index
@@ -82,9 +81,3 @@ let revStr = arr.join()
 
 let newname = arr.join("");
 // console.log(newname)
-
-
-
-// diff between tostring & join
-
-// replace string only change first similar string?

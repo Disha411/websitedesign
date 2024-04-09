@@ -49,11 +49,11 @@ console.log("-----------  available----------->", available);
 // LRV = lastReturnValue
 
 let Rarray = [1, 2, 3, 4];
-// console.log("-----------  Rarray----------->", Rarray)
-// let total = Rarray.reduce((LRV, e) => {
-//   console.log("-----------  LRV, e----------->", LRV, e);
-//   return LRV + e;
-// });
+console.log("-----------  Rarray----------->", Rarray)
+let total = Rarray.reduce((LRV, e) => {
+  console.log("-----------  LRV, e----------->", LRV, e);
+  return LRV + e;
+});
 // console.log("-----------  total----------->", total)
 
 let mapTotal = 0;
