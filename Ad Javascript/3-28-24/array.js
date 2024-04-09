@@ -32,7 +32,7 @@ console.log("-----------  available----------->", available);
     let dataArr = arr.filter((e, i) => {
         console.log("-----------  e----------->", e, i);
         return e % 2 === 0;
-    });
+    });results
     console.log("-----------  dataArr----------->", dataArr);
     
     // map(func) – creates a new array from results of calling func for every element.
