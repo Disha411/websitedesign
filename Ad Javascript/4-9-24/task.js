@@ -24,7 +24,7 @@ let data = [
 
 // addition of all marks
 
-/* 
+/*
 let totalmarks = 0
 data[0].marksheet.map((e)=>{
     // console.log(e.marks);
@@ -66,11 +66,9 @@ console.log(num)
 
 
 //find all marks between 45 to 95
-
 /*
 let num = data[0].marksheet.filter((e, i) => {
    return e.marks > min && e.marks < max
-   
 })
 console.log(num)
 
