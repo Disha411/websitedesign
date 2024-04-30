@@ -1,0 +1,17 @@
+.Header{
+    background-color: rgb(185, 153, 214);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.Header .anchortag{
+    display: flex;
+    gap: 20px;
+}
+.Header a{
+    text-decoration: none;
+    color: black;
+}
+.Header .Searchbar input{
+    border: 1px solid black;
+}

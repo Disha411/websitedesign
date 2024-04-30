@@ -1,0 +1,14 @@
+.main{
+    background-color: bisque;
+    padding: 20px;    
+    height: 450px;
+    
+}
+
+.main p{
+    margin-top: 120px;
+    margin-left: 165px;
+    margin-right: 165px;
+    text-align: center;
+    font-size: 20px;
+}
