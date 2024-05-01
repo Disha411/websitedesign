@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Task1 from './1.Task1/Task1'
 import Task2 from './2.Task2/Task2'
+import Task3 from './3.Task3/Task3'
 import Task4 from './4.Task4/Task4'
 
 
@@ -13,7 +14,8 @@ export default function App() {
     <div>
       {/* <Task1/> */}
       {/* <Task2/> */}
-      <Task4/>
+      <Task3/>
+      {/* <Task4/> */}
     </div>
   )
 }

@@ -1,0 +1,10 @@
+.Header_banner{
+    background-color: rgb(218, 212, 212);
+    color: rgb(114, 108, 108);
+    text-align: center;
+    height: 150px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
