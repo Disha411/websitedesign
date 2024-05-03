@@ -6,7 +6,7 @@ export default function Cardcom() {
     <div>
       <Card
         style={{
-          width: '19rem', border: '1px solid gray'
+          width: '19rem', border: '1px solid gray',borderRadius:"5%", padding:"5px"
         }}
       >
         <img
@@ -27,7 +27,7 @@ export default function Cardcom() {
             Some quick example text to build on the card title and make up the bulk of the card‘s content.
           </CardText>
           <div style={{display:"flex",justifyContent:"center"}}>
-            <Button style={{ color: "blue" }}>
+            <Button >
               Button
             </Button>
           </div>

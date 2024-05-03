@@ -5,9 +5,10 @@ export default function Footer() {
         display: "flex",
         justifyContent: "center",
         border: "1px solid gray",
-        marginTop:"20px"
+        marginTop:"20px",
+        backgroundColor: "gray",
     }
     return (
-        <div style={divStyle}>@Copyright</div>
+        <div style={divStyle}> @Copyright</div>
     )
 }
