@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function MapKeyCom() {
-    let name = ["uv", "uj", "up", "us"]
+    let name = ["Disha","Sanju","Mahi","Sanjana"]
     return (
         <div>
             {name?.map?.((e, i) => {
@@ -11,7 +11,6 @@ export default function MapKeyCom() {
                         <hr />
                     </div>
                 );
-
             })}
         </div>
     )
