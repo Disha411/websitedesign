@@ -7,7 +7,7 @@ import Task2 from './2.Task2/Task2'
 import Task3 from './3.Task3/Task3'
 import Task4 from './4.Task4/Task4'
 import Funprops from './5.Task5(props)/Funprops'
-
+import InputCom from './6.Task6(input)/InputCom'
 
 
 export default function App() {
@@ -17,7 +17,8 @@ export default function App() {
       {/* <Task2/> */}
       {/* <Task3/> */}
       {/* <Task4/> */}
-      <Funprops/>
+      {/* <Funprops/> */}
+      <InputCom/>            
     </div>
   )
 }
