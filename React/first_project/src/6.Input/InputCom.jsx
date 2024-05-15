@@ -1,40 +1,83 @@
 import React, { useState } from "react";
-import {Button,Input} from "reactstrap";
+import { Button, Input } from "reactstrap";
+import { FilePenLine } from "lucide-react";
 
 export default function InputCom() {
-  let [name, setName] = useState("");
-  let [nameArr, setNameArr] = useState([]);
-  console.log("-----------  nameArr----------->", nameArr);
+  let [task, setTask] = useState("");
+  let [arr, setArr] = useState([]);
+  let [index, setIndex] = useState(null);
+  let [upadteMode, setUpdateMode] = useState(false);
 
-  const getData = (e) => {
-    setName(e.target.value);
+  const getInputData = (e) => {
+    setTask(e.target.value);
   };
 
-  const addNameHandler = () => {
-    console.log("-=-=-=-=");
-    setNameArr([...nameArr, name]);
-    setName("");
+  const addDataIntoArr = () => {
+    setArr([...arr, task]); // ... for copy old data
+    setTask(""); // blank a input after click
   };
 
+  const deleteHandler = (index) => {
+    let newArr = arr.filter((e, i) => i !== index);
+    setArr(newArr);
+  };
+
+  const editHandler = (e, index) => {
+    setIndex(index);
+    setTask(e);
+    setUpdateMode(true);
+  };
+
+  const updateData = () => {
+    arr.splice(index, 1, task);
+    setArr([...arr]);
+    setUpdateMode(false);
+    setTask("");
+  };
   return (
-    <div className="justify-center text-center">
-      <h1>Name : {name}</h1>
-      <input
-        value={name}
-        className="w-250 ring"
-        placeholder="Enter your name"
-        onChange={(e) => getData(e)}
-      />
-      <br />
-      <button className="border-red-500 text-white bg-red-500 mt-3"   onClick={() => addNameHandler()}>Submit</button>
-      <hr />
-      {nameArr?.map((e) => {
-        return (
-          <div>
-            <li>{e}</li>
-          </div>
-        );
-      })}
+    <div className="d-flex w-100 flex-column align-items-center justify-content-center m-3">
+      <h2>input : {task}</h2>
+      <h2>index : {index}</h2>
+      <div className="d-flex w-100 align-items-center  justify-content-center">
+        <Input
+          value={task} // to controll input value
+          className="w-25"
+          placeholder="Please enter task"
+          onChange={(e) => getInputData(e)}
+        />
+        {upadteMode ? (
+          <Button onClick={() => updateData()}>Update</Button>
+        ) : (
+          <Button onClick={() => addDataIntoArr()}>Add Task</Button>
+        )}
+      </div>
+      <div>
+        <ul className="border rounded-md p-[10px] min-w-[50vw] mt-6">
+          {arr.map((e, i) => {
+            return (
+              <div>
+                <div className="group  d-flex  justify-content-between">
+                  <li className="text-blue-500" key={i}>
+                    {e}
+                  </li>
+                  <div>
+                    <Button onClick={() => editHandler(e, i)}>
+                      <FilePenLine />
+                    </Button>
+                    <button
+                      className="ml-3 ring-1 ring-black rounded-md px-3 py-1 font-[400]  hover:ring-red-700 hover:ring-2 hover:!bg-[#eb6969] hover:text-red-900 group-hover:bg-black group-hover:text-white"
+                      onClick={() => deleteHandler(i)}
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+                <hr />
+              </div>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 }
