@@ -9,19 +9,21 @@ import FunProps from './4.Props/FunProps'
 import MapKeyCom from './5.MapKey/MapKeyCom'
 import FragmentCom from './5.MapKey/FragmentCom'
 import InputCom from './6.Input/InputCom'
+import Multiinput from './6.Input/Multiinput'
 
 
 
 export default function App() {
   return (
-    <div>
+    <div className='d-flex justify-center mt-5'>
       {/* <Component/> */}
       {/* <States /> */}
       {/* <Style/> */}
       {/* <FunProps/> */}
       {/* <MapKeyCom/> */}
       {/* <FragmentCom/> */}
-      <InputCom/>
+      {/* <InputCom/> */}
+      <Multiinput/>
     </div>
   )
 }
