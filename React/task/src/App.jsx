@@ -8,6 +8,9 @@ import Task3 from './3.Task3/Task3'
 import Task4 from './4.Task4/Task4'
 import Funprops from './5.Task5(props)/Funprops'
 import InputCom from './6.Task6(input)/InputCom'
+import Countertask from './CounterTask/Countertask'
+import InputCom2 from './6.Task6(input)/InputCom2'
+import InputColor from './6.Task6(input)/InputColor'
 
 
 export default function App() {
@@ -18,7 +21,10 @@ export default function App() {
       {/* <Task3/> */}
       {/* <Task4/> */}
       {/* <Funprops/> */}
-      <InputCom/>            
+      <InputColor/>
+      {/* <InputCom/> */}
+      {/* <InputCom2/> */}
+      {/* <Countertask/> */}
     </div>
   )
 }

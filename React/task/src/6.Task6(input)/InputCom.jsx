@@ -22,7 +22,6 @@ export default function InputCom() {
         let newArr = arr.filter((e, i) => i !== index);
         setArr(newArr);
     }
-
     const Edithandler = (e, index) => {
         setIndex(index);
         setTask(e);
@@ -37,6 +36,7 @@ export default function InputCom() {
     return (
         <div className="m-5 d-flex flex-column gap-2 align-items-center">
             <h2>Input : {task} </h2>
+            <h2>index : {index}</h2>
 
             <Input className="w-25" value={task} onChange={(e) => getInputData(e)} />
             {upadteMode ? (
@@ -62,7 +62,6 @@ export default function InputCom() {
                             </>
                         );
                     })}
-
                 </ul>
             </div>
         </div>
