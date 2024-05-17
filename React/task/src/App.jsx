@@ -11,6 +11,7 @@ import InputCom from './6.Task6(input)/InputCom'
 import Countertask from './CounterTask/Countertask'
 import InputCom2 from './6.Task6(input)/InputCom2'
 import InputColor from './6.Task6(input)/InputColor'
+import Inputnew from './6.Task6(input)/Inputnew'
 
 
 export default function App() {
@@ -21,9 +22,10 @@ export default function App() {
       {/* <Task3/> */}
       {/* <Task4/> */}
       {/* <Funprops/> */}
-      <InputColor/>
+      {/* <InputColor/> */}
       {/* <InputCom/> */}
       {/* <InputCom2/> */}
+      <Inputnew/>
       {/* <Countertask/> */}
     </div>
   )
