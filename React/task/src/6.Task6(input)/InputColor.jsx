@@ -1,26 +1,41 @@
 import React, { useState } from 'react'
 
 export default function InputColor() {
-  let [color, setColor] = useState("")
-  let [arr, setArr] = useState([])
+  let [color, setcolor] = useState("")
+  let [arr, setarr] = useState([])
   let [index, setIndex] = useState(null)
+  let [updateMode, setUpdateMode] = useState(false);
 
-  const colorinputhandler = (e) => {
-    setColor(e.target.value)
+  const inputhandler = (e) => {
+    setcolor(e.target.value)
   }
-  const addcolorhandler = () => {
-    setArr([...arr, color])
-    setColor("")
+  const addcolor = () => {
+    setarr([...arr, color])
+    setcolor("")
   }
   const DeleteHandler = (index) => {
     let newarr = arr.filter((e, i) => i !== index)
-    setArr(newarr)
+    setarr(newarr)
+  }
+  const Edithandler = (e, index) => {
+    setIndex(index)
+    setcolor(e)
+    setUpdateMode(true)
+  }
+  const updateData = () => {
+    arr.splice(index, 1, color);
+    setarr([...arr]);
+    setUpdateMode(false);
+    setcolor("");
   }
   return (
     <div className='m-5'>
-      <input value={color}
-        className='' placeholder='Enter a color' onChange={(e) => colorinputhandler(e)} />
-      <button onClick={() => addcolorhandler()}>Add Color</button>
+      <input value={color} type="text" onChange={(e) => inputhandler(e)} />
+      {updateMode ? (
+        <button onClick={() => updateData()}>Update</button>
+      ) : (
+        <button onClick={() => addcolor()}>Add Color</button>
+      )}
 
       <div>
         <ul>
@@ -29,16 +44,16 @@ export default function InputColor() {
               <>
                 <div className='d-flex gap-5'>
                   <li>{e}</li>
-                  <div>
-                    <button className='rounded'>Edit</button>
-                    <button className='rounded' onClick={() => DeleteHandler(i)}>Delete</button>
+                  <div className='d-flex gap-4 m-2'>
+                    <button onClick={() => Edithandler(e, i)}>Action</button>
+                    <button onClick={() => DeleteHandler(i)}>Delete</button>
                   </div>
                 </div>
                 <hr />
               </>
             )
-          })
           }
+          )}
         </ul>
       </div>
     </div>
