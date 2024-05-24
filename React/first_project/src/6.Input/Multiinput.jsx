@@ -3,27 +3,27 @@ import { Button, Form, Input, Label, Table } from 'reactstrap'
 
 export default function Multiinput() {
     let [user, setUser] = useState({ email: "", password: "" });
-    let [userArr,setUserArr] = useState([])
+    let [userArr, setUserArr] = useState([])
 
-    const submitHandler = () =>{
-        setUserArr([...userArr,user])
-        setUser({email:"",password:""})
+    const submitHandler = () => {
+        setUserArr([...userArr, user])
+        setUser({ email: "", password: "" })
     }
     return (
         <div>
             <Form className="border border-black p-4">
+                <h1>email is:{user.email}</h1>
                 <Label>Email</Label>
-                <Input placeholder='Enter a email' onChange={() => {
-                    setUserArr({...user,email: e.target.value })
-                }}/>
+                <Input placeholder='Enter a email' onChange={(e) => {
+                    setUser({ ...user, email: e.target.value })
+                }} />
 
                 <Label>Password</Label>
                 <Input placeholder='Enter a password '></Input>
 
-                <Button className='w-full mt-2 bg-danger' onClick={()=>submitHandler()}>Submit</Button>
+                <Button className='w-full mt-2 bg-danger' onClick={() => submitHandler()}>Submit</Button>
             </Form>
-            <Table
-            >
+            <Table>
                 <thead>
                     <tr>
                         <th>
@@ -36,7 +36,7 @@ export default function Multiinput() {
                             Password
                         </th>
                         <th>
-                            Username
+                            Action
                         </th>
                     </tr>
                 </thead>
