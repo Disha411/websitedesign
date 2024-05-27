@@ -12,6 +12,7 @@ import InputCom from './6.Input/InputCom'
 import Multiinput from './6.Input/Multiinput'
 import ConditonalCom from './7.ConditionalRender/ConditonalCom'
 import LocalStorage from './6.Input/LocalStorage'
+import UseReducer from './8.hook/UseReducer'
 
 
 export default function App() {
@@ -24,9 +25,10 @@ export default function App() {
       {/* <MapKeyCom/> */}
       {/* <FragmentCom/> */}
       {/* <InputCom/> */}
-      <LocalStorage />
+      {/* <LocalStorage /> */}
       {/* <Multiinput/> */}
       {/* <ConditonalCom/> */}
+      <UseReducer/>
     </div>
   )
 }
