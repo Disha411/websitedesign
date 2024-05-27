@@ -7,7 +7,10 @@ function reducer(state, action) {
         return state + 1;
     } else if (action === "dec-1") {
         return state - 1;
-
+    } else if (action === "dec-10") {
+        return state - 10;
+    } else if (action === "reset") {
+        return 0;
     } else {
         return state
     }
