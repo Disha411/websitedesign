@@ -11,6 +11,7 @@ import FragmentCom from './5.MapKey/FragmentCom'
 import InputCom from './6.Input/InputCom'
 import Multiinput from './6.Input/Multiinput'
 import ConditonalCom from './7.ConditionalRender/ConditonalCom'
+import LocalStorage from './6.Input/LocalStorage'
 
 
 export default function App() {
@@ -23,7 +24,8 @@ export default function App() {
       {/* <MapKeyCom/> */}
       {/* <FragmentCom/> */}
       {/* <InputCom/> */}
-      <Multiinput/>
+      <LocalStorage />
+      {/* <Multiinput/> */}
       {/* <ConditonalCom/> */}
     </div>
   )
