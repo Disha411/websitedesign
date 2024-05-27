@@ -22,8 +22,8 @@ export default function App() {
       {/* <FunProps/> */}
       {/* <MapKeyCom/> */}
       {/* <FragmentCom/> */}
-      <InputCom/>
-      {/* <Multiinput/> */}
+      {/* <InputCom/> */}
+      <Multiinput/>
       {/* <ConditonalCom/> */}
     </div>
   )
