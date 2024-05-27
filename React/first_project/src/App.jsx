@@ -13,6 +13,7 @@ import Multiinput from './6.Input/Multiinput'
 import ConditonalCom from './7.ConditionalRender/ConditonalCom'
 import LocalStorage from './6.Input/LocalStorage'
 import UseReducer from './8.hook/UseReducer'
+import UseRefCom from './8.hook/UseRefCom'
 
 
 export default function App() {
@@ -28,7 +29,8 @@ export default function App() {
       {/* <LocalStorage /> */}
       {/* <Multiinput/> */}
       {/* <ConditonalCom/> */}
-      <UseReducer/>
+      {/* <UseReducer/> */}
+      <UseRefCom/>
     </div>
   )
 }
