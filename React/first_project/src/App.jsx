@@ -36,10 +36,10 @@ export default function App() {
       {/* <LocalStorage /> */}
       {/* <Multiinput/> */}
       {/* <ConditonalCom/> */}
-      <MainCom/>
+      {/* <MainCom/>/ */}
       {/* <ProjectUseEffect/> */}
       {/* <UseEffectCom/> */}
-      {/* <UseReducer/> */}
+      <UseReducer/>
       {/* <UseRefCom/> */}
     </div>
   )

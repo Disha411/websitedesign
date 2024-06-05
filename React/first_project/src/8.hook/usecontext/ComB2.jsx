@@ -6,7 +6,6 @@ export default function ComB2(props) {
 
     return (
         <div>ComB2
-
             <h1>Name is {props.name}</h1>
             <h1>Age is {data}</h1>
         </div>

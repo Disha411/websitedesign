@@ -18,6 +18,7 @@ function reducer(state, action) {
 
 export default function UseReducer() {
     let [count, dispatch] = useReducer(reducer, 1)
+    // let [state,dispach method] = usereducer(function,initial value)
     return (
         <div>
             <h1>Count is {count}</h1>
