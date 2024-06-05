@@ -1,19 +1,24 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, Form, Input, Label, Table } from 'reactstrap'
 
 export default function Register() {
     let [user, setUser] = useState({ name: "", email: "", password: "" })
     let [Arr, setArr] = useState([])
 
-
     const Submithandler = (e) => {
         e.preventDefault()
         setArr([...Arr, user])
+        localStorage.setItem("data", JSON.stringify([...Arr, user]))
         setUser({ name: "", email: "", password: "" })
     }
+    useEffect(() => {
+        let jsonString = localStorage.getItem("data")
+        let normalData = JSON.parse(jsonString)
+        setArr(normalData)
+    },[])
     return (
-        <div className='w-full'>
-            <Form action="" className='m-5 w-25'>
+        <div className=''>
+            <Form action="" className='m-2 w-25 '>
 
                 <Label>Name : </Label>
                 <Input value={user.name} onChange={(e) => setUser({ ...user, name: e.target.value })} />
