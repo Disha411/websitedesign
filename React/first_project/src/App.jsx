@@ -14,6 +14,11 @@ import ConditonalCom from './7.ConditionalRender/ConditonalCom'
 import LocalStorage from './6.Input/LocalStorage'
 import UseReducer from './8.hook/UseReducer'
 import UseRefCom from './8.hook/UseRefCom'
+import ProjectUseEffect from './8.hook/ProjectUseEffect'
+import ApiCall from './6.Input/ApiCall'
+import UseEffectCom from './8.hook/UseEffectCom'
+import InputLocal from './6.Input/InputLocal'
+import MainCom from './8.hook/usecontext/MainCom'
 
 
 export default function App() {
@@ -25,12 +30,17 @@ export default function App() {
       {/* <FunProps/> */}
       {/* <MapKeyCom/> */}
       {/* <FragmentCom/> */}
+      {/* <ApiCall/> */}
       {/* <InputCom/> */}
+      {/* <InputLocal/> */}
       {/* <LocalStorage /> */}
       {/* <Multiinput/> */}
       {/* <ConditonalCom/> */}
+      <MainCom/>
+      {/* <ProjectUseEffect/> */}
+      {/* <UseEffectCom/> */}
       {/* <UseReducer/> */}
-      <UseRefCom/>
+      {/* <UseRefCom/> */}
     </div>
   )
 }
