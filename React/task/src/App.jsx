@@ -11,6 +11,7 @@ import InputCom from './6.Task6(input)/InputCom'
 import Countertask from './CounterTask/Countertask'
 import MultiInput from './6.Task6(input)/MultiInput'
 import Register from './newtask/Register'
+import Crud from './6.Task6(input)/Crud'
 
 export default function App() {
   return (
@@ -20,10 +21,11 @@ export default function App() {
       {/* <Task3/> */}
       {/* <Task4/> */}
       {/* <Funprops/> */}
+      <Crud/>
       {/* <InputCom/> */}
       {/* <MultiInput/> */}
       {/* <Countertask/> */}
-      <Register/>
+      {/* <Register/> */}
     </div>
   )
 }
