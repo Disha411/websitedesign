@@ -19,6 +19,7 @@ import ApiCall from './6.Input/ApiCall'
 import UseEffectCom from './8.hook/UseEffectCom'
 import InputLocal from './6.Input/InputLocal'
 import MainCom from './8.hook/usecontext/MainCom'
+import RadioButton from './6.Input/RadioButton'
 
 
 export default function App() {
@@ -35,11 +36,12 @@ export default function App() {
       {/* <InputLocal/> */}
       {/* <LocalStorage /> */}
       {/* <Multiinput/> */}
+      <RadioButton/>
       {/* <ConditonalCom/> */}
       {/* <MainCom/>/ */}
       {/* <ProjectUseEffect/> */}
       {/* <UseEffectCom/> */}
-      <UseReducer/>
+      {/* <UseReducer/>` */}
       {/* <UseRefCom/> */}
     </div>
   )
