@@ -20,6 +20,8 @@ import UseEffectCom from './8.hook/UseEffectCom'
 import InputLocal from './6.Input/InputLocal'
 import MainCom from './8.hook/usecontext/MainCom'
 import RadioButton from './6.Input/RadioButton'
+import Checkbox from './6.Input/Checkbox'
+import SelectCom from './6.Input/SelectCom'
 
 
 export default function App() {
@@ -32,11 +34,13 @@ export default function App() {
       {/* <MapKeyCom/> */}
       {/* <FragmentCom/> */}
       {/* <ApiCall/> */}
+      {/* <Checkbox/> */}
       {/* <InputCom/> */}
       {/* <InputLocal/> */}
       {/* <LocalStorage /> */}
       {/* <Multiinput/> */}
-      <RadioButton/>
+      {/* <RadioButton/> */}
+      <SelectCom/>
       {/* <ConditonalCom/> */}
       {/* <MainCom/>/ */}
       {/* <ProjectUseEffect/> */}
