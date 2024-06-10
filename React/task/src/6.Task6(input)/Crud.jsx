@@ -9,7 +9,7 @@ export default function Crud() {
 
     const submithandler = (e) => {
         setArr([...Arr, data])
-        setdata({ Name: "", Email: "", gender: "" })
+        setdata({ Name: "", Email: "", gender: "",hobby: [] })
     }
     const DeleteHandler = (index) => {
         let newarr = Arr.filter((e, i) => i !== index)
@@ -17,15 +17,14 @@ export default function Crud() {
     }
     const checkBoxhandler = (value, e) => {
         if (e.target.checked) {
-            setdata([...data, value])
+            setdata({...data,hobby:[...data.hobby,value]})
         } else {
-            let filterData = data.hobby.filter((e) => e !== value)
-            setdata(filterData)
+            let filterData = data.hobby.filter((e) => e !== hobby(value))
+            setdata({...data,hobby:[filterData]})
         }
     }
-
     return (
-        <div className='m-5 p-5 w-3 h-4 '>
+        <div className='m-auto mt-5 p-5 w-50 border shadow-sm'>
             <div className='inputs d-flex flex-column gap-3'>
                 <Input value={data.Name} placeholder='Enter Name' onChange={(e) => setdata({ ...data, Name: e.target.value })} />
                 <Input value={data.Email} placeholder='Enter Email' onChange={(e) => setdata({ ...data, Email: e.target.value })} />
@@ -38,11 +37,12 @@ export default function Crud() {
             </div>
 
             <div className='hobbycheckboxes'>
-                <Input type="checkbox" checked={data.hobby.includes("Cricket")} onChange={(e) => checkBoxhandler("Cricket", e)} />Cricket
-                <Input type="checkbox" checked={data.hobby.includes("Vollyball")} onChange={(e) => checkBoxhandler("Vollyball", e)} />Vollyball
-                <Input type="checkbox" checked={data.hobby.includes("Dancing")} onChange={(e) => checkBoxhandler("Dancing", e)} />Dancing
-                <Input type="checkbox" checked={data.hobby.includes("Singing")} onChange={(e) => checkBoxhandler("Singing", e)} />Singing
+                <Input type="checkbox" checked={data?.hobby?.includes?.("Cricket")} onChange={(e) => checkBoxhandler("Cricket", e)} />Cricket
+                <Input type="checkbox" checked={data?.hobby?.includes?.("Vollyball")} onChange={(e) => checkBoxhandler("Vollyball", e)} />Vollyball
+                <Input type="checkbox" checked={data?.hobby?.includes?.("Dancing")} onChange={(e) => checkBoxhandler("Dancing", e)} />Dancing
+                <Input type="checkbox" checked={data?.hobby?.includes?.("Singing")} onChange={(e) => checkBoxhandler("Singing", e)} />Singing
             </div>
+
             <div className=''>
                 <select>
                     <option value="">Admin</option>
@@ -71,8 +71,8 @@ export default function Crud() {
                                 <th scope="row">{i + 1}</th>
                                 <td>{e.Name}</td>
                                 <td>{e.Email}</td>
-                                <td>{data.gender}</td>
-                                <td></td>
+                                <td>{e.gender}</td>
+                                <td>{e.hobby}</td>
                                 <td><Button>Update</Button></td>
                                 <td><Button className='bg-danger' onClick={() => DeleteHandler(i)}>Delete</Button></td>
                             </tr>
