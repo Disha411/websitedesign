@@ -21,11 +21,11 @@ export default function App() {
       {/* <Task3/> */}
       {/* <Task4/> */}
       {/* <Funprops/> */}
-      {/* <Crud/> */}
+      <Crud/>
       {/* <InputCom/> */}
       {/* <MultiInput/> */}
       {/* <Countertask/> */}
-      <Register/>
+      {/* <Register/> */}
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Select from 'react-select'
 import { Button, Input, Table } from 'reactstrap'
 
@@ -18,11 +18,13 @@ export default function Crud() {
 
     const submithandler = (e) => {
         setArr([...Arr, data])
+        localStorage.setItem("data", JSON.stringify([...Arr, data]))
         setdata(intialValue)
     }
     const DeleteHandler = (index) => {
         let newarr = Arr.filter((e, i) => i !== index)
         setArr(newarr)
+        localStorage.setItem("data", JSON.stringify(newarr))
     }
     const edithandler = (e, i) => {
         setdata(e)
@@ -32,6 +34,7 @@ export default function Crud() {
     const updatedata = () => {
         Arr.splice(index, 1, data);
         setArr([...Arr]);
+        localStorage.setItem("data", JSON.stringify([...Arr]))
         setUpdateMode(false)
         setdata(intialValue)
     }
@@ -43,6 +46,11 @@ export default function Crud() {
             setdata({ ...data, hobby: filterData })
         }
     }
+    useEffect(() => {
+        let jsonString = localStorage.getItem("data") || "[]"
+        let normalData = JSON.parse(jsonString)
+        setArr(normalData)
+    }, [])
 
     return (
         <div className='m-auto mt-5 p-5 w-50 border shadow-sm'>
