@@ -27,7 +27,7 @@ import SelectCom from './6.Input/SelectCom'
 export default function App() {
   return (
     <div className='d-flex justify-center mt-5'>
-      {/* <Component/> */}
+      <Component/>
       {/* <States /> */}
       {/* <Style/> */}
       {/* <FunProps/> */}
@@ -40,7 +40,7 @@ export default function App() {
       {/* <LocalStorage /> */}
       {/* <Multiinput/> */}
       {/* <RadioButton/> */}
-      <SelectCom/>
+      {/* <SelectCom/> */}
       {/* <ConditonalCom/> */}
       {/* <MainCom/>/ */}
       {/* <ProjectUseEffect/> */}

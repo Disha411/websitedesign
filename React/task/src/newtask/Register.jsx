@@ -11,11 +11,16 @@ export default function Register() {
         localStorage.setItem("data", JSON.stringify([...Arr, user]))
         setUser({ name: "", email: "", password: "" })
     }
+    const deletehandler = (index) => {
+        let newarr = Arr.filter((e,i) => i !== index)
+        setArr(newarr)
+        localStorage.setItem("data", JSON.stringify(newarr))
+    }
     useEffect(() => {
-        let jsonString = localStorage.getItem("data")
+        let jsonString = localStorage.getItem("data") ||"[]"
         let normalData = JSON.parse(jsonString)
         setArr(normalData)
-    },[])
+    }, [])
     return (
         <div className=''>
             <Form action="" className='m-2 w-25 '>
@@ -40,6 +45,7 @@ export default function Register() {
                         <th>Name</th>
                         <th>Email</th>
                         <th>Password</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,6 +56,7 @@ export default function Register() {
                                 <td>{e.name}</td>
                                 <td>{e.email}</td>
                                 <td>{e.password}</td>
+                                <td><Button className='bg-danger' onClick={() => deletehandler(i)}>Delete</Button></td>
                             </tr>
                         )
                     })}
