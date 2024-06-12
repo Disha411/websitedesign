@@ -22,12 +22,13 @@ import MainCom from './8.hook/usecontext/MainCom'
 import RadioButton from './6.Input/RadioButton'
 import Checkbox from './6.Input/Checkbox'
 import SelectCom from './6.Input/SelectCom'
+import Router from './9.Routing/Router'
 
 
 export default function App() {
   return (
     <div className='d-flex justify-center mt-5'>
-      <Component/>
+      {/* <Component/> */}
       {/* <States /> */}
       {/* <Style/> */}
       {/* <FunProps/> */}
@@ -47,6 +48,8 @@ export default function App() {
       {/* <UseEffectCom/> */}
       {/* <UseReducer/>` */}
       {/* <UseRefCom/> */}
+      {/* ========================== Router ================================= */}
+      <Router/>
     </div>
   )
 }

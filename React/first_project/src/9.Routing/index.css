@@ -1,0 +1,8 @@
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.active{
+    color: red;
+}
