@@ -5,6 +5,7 @@ import Contactus from './Contactus'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import Error404 from './Error404'
 import Header from './Header'
+import ProductDetails from './ProductDetails'
 
 
 export default function Router() {
@@ -21,6 +22,7 @@ export default function Router() {
                     <Route path='/' element={<Home />} />
                     <Route path='/contact' element={<Contactus />} />
                     <Route path="/about" Component={Aboutus} />
+                    <Route path="/product/:id" Component={ProductDetails} />
                     <Route path='*' element={<Error404 />} />
                 </Routes>
             </BrowserRouter>
