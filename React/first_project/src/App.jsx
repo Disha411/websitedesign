@@ -43,13 +43,13 @@ export default function App() {
       {/* <RadioButton/> */}
       {/* <SelectCom/> */}
       {/* <ConditonalCom/> */}
-      {/* <MainCom/>/ */}
+      <MainCom/>/
       {/* <ProjectUseEffect/> */}
       {/* <UseEffectCom/> */}
       {/* <UseReducer/>` */}
       {/* <UseRefCom/> */}
       {/* ========================== Router ================================= */}
-      <Router/>
+      {/* <Router/> */}
     </div>
   )
 }
