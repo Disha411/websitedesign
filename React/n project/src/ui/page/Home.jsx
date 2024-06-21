@@ -4,6 +4,8 @@ import {
   Button,
   Card,
   CardBody,
+  CardText,
+  CardTitle,
   UncontrolledCarousel,
 } from "reactstrap";
 import backgroundimg from "../../Images/backgroundimg.avif";
@@ -80,7 +82,7 @@ export default function Home() {
           </div>
           {/* -------------video----------- */}
           <div className="relative w-[310px] h-[450px] rotate-2 bg-white rounded-lg">
-            <video autoPlay loop muted className="mt-3 p-0 w-[300px] h-[430px] border rounded">
+            <video autoPlay loop muted className="mt-3 p-0 w-[300px] h-[430px] rounded">
               <source className="p-0" src={video} />
             </video>
             <div className="absolute flex gap-1 top-1 left-1">
@@ -164,96 +166,30 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="m-16">
+        <h1 className="font-bold text-center my-4">GEEKS ASSEMBLE!</h1>
+        <div className="grid grid-cols-4 gap-3 " >
+          <Card className="rounded-xl p-0">
+            <img
+              className="rounded-xl m-2 hover:scale-125 transition-transform duration-700 cursor-pointer"
+              alt="Sample"
+              src="https://veirdo.in/cdn/shop/files/MicrosoftTeams-image_c45a2b3f-666c-4ee6-ae2e-e17fb5753c66.png?v=1707460692"
+            />
+            <CardBody className="p-0">
+              <div className="border-t border-gray-300">
+                <div className="flex  justify-between items-center">
+                  <div className=" hover:text-gray-400 font-bold italic flex justify-center items-center cursor-pointer w-[80%]">
+                    Disney
+                  </div>
+
+                </div>
+              </div>
+            </CardBody>
+          </Card>
+        </div>
+      </div>
+
     </div>
   );
 }
 
-/*
-
-  <Card
-            style={{
-              width: "18rem",
-            }}
-          >
-            <img
-              className="rounded-xl"
-              alt="Sample"
-              src="https://veirdo.in/cdn/shop/files/Originals-Beige-Oversized-T-Shirt-Veirdo-6625.jpg?v=1707158469&width=360"
-            />
-            <CardBody>
-              <CardTitle tag="h5">Rs.499</CardTitle>
-              <CardText>
-                Originals Beige Oversized Chest Graphic Printed Tshirt
-              </CardText>
-              <hr />
-              <button className="font-bold">
-                ADD TO CART
-                <Heart />
-              </button>
-            </CardBody>
-          </Card>
-          <Card
-            style={{
-              width: "18rem",
-            }}
-          >
-            <img
-              alt="Sample"
-              src="https://veirdo.in/cdn/shop/files/v44.jpg?v=1717407545&width=360"
-            />
-            <CardBody>
-              <CardTitle tag="h5">Rs.499</CardTitle>
-              <CardText>
-                Veirdo Blue Oversized Back Graphic Printed Tshirt
-              </CardText>
-              <hr />
-              <button className="font-bold">
-                ADD TO CART
-                <Heart />
-              </button>
-            </CardBody>
-          </Card>
-          <Card
-            style={{
-              width: "18rem",
-            }}
-          >
-            <img
-              alt="Sample"
-              src="https://veirdo.in/cdn/shop/files/Teddy-Printed-Oversized-T-Shirt-Veirdo-9408.jpg?v=1707167484&width=360"
-            />
-            <CardBody>
-              <CardTitle tag="h5">Rs.499</CardTitle>
-              <CardText>
-                Originals Beige Oversized Chest Graphic Printed Tshirt
-              </CardText>
-              <hr />
-              <button className="font-bold">
-                ADD TO CART
-                <Heart />
-              </button>
-            </CardBody>
-          </Card>
-          <Card
-            style={{
-              width: "18rem",
-            }}
-          >
-            <img
-              alt="Sample"
-              src="https://veirdo.in/cdn/shop/files/9_0a82b071-8c51-4e44-b9bd-3b61ae449623.jpg?v=1709546813&width=360"
-            />
-            <CardBody>
-              <CardTitle tag="h5">Rs.499</CardTitle>
-              <CardText>
-                Originals Beige Oversized Chest Graphic Printed Tshirt
-              </CardText>
-              <hr />
-              <button className="font-bold">
-                ADD TO CART
-                <Heart />
-              </button>
-            </CardBody>
-          </Card>
-
-*/
