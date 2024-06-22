@@ -8,6 +8,7 @@ import Merchandise from "../ui/page/Merchandise";
 import Header from "../ui/components/Header";
 import Home from "../ui/page/Home";
 import Footer from "../ui/components/Footer";
+import Login from "../ui/page/Login";
 
 export default function Router() {
   return (
@@ -21,6 +22,7 @@ export default function Router() {
           <Route path="/Oversized_tshirts" element={<Oversized_tshirts />} />
           <Route path="/All_categories" element={<All_categories />} />
           <Route path="/Merchandise" element={<Merchandise />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         <Footer />
       </BrowserRouter>

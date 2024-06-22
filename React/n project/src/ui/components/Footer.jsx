@@ -1,40 +1,43 @@
 import { Instagram, Linkedin, MessageCircleMore, Twitter } from "lucide-react";
 import React from "react";
-import { Table } from "reactstrap";
+import { Button, Table } from "reactstrap";
 
 export default function Footer() {
   return (
-    <footer className="bg-green-600 p-3">
-      <div className="flex">
+    <footer className="bg-green-500 p-3 mt-5">
+      <div className="flex justify-between">
         <h1 className="font-bold text-white text-2xl">JOIN OUR VEIRDO FAM</h1>
-        <input type="text" />
+        <div className="border rounded bg-white p-1">
+          <input className="font-thin h-full" placeholder="veirdo@yahoo.com" />
+          <Button className="bg-purple-600">SUBSCRIBE</Button>
+        </div>
       </div>
       <div className="items-start p-3 text-left">
         <p className="font-bold">SPOT US ON</p>
       </div>
       <div>
-        <Table className=" bg-green-600">
+        <Table className="">
           <thead>
             <tr className="border border-black">
-              <th className=" !bg-green-600 border-r p-3">
+              <th className=" !bg-green-500 border-r p-3">
                 <div className="flex gap-2 items-center">
                   <Instagram />
                   INSTAGRAM
                 </div>
               </th>
-              <th className=" !bg-green-600 border-r p-3">
+              <th className=" !bg-green-500 border-r p-3">
                 <div className="flex gap-2 items-center">
                   <Linkedin />
                   LINKEDIN
                 </div>{" "}
               </th>
-              <th className=" !bg-green-600 border-r p-3">
+              <th className=" !bg-green-500 border-r p-3">
                 <div className="flex gap-2 items-center">
                   <Twitter />
                   TWITTER
                 </div>
               </th>
-              <th className=" !bg-green-600 border-r p-3">
+              <th className=" !bg-green-500 border-r p-3">
                 <div className="flex gap-2 items-center">
                   <MessageCircleMore />
                   WHATSAPP
@@ -81,12 +84,12 @@ export default function Footer() {
       <div>
         <marquee
           className="text-yellow-400 font-bold text-[150px]"
-          scrollamount="20"
-        >
+          scrollamount="20">
           <span>FIND YOUR FLIP SIDE</span>
           <span>FIND YOUR FLIP SIDE</span>
         </marquee>
       </div>
+      <p className="text-sm">Copyright © VEIRDO 2023</p>
     </footer>
   );
 }

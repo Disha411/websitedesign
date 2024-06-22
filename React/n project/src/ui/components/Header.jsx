@@ -1,6 +1,5 @@
 import React from "react";
 import logoImg from "../../Images/logo.svg";
-import { Input } from "reactstrap";
 import { NavLink, useNavigate } from "react-router-dom";
 import { Heart, Search, ShoppingCart, User } from "lucide-react";
 
@@ -47,7 +46,7 @@ export default function Header() {
             />
             <Search className="text-purple-400" />
           </div>
-          <User />
+          <User className="cursor-pointer" onClick={()=>navigate("/login")} />
           <Heart />
           <ShoppingCart />
         </div>

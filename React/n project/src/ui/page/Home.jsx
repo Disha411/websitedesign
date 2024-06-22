@@ -4,13 +4,12 @@ import {
   Button,
   Card,
   CardBody,
-  CardText,
-  CardTitle,
   UncontrolledCarousel,
 } from "reactstrap";
 import backgroundimg from "../../Images/backgroundimg.avif";
 import video from "../../Images/video.mp4";
 import CardCom from "../components/CardCom";
+import CardCom2 from "../components/CardCom2";
 
 export default function Home() {
   return (
@@ -44,7 +43,7 @@ export default function Home() {
       </div>
       <div className="cards mx-16">
         <h1 className="font-bold text-xl text-center pb-4">OUR BESTSELLERS</h1>
-        <div className="grid grid-cols-4 gap-3 ">
+        <div className="grid grid-cols-4 gap-3 mx-16">
           {[1, 2, 3, 4].map(() => {
             return <CardCom />;
           })}
@@ -168,27 +167,44 @@ export default function Home() {
       </div>
       <div className="m-16">
         <h1 className="font-bold text-center my-4">GEEKS ASSEMBLE!</h1>
-        <div className="grid grid-cols-4 gap-3 " >
-          <Card className="rounded-xl p-0">
-            <img
-              className="rounded-xl m-2 hover:scale-125 transition-transform duration-700 cursor-pointer"
-              alt="Sample"
-              src="https://veirdo.in/cdn/shop/files/MicrosoftTeams-image_c45a2b3f-666c-4ee6-ae2e-e17fb5753c66.png?v=1707460692"
-            />
-            <CardBody className="p-0">
-              <div className="border-t border-gray-300">
-                <div className="flex  justify-between items-center">
-                  <div className=" hover:text-gray-400 font-bold italic flex justify-center items-center cursor-pointer w-[80%]">
-                    Disney
-                  </div>
-
-                </div>
-              </div>
-            </CardBody>
-          </Card>
+        <div className="grid grid-cols-6 gap-2 " >
+          {[1, 2, 3, 4, 5, 6].map((e) => {
+            return <CardCom2 />
+          })}
+        </div>
+        <div className="flex justify-center mt-3">
+          <Button className="bg-green-400 shadow-[3px_3px_0_0_yellow] m-3 border-black text-black ">
+            <p className="mx-5 font-medium">SEE ALL MERCH</p>
+          </Button>
         </div>
       </div>
+      <div className="flex gap-1">
+        <img className="w-full" src="https://veirdo.in/cdn/shop/files/1_5.png?v=1707824295&width=360" alt="" />
+        <img className="w-full" src="https://veirdo.in/cdn/shop/files/2_5_8da632cf-abda-496a-9192-019951361e02.png?v=1707824295&width=360" alt="" />
+      </div>
+      <div className="cards mx-16">
+        <h1 className="font-bold text-center my-4">OUR UNISEX COLLECTION</h1>
+        <div className="grid grid-cols-4 gap-3">
+          {[1, 2, 3, 4].map(() => {
+            return <CardCom />;
+          })}
+        </div>
+        <div className="flex justify-center mt-3">
+          <Button className="bg-green-400 shadow-[3px_3px_0_0_yellow] m-3 border-black text-black ">
+            <p className="mx-5 font-medium">EXPLORE ALL PRODUCTS</p>
+          </Button>
+        </div>
 
+        <h1 className="font-bold text-center my-4">VEIRDO FEATURED ON</h1>
+        <div>
+          <marquee className="flex" behavior="" direction="">
+            <span><img src="https://veirdo.in/cdn/shop/files/Screenshot_2023-12-12_at_4.14_2.png?v=1706600616" alt="" /></span>
+            <span><img src="https://veirdo.in/cdn/shop/files/image_204.png?v=1706600607" alt="" /></span>
+            <span><img src="https://veirdo.in/cdn/shop/files/Screenshot_2023-12-12_at_4.14_1_7d99594b-48f3-44f7-92b1-e9ad88b1bea2.png?v=1705387789" alt="" /></span>
+            <span><img src="https://veirdo.in/cdn/shop/files/Screenshot_2023-12-12_at_4.14_4.png?v=1706600616" alt="" /></span>
+          </marquee>
+        </div>
+      </div>
     </div>
   );
 }
