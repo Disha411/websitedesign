@@ -9,6 +9,7 @@ import Header from "../ui/components/Header";
 import Home from "../ui/page/Home";
 import Footer from "../ui/components/Footer";
 import Login from "../ui/page/Login";
+import Registration from "../ui/page/Registration";
 
 export default function Router() {
   return (
@@ -23,6 +24,7 @@ export default function Router() {
           <Route path="/All_categories" element={<All_categories />} />
           <Route path="/Merchandise" element={<Merchandise />} />
           <Route path="/login" element={<Login />} />
+          <Route path="*" element={<Registration />} />
         </Routes>
         <Footer />
       </BrowserRouter>
