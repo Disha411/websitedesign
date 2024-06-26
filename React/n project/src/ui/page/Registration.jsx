@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import { Button, Input } from 'reactstrap'
 
+const alldata = { name: "", email: "", number: "", age: "", gender: "", address: "", city: "", state: "", pincode: "", password: "", cpassword: "" }
+
 export default function Registration() {
-    const alldata = useState()
-    let [data, setdata] = useState({name: "", email: "", number: "", age: "", gender: "", address: "", city: "", state: "", pincode: "", password: "", cpassword: ""})
+    let [data, setdata] = useState(alldata)
 
     const Submithandler = (e) => {
         e.preventDefault()
-        setdata({ name: "", email: "", number: "", age: "", gender: "", address: "", city: "", state: "", pincode: "", password: "", cpassword: "" });
+        setdata(alldata);
         console.log("🚀 ~ Login ~ data:", data)
     }
 
@@ -33,22 +34,22 @@ export default function Registration() {
 
             <br />
             <label>Address-1*</label>
-            <Input type="text" placeholder='Enter your address' className='bg-slate-100' />
+            <Input type="text" placeholder='Enter your address' className='bg-slate-100' onChange={(e) => setdata({ ...data, address: e.target?.value })} />
 
             <label>City*</label>
-            <Input type="text" placeholder='Enter your city' className='bg-slate-100' />
+            <Input type="text" placeholder='Enter your city' className='bg-slate-100' onChange={(e) => setdata({ ...data, city: e.target?.value })} />
 
             <label>State*</label>
-            <Input type="text" placeholder='Enter your state' className='bg-slate-100' />
+            <Input type="text" placeholder='Enter your state' className='bg-slate-100' onChange={(e) => setdata({ ...data, state: e.target?.value })} />
 
             <label>Pincode*</label>
-            <Input type="text" placeholder='Enter your picode' className='bg-slate-100' />
+            <Input type="text" placeholder='Enter your picode' className='bg-slate-100' onChange={(e) => setdata({ ...data, pincode: e.target?.value })} />
 
             <label>Password*</label>
             <Input value={data.password} type="password" placeholder='Password' className='bg-slate-100' onChange={(e) => setdata({ ...data, password: e.target?.value })} />
 
             <label>Confirm Password*</label>
-            <Input value={data.password} type="password" placeholder='Enter your confirm password' className='bg-slate-100' onChange={(e) => setdata({ ...data, password: e.target?.value })} />
+            <Input value={data.password} type="password" placeholder='Enter your confirm password' className='bg-slate-100' onChange={(e) => setdata({ ...data, cpassword: e.target?.value })} />
 
             <div className='text-center mt-3'>
                 <Button className='border-2 border-red-600 text-red-600 bg-white' onClick={(e) => Submithandler(e)}>REGISTER</Button>

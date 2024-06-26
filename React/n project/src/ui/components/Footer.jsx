@@ -19,25 +19,25 @@ export default function Footer() {
         <Table className="">
           <thead>
             <tr className="border border-black">
-              <th className=" !bg-green-500 border-r p-3">
-                <div className="flex gap-2 items-center">
+              <th className=" !bg-green-500 border-r p-3 cursor-pointer hover:bg-green-950">
+                <div className="flex gap-2 items-center ">
                   <Instagram />
                   INSTAGRAM
                 </div>
               </th>
-              <th className=" !bg-green-500 border-r p-3">
+              <th className=" !bg-green-500 border-r p-3 cursor-pointer">
                 <div className="flex gap-2 items-center">
                   <Linkedin />
                   LINKEDIN
                 </div>{" "}
               </th>
-              <th className=" !bg-green-500 border-r p-3">
+              <th className=" !bg-green-500 border-r p-3 cursor-pointer">
                 <div className="flex gap-2 items-center">
                   <Twitter />
                   TWITTER
                 </div>
               </th>
-              <th className=" !bg-green-500 border-r p-3">
+              <th className=" !bg-green-500 border-r p-3 cursor-pointer">
                 <div className="flex gap-2 items-center">
                   <MessageCircleMore />
                   WHATSAPP
