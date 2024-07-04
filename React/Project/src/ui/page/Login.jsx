@@ -1,29 +1,43 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import { useCookies } from 'react-cookie';
+import { useNavigate } from 'react-router-dom';
 import { Button, Input } from 'reactstrap'
-
 
 
 export default function Login() {
     let [data, setdata] = useState({ email: "", password: "" })
+    let [cookies, setCookies] = useCookies([]);
+    const navigate = useNavigate();
 
-    const Submithandler = (e) => {
+    const Submithandler = async (e) => {
         e.preventDefault()
-        setdata({ email: "", password: "" });
-
-        axios.post("")
+        try {
+            let response = await axios.post("http://localhost:9999/user/signin", data)
+            console.log("🚀 ~ Submithandler ~ response:", response.data)
+            setCookies("user", response?.data?.data);
+            setCookies("token", response?.data?.token);
+            navigate("/");
+            setdata({ email: "", password: "" });
+        } catch (error) {
+            console.log("🚀 ~ Submithandler ~ error:", error)
+        }
     }
 
     return (
-        <div className='h-[300px] w-[400px] m-auto mt-5 bg-purple-300 rounded p-3 text-white'>
+        <div className='h-[300px] w-[400px] m-auto mt-5 bg-purple-300 rounded p-3 text-white shadow-md'>
             <h1 className='h1 text-center'>Login</h1>
-            <label className='text-xl'>Email id</label>
-            <Input value={data.email} type="email" placeholder='Enter Email id' className='bg-slate-100' onChange={(e) => setdata({ ...data, email: e.target?.value })} />
+            <form action="">
 
-            <label className='text-xl'>Password</label>
-            <Input value={data.password} type="password" placeholder='Enter Password' className='bg-slate-100' onChange={(e) => setdata({ ...data, password: e.target?.value })} />
+                <label className='text-xl'>Email id</label>
+                <Input value={data.email} type="email" placeholder='Enter Email id' className='bg-slate-100' onChange={(e) => setdata({ ...data, email: e.target?.value })} />
 
-            <div className='text-center mt-3'>
+                <label className='text-xl'>Password</label>
+                <Input value={data?.password} type="password" placeholder='Enter Password' className='bg-slate-100' onChange={(e) => setdata({ ...data, password: e.target?.value })} />
+
+            </form>
+            <div className='flex gap-5 text-center mt-3'>
+                <a href="" className="text-blue-800" onClick={() => navigate("/registration")}>New user?</a>
                 <Button className='bg-blue-600 h-[40px] w-[200px]' onClick={(e) => Submithandler(e)}>Submit</Button>
             </div>
         </div>

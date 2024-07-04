@@ -19,6 +19,7 @@ export default function Home() {
   };
   return (
     <div>
+      {/* <--------------------- Carousel ----------------------> */}
       <div className="Carousel mx-16 my-4 ">
         <UncontrolledCarousel
           className="rounded-xl overflow-hidden"
@@ -48,7 +49,7 @@ export default function Home() {
       </div>
       <div className="cards mx-16">
         <h1 className="font-bold text-xl text-center pb-4">OUR BESTSELLERS</h1>
-        <div className="grid grid-cols-4 gap-3 mx-16">
+        <div className="grid grid-cols-4 gap-3 ">
           {[1, 2, 3, 4].map(() => {
             return <CardCom />;
           })}
@@ -61,7 +62,7 @@ export default function Home() {
         <div className="text-center my-4">
           <h1 className="font-bold m-3">TOP CATEGORIES</h1>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 mx-16">
           {[1, 2, 3, 4].map((e) => {
             return (
               <Card>
@@ -156,7 +157,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          {/* <---------imgfooter----> */}
+          {/* <-------------------imgfooter-----------------> */}
           <div className=" absolute left-0 right-0 bottom-0 p-4 rounded-br-xl rounded-bl-xl bg-yellow-300">
             <div className="grid grid-cols-2 gap-2">
               <div>
@@ -281,24 +282,32 @@ export default function Home() {
         <h1 className="font-bold text-center my-4">VEIRDO FEATURED ON</h1>
         <div>
           <marquee className="" behavior="" direction="">
-            <div className="flex gap-3">
-              <img
-                src="https://veirdo.in/cdn/shop/files/Screenshot_2023-12-12_at_4.14_2.png?v=1706600616"
-                alt=""
-              />
-              <img
-                src="https://veirdo.in/cdn/shop/files/image_204.png?v=1706600607"
-                alt=""
-              />
-              <img
-                src="https://veirdo.in/cdn/shop/files/Screenshot_2023-12-12_at_4.14_1_7d99594b-48f3-44f7-92b1-e9ad88b1bea2.png?v=1705387789"
-                alt=""
-              />
-              <img
-                src="https://veirdo.in/cdn/shop/files/Screenshot_2023-12-12_at_4.14_4.png?v=1706600616"
-                alt=""
-              />
+            <div className="flex">
+              {[1, 2, 3, 4].map(() => {
+                return (
+                  <div className="flex gap-3">
+                    <img
+                      src="https://veirdo.in/cdn/shop/files/Screenshot_2023-12-12_at_4.14_2.png?v=1706600616"
+                      alt=""
+                    />
+                    <img
+                      src="https://veirdo.in/cdn/shop/files/image_204.png?v=1706600607"
+                      alt=""
+                    />
+                    <img
+                      src="https://veirdo.in/cdn/shop/files/Screenshot_2023-12-12_at_4.14_1_7d99594b-48f3-44f7-92b1-e9ad88b1bea2.png?v=1705387789"
+                      alt=""
+                    />
+                    <img
+                      src="https://veirdo.in/cdn/shop/files/Screenshot_2023-12-12_at_4.14_4.png?v=1706600616"
+                      alt=""
+                    />
+                  </div>
+                );
+              })}
+
             </div>
+
           </marquee>
         </div>
       </div>

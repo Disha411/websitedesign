@@ -17,7 +17,7 @@ const categoryselecthandler = [
     { value: "Full sleeve", label: "Full sleeve" }
 ]
 
-const alldata = { title: "", description: "", size: "", color: "", category: "", price: "", image: "", stock: "", Discount: "" }
+const alldata = { title: "", description: "", size: "", color: "", category: "", price: "", image: "", stock: "", discount: "" }
 
 export default function ProductForm() {
     let [data, setdata] = useState(alldata)
@@ -62,6 +62,8 @@ export default function ProductForm() {
             <label>Stock</label>
             <Input value={data.stock} type="text" placeholder='Enter a available stock' className='bg-slate-100' onChange={(e) => setdata({ ...data, stock: e.target?.value })} />
 
+            <label>Discount</label>
+            <Input value={data.discount} type="text" placeholder='Enter a discount' className='bg-slate-100' onChange={(e) => setdata({ ...data, discount: e.target?.value })} />
 
             <div className='text-center mt-3'>
                 <Button className='border-2 border-red-600 text-red-600 bg-white hover:text-red-600 hover:border-red-600' onClick={(e) => Submithandler(e)}>SUBMIT</Button>
