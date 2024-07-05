@@ -17,6 +17,7 @@ export default function Login() {
             console.log("🚀 ~ Submithandler ~ response:", response.data)
             setCookies("user", response?.data?.data);
             setCookies("token", response?.data?.token);
+            
             navigate("/");
             setdata({ email: "", password: "" });
         } catch (error) {

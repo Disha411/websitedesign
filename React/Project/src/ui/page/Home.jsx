@@ -62,7 +62,7 @@ export default function Home() {
         <div className="text-center my-4">
           <h1 className="font-bold m-3">TOP CATEGORIES</h1>
         </div>
-        <div className="flex gap-4 mx-16">
+        <div className="flex gap-3 mx-16">
           {[1, 2, 3, 4].map((e) => {
             return (
               <Card>
@@ -280,12 +280,12 @@ export default function Home() {
         </div>
 
         <h1 className="font-bold text-center my-4">VEIRDO FEATURED ON</h1>
-        <div>
+        <div className="mb-5">
           <marquee className="" behavior="" direction="">
-            <div className="flex">
+            <div className="flex gap-5">
               {[1, 2, 3, 4].map(() => {
                 return (
-                  <div className="flex gap-3">
+                  <>
                     <img
                       src="https://veirdo.in/cdn/shop/files/Screenshot_2023-12-12_at_4.14_2.png?v=1706600616"
                       alt=""
@@ -302,7 +302,7 @@ export default function Home() {
                       src="https://veirdo.in/cdn/shop/files/Screenshot_2023-12-12_at_4.14_4.png?v=1706600616"
                       alt=""
                     />
-                  </div>
+                  </>
                 );
               })}
 
@@ -310,6 +310,7 @@ export default function Home() {
 
           </marquee>
         </div>
+
       </div>
     </div>
   );

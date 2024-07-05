@@ -1,7 +1,7 @@
 import React from "react";
 import logoImg from "../../Images/logo.svg";
 import { NavLink, useNavigate } from "react-router-dom";
-import { Heart, Search, ShoppingCart, User } from "lucide-react";
+import { Heart, Search, ShoppingCart } from "lucide-react";
 import { useCookies } from "react-cookie";
 
 export default function Header() {
