@@ -16,8 +16,7 @@ export default function Login() {
             let response = await axios.post("http://localhost:9999/user/signin", data)
             console.log("🚀 ~ Submithandler ~ response:", response.data)
             setCookies("user", response?.data?.data);
-            setCookies("token", response?.data?.token);
-            
+            setCookies("token", response?.data?.token);   
             navigate("/");
             setdata({ email: "", password: "" });
         } catch (error) {
@@ -26,7 +25,7 @@ export default function Login() {
     }
 
     return (
-        <div className='h-[300px] w-[400px] m-auto mt-5 bg-purple-300 rounded p-3 text-white shadow-md'>
+        <div className='h-[300px] w-[400px] m-auto mt-5 mb-5 bg-purple-300 rounded p-3 text-white shadow-md'>
             <h1 className='h1 text-center'>Login</h1>
             <form action="">
 

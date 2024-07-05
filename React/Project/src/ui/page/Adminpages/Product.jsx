@@ -57,6 +57,7 @@ export default function Product() {
                 <td>{e.discountPercentage}</td>
                 <td>{e.category}</td>
                 <td>{e.color}</td>
+
                 <td>{e.size}</td>
                 <td>{e.availableStock}</td>
                 <td>{e.rating}</td>

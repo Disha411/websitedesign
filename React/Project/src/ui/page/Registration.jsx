@@ -40,7 +40,7 @@ export default function Registration() {
     }
 
     return (
-        <div className=' w-[400px] m-auto mt-5 p-3 text-gray'>
+        <div className=' w-[400px] m-auto mt-5 p-3 text-white mb-5 bg-purple-300 rounded shadow-md'>
             <h1 className='h1 text-center'>Registration</h1>
 
             <label>Name*</label>
@@ -75,7 +75,7 @@ export default function Registration() {
             <Input value={data.cpassword} type="password" placeholder='Enter your confirm password' className='bg-slate-100' onChange={(e) => setdata({ ...data, cpassword: e.target?.value })} /> */}
 
             <div className='text-center mt-3'>
-                <Button className='border-2 border-red-600 text-red-600 bg-white hover:text-red-600 hover:border-red-600' onClick={(e) => Submithandler(e)}>REGISTER</Button>
+                <Button className='bg-blue-600 border-2 ' onClick={(e) => Submithandler(e)}>REGISTER</Button>
             </div>
         </div>
     )
