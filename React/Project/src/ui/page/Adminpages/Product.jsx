@@ -23,7 +23,7 @@ export default function Product() {
           <tr >
             <th className='w-[50px]'>Sr</th>
             <th className='w-[50px]'>Title</th>
-            <th className='w-[50px]'>description</th>
+            <th className='w-[50px]'>Description</th>
             <th className='w-[50px]'>Brand</th>
             <th className='w-[50px]'>Gender</th>
             <th className='w-[50px]'>Price</th>
@@ -39,7 +39,7 @@ export default function Product() {
         </thead>
         <tbody>
           {productData.map((e, i) => {
-            {/* console.log("-----------  e----------->", e); */ }
+            console.log("-----------  e----------->", e);
             return (
               <tr>
                 <th scope="row">{i + 1}</th>
@@ -55,10 +55,15 @@ export default function Product() {
                   <img src={e.thumbnail} alt="" />
                 </td>
                 <td>{e.discountPercentage}</td>
-                <td>{e.category}</td>
-                <td>{e.color}</td>
-
-                <td>{e.size}</td>
+                <td>{e.category.map((e) => {
+                  return <p>{e}</p>
+                })}</td>
+                <td>{e.color.map((ele) => {
+                  return <p>{ele},</p>
+                })}</td>
+                <td>{e.size.map((ele) => {
+                  return <p>{ele},</p>
+                })}</td>
                 <td>{e.availableStock}</td>
                 <td>{e.rating}</td>
               </tr>
