@@ -64,7 +64,7 @@ export default function Home() {
           })}
         </div>
         <div className="flex justify-center mt-3">
-          <Button className="bg-green-400 shadow-[3px_3px_0_0_red] m-3 border-black text-black ">
+          <Button className="bg-green-400 shadow-[3px_3px_0_0_yellow] m-3 border-black text-black hover:bg-green-400">
             <p className="mx-5 font-medium">SEE MORE BESTSELLERS</p>
           </Button>
         </div>
@@ -123,7 +123,7 @@ export default function Home() {
           })}
         </div>
         <div className="flex justify-center mt-3">
-          <Button className="bg-green-400 shadow-[3px_3px_0_0_red] m-3 border-black text-black ">
+          <Button className="bg-green-400 shadow-[3px_3px_0_0_yellow] m-3 border-black text-black hover:bg-green-400">
             <p className="mx-5 font-medium">SEE ALL NEW ARRIVALS</p>
           </Button>
         </div>
@@ -206,7 +206,7 @@ export default function Home() {
           })}
         </div>
         <div className="flex justify-center mt-3">
-          <Button className="bg-green-400 shadow-[3px_3px_0_0_yellow] m-3 border-black text-black ">
+          <Button className="bg-green-400 shadow-[3px_3px_0_0_yellow] m-3 border-black text-black hover:bg-green-400">
             <p className="mx-5 font-medium">SEE ALL MERCH</p>
           </Button>
         </div>
@@ -231,7 +231,7 @@ export default function Home() {
           })}
         </div>
         <div className="flex justify-center mt-3">
-          <Button className="bg-green-400 shadow-[3px_3px_0_0_yellow] m-3 border-black text-black ">
+          <Button className="bg-green-400 shadow-[3px_3px_0_0_yellow] m-3 border-black text-black hover:bg-green-400">
             <p className="mx-5 font-medium">EXPLORE ALL PRODUCTS</p>
           </Button>
         </div>
@@ -250,48 +250,73 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="group relative w-[100px]">
+          {/* <div className="group relative w-[100px]">
 
             <img className="peer absolute group-hover:opacity-70 top-0" src={image1} alt="" />
             <div className="absolute bg-red-600 group-hover:!bg-black w-full h-full opacity-0 group-hover:!opacity-100">
 
               <p className=" top-0   text-white "> test test</p>
             </div>
-          </div>
+          </div> */}
+
           <div className=" absolute top-48 grid grid-cols-5 mx-16 gap-2">
-            <div className="relative border-4 border-white rounded">
+
+            <div className="relative h-[200px] border-4 border-white rounded group cursor-pointer">
               <img
-                className="peer h-[200px] w-[200px] cursor-pointer"
-                src={image1}
-              />
-              {/* <div className="absolute top-0 z-10 opacity-0 group-hover:opacity-100"> */}
-              <p className="absolute top-0  bg-black opacity-0 z-40 !peer-hover:opacity-100 text-white text-center mt-10">Enter the flipside where fashion is fearless and style</p>
-              {/* </div> */}
+                className="peer h-full w-[200px] absolute group-hover:opacity-30 top-0"
+                src={image1} />
+              <div>
+                <p className="top-0 text-white text-center mt-10 ">Enter the flipside where fashion is fearless and style</p>
+              </div>
             </div>
-            <img
-              className="h-[200px] w-[200px] border-4 border-white rounded cursor-pointer"
-              src={image2}
-            />
-            <img
-              className="h-[400px] w-[350px] border-4 border-white rounded cursor-pointer row-span-2 col-span-2 m-2"
-              src={image3}
-            />
-            <img
-              className="h-[200px] w-[200px] border-4 border-white rounded cursor-pointer"
-              src={image4}
-            />
-            <img
-              className="h-[200px] w-[200px] border-4 border-white rounded cursor-pointer"
-              src={image5}
-            />
-            <img
-              className="h-[200px] w-[200px] border-4 border-white rounded cursor-pointer"
-              src={image6}
-            />
-            <img
-              className="h-[200px] w-[200px] border-4 border-white rounded cursor-pointer"
-              src={image7}
-            />
+            <div className="relative h-[200px] border-4 border-white rounded group cursor-pointer">
+              <img
+                className="peer h-full w-[200px] absolute group-hover:opacity-30 top-0"
+                src={image2} />
+              <div>
+                <p className="top-0 text-white text-center mt-10 ">Enter the flipside where fashion is fearless and style</p>
+              </div>
+            </div>
+            <div className="relative h-[400px] w-[350px] border-4 border-white rounded group cursor-pointer row-span-2 col-span-2 m-2">
+              <img
+                className="peer h-full w-[350px] border-white rounded absolute group-hover:opacity-30 top-0"
+                src={image3} />
+              <div>
+                <p className="top-0 text-white text-center mt-10 ">Enter the flipside where fashion is fearless and style</p>
+              </div>
+            </div>
+            <div className="relative border-4 h-[200px] border-white rounded group cursor-pointer">
+              <img
+                className="peer h-full w-[200px]  border-white rounded absolute group-hover:opacity-30 top-0"
+                src={image4} />
+              <div>
+                <p className="top-0 text-white text-center mt-10 ">Enter the flipside where fashion is fearless and style</p>
+              </div>
+            </div>
+            <div className="relative border-4 h-[200px] border-white rounded group cursor-pointer">
+              <img
+                className="peer h-full w-[200px]  border-white rounded  absolute group-hover:opacity-30 top-0"
+                src={image5} />
+              <div>
+                <p className="top-0 text-white text-center mt-10 ">Enter the flipside where fashion is fearless and style</p>
+              </div>
+            </div>
+            <div className="relative border-4 h-[200px] border-white rounded group cursor-pointer">
+              <img
+                className="peer h-full w-[200px]  border-white rounded  absolute group-hover:opacity-30 top-0"
+                src={image6} />
+              <div>
+                <p className="top-0 text-white text-center mt-10 ">Enter the flipside where fashion is fearless and style</p>
+              </div>
+            </div>
+            <div className="relative border-4 h-[200px] border-white rounded group cursor-pointer">
+              <img
+                className="peer h-full w-[200px]  border-white rounded  absolute group-hover:opacity-30 top-0"
+                src={image7} />
+              <div>
+                <p className="top-0 text-white text-center mt-10 ">Enter the flipside where fashion is fearless and style</p>
+              </div>
+            </div>
           </div>
         </div>
 

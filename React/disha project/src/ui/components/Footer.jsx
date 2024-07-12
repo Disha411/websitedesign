@@ -11,7 +11,7 @@ export default function Footer() {
           <h1 className="font-bold text-white text-5xl">VEIRDO FAM</h1>
         </div>
         <div className="border rounded bg-white p-1 h-full shadow-[1px_2px_0_0_black]">
-          <input className="font-thin h-full w-[400px]" placeholder="veirdo@yahoo.com" />
+          <input className="font-thin h-full w-[400px] focus:outline-none" placeholder="veirdo@yahoo.com" />
           <Button className="bg-purple-600">SUBSCRIBE</Button>
         </div>
       </div>
