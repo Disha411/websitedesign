@@ -4,8 +4,6 @@ import { useNavigate } from "react-router-dom";
 import Select from "react-select";
 import { Button, Input } from "reactstrap";
 
-
-
 const categoryselecthandler = [
   { value: "Shirts", label: "Shirts" },
   { value: "Jackets", label: "Jackets" },

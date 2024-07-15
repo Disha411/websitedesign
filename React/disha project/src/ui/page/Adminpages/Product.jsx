@@ -1,10 +1,11 @@
 import axios from "axios";
+import { Search } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import ReactPaginate from "react-paginate";
 import { useNavigate } from "react-router-dom";
 import ReactSelect from "react-select";
-import { Button, Modal, ModalBody, ModalFooter, ModalHeader, Table } from "reactstrap";
+import { Button, Input, Modal, ModalBody, ModalFooter, ModalHeader, Table } from "reactstrap";
 
 export default function Product() {
   let [flag, setFlag] = useState(true);
@@ -13,6 +14,7 @@ export default function Product() {
   let [count, setCount] = useState(10);
   let [page, setPage] = useState(1);
   let [modal, setModal] = useState(false);
+  let [searchText, setsearchText] = useState("")
 
   const toggle = () => setModal(!modal);
 
@@ -31,6 +33,7 @@ export default function Product() {
           params: {
             limit: limit,
             page: page,
+            search: searchText
           },
         }
       );
@@ -43,7 +46,7 @@ export default function Product() {
 
   useEffect(() => {
     callApiHandler();
-  }, [flag, limit, page]);
+  }, [flag, limit, page, searchText]);
 
   const deleteHandler = async (id) => {
     try {
@@ -65,6 +68,7 @@ export default function Product() {
     <div>
       <div className="d-flex justify-between my-3 px-3">
         <h1>Product count : {count}</h1>
+        <Input placeholder="Search your text here..." className="w-[250px]" onChange={(e) => setsearchText(e.target.value)} />
         <div className="flex gap-3">
           <ReactSelect
             options={[
@@ -78,9 +82,10 @@ export default function Product() {
           <Button onClick={() => navigate("/addproduct-form")}>Add Product</Button>
         </div>
       </div>
+
       <ReactPaginate
         pageCount={count / limit}
-        className="flex gap-3"
+        className="flex gap-3 justify-center my-3"
         activeClassName="bg-black text-white"
         onPageChange={(e) => setPage(e.selected + 1)}
         pageClassName="border py-2 px-3 border-black rounded-full"
@@ -124,7 +129,7 @@ export default function Product() {
                     <Modal isOpen={modal} toggle={toggle}>
                       <ModalHeader toggle={toggle}>What you want to Edit</ModalHeader>
                       <ModalBody>
-                        edit or not
+                        Edit or not
                       </ModalBody>
                       <ModalFooter>
                         <Button color="primary" onClick={toggle}>

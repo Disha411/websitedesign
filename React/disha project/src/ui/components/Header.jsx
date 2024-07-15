@@ -8,7 +8,7 @@ export default function Header() {
   const navigate = useNavigate();
 
   let [cookies, setCookies, removeCookies] = useCookies(["token", "user"])
-  console.log("🚀 ~ Header ~ cookies:", cookies)
+  // console.log("🚀 ~ Header ~ cookies:", cookies)
 
   const logoutHandler = () => {
     removeCookies("user");
@@ -18,9 +18,13 @@ export default function Header() {
 
   return (
     <>
-      <div className="bg-blue-500 text-white text-center py-1">
-        Buy Any 3 @1099 on Printed Half Sleeve Tshirt
-      </div>
+      {cookies?.user?.userType !== "admin" && (
+        <div className="bg-blue-500 text-white text-center py-1">
+          Buy Any 3 @1099 on Printed Half Sleeve Tshirt
+        </div>
+      )
+      }
+
       <div className="Header uppercase flex justify-between items-center gap-3 p-3 font-bold font-sans">
         <div className="flex items-center gap-4">
           <p>
