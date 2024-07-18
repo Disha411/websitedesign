@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Form, Input, Label, Table } from 'reactstrap'
 
-export default function Register() {
+export default function Register_todo() {
     let [user, setUser] = useState({ name: "", email: "", password: "" })
     let [Arr, setArr] = useState([])
 

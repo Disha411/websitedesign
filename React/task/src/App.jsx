@@ -10,8 +10,9 @@ import Funprops from './5.Task5(props)/Funprops'
 import InputCom from './6.Task6(input)/InputCom'
 import Countertask from './CounterTask/Countertask'
 import MultiInput from './6.Task6(input)/MultiInput'
-import Register from './newtask/Register'
 import Crud from './6.Task6(input)/Crud'
+import Register_todo from './newtask/Register_todo'
+import Todolist from './newtask/Todolist'
 
 export default function App() {
   return (
@@ -21,11 +22,12 @@ export default function App() {
       {/* <Task3/> */}
       {/* <Task4/> */}
       {/* <Funprops/> */}
-      <Crud/>
+      {/* <Crud/> */}
       {/* <InputCom/> */}
       {/* <MultiInput/> */}
       {/* <Countertask/> */}
-      {/* <Register/> */}
+      {/* <Register_todo /> */}
+      <Todolist />
     </div>
   )
 }

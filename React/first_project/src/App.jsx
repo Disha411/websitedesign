@@ -23,17 +23,29 @@ import RadioButton from './6.Input/RadioButton'
 import Checkbox from './6.Input/Checkbox'
 import SelectCom from './6.Input/SelectCom'
 import Router from './9.Routing/Router'
+import AppRedux from './10.Redux/AppRedux'
 
 
 export default function App() {
   return (
     <div className='d-flex justify-center mt-5'>
+      {/* ========================== Component ================================= */}
       {/* <Component/> */}
+
+      {/* ========================== States ================================= */}
       {/* <States /> */}
+
+      {/* ========================== Style ================================= */}
       {/* <Style/> */}
+
+      {/* ========================== Props ================================= */}
       {/* <FunProps/> */}
-      {/* <MapKeyCom/> */}
+
+      {/* ========================== Mapkey ================================= */}
       {/* <FragmentCom/> */}
+      {/* <MapKeyCom/> */}
+
+      {/* ========================== Input ================================= */}
       {/* <ApiCall/> */}
       {/* <Checkbox/> */}
       {/* <InputCom/> */}
@@ -42,14 +54,25 @@ export default function App() {
       {/* <Multiinput/> */}
       {/* <RadioButton/> */}
       {/* <SelectCom/> */}
+
+      {/* ========================== ConditonalRender ================================= */}
       {/* <ConditonalCom/> */}
-      <MainCom/>/
+
+
+
+      {/* ========================== Hooks ================================= */}
       {/* <ProjectUseEffect/> */}
       {/* <UseEffectCom/> */}
-      {/* <UseReducer/>` */}
+      {/* <UseReducer/> */}
       {/* <UseRefCom/> */}
+      {/*================ usecontext =========*/}
+      {/* <MainCom/>   */}
+
       {/* ========================== Router ================================= */}
       {/* <Router/> */}
+
+      {/* ========================== Redux ================================= */}
+      <AppRedux />
     </div>
   )
 }
