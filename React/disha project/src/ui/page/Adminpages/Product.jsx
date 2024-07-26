@@ -77,7 +77,7 @@ export default function Product() {
               { label: 25, value: 25 },
               { label: 50, value: 50 },
             ]}
-            onChange={(e) => setLimit(e.value)}
+            onChange={(e) => (setLimit(e.value),setPage(1))}
           />
           <Button onClick={() => navigate("/addproduct-form")}>Add Product</Button>
         </div>
@@ -88,6 +88,7 @@ export default function Product() {
         className="flex gap-3 justify-center my-3"
         activeClassName="bg-black text-white"
         onPageChange={(e) => setPage(e.selected + 1)}
+        forcePage={page-1}
         pageClassName="border py-2 px-3 border-black rounded-full"
       />
 
