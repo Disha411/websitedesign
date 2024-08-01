@@ -10,7 +10,6 @@ export default function User() {
       let response = await axios.get("http://localhost:9999/user/getAll");
       console.log("response:", response)
       setuserData(response.data.data)
-      
     }
     catch (error) {
       console.log("error:", error)
@@ -28,9 +27,8 @@ export default function User() {
             <th>Sr.</th>
             <th>Name</th>
             <th>Email</th>
-            <th>Gender</th>
             <th>City</th>
-            <th>Pincode</th>
+            <th>Mo.no.</th>
           </tr>
         </thead>
         <tbody>
@@ -40,9 +38,8 @@ export default function User() {
                 <th scope="row">{i+1}</th>
                 <td>{e.name}</td>
                 <td>{e.email}</td>
-                <td>{e.gender}</td>
-                <td>{e.city}</td>
-                <td>{e.pincode}</td>
+                <td>{e?.address[0]?.city}</td>
+                <td>{e.number}</td>
               </tr>
             )
           })

@@ -20,7 +20,6 @@ let countSlice = createSlice({
         },
         dec2: (state, action) => {
             state.count2--
-            // console.log("dec called")
         },
         reset2: (state, action) => {
             state.count2 = 500

@@ -27,7 +27,6 @@ export default function LocalStorage() {
   const removeAge = () => {
     localStorage.removeItem("age")
   }
-
   const removeAll = () => {
     localStorage.clear()
   }

@@ -102,7 +102,6 @@ export default function Home() {
             <video
               autoPlay
               loop
-              muted
               className="mt-3 p-0 w-[300px] h-[430px] rounded"
             >
               <source className="p-0" src={video} />

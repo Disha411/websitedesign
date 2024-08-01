@@ -102,8 +102,8 @@ export default function Product() {
             <th className="w-[50px]">Gender</th>
             <th className="w-[50px]">Price</th>
             <th>Images</th>
-            <th>Thumbnail</th>
-            <th>Discount %</th>
+            <th className="w-[150px]">Thumbnail</th>
+            <th className="w-[25px]">Discount %</th>
             <th className="w-[30px]">Category</th>
             <th>Color</th>
             <th>Size</th>
@@ -151,7 +151,7 @@ export default function Product() {
                   <img className="h-[50px]" src={e.image} alt="" srcset="" />
                 </td>
                 <td>
-                  {/* <img className="w-[50px]" src={e.thumbnail} alt="" /> */}
+                  <img className="w-[130px] h-[130px]" src={e.thumbnail} alt="" />
                 </td>
                 <td>{e.discountPercentage}</td>
                 <td>

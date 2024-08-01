@@ -13,7 +13,7 @@ import { reset2 } from './CounterSlice'
 export default function CountCom() {
 
     let CounterSlice = useSelector((store) => {
-        console.log("🚀 ~ useSelector ~ store:", store)
+        // console.log("🚀 ~ useSelector ~ store:", store)
         return store.CounterSlice
     })
     const dispatch = useDispatch()
