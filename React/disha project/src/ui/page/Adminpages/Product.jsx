@@ -27,7 +27,6 @@ const alldata = {
   discountPercentage: "",
 };
 
-
 export default function Product() {
   let [flag, setFlag] = useState(true);
   let [productData, setproductData] = useState([]);
@@ -36,10 +35,10 @@ export default function Product() {
   let [page, setPage] = useState(1);
   let [modal, setModal] = useState(false);
   let [searchText, setsearchText] = useState("")
-
   let [data, setdata] = useState(alldata);
   let [color, setcolor] = useState([])
   let [size, setsize] = useState([])
+  let [cookies] = useCookies(["token"]);
 
   const navigate = useNavigate();
 
@@ -78,6 +77,7 @@ export default function Product() {
   };
 
   const toggle = () => setModal(!modal);
+
   const editHandler = (e) => {
     setdata(e)
     setsize(e.size)
@@ -87,7 +87,6 @@ export default function Product() {
 
   const refetch = () => setFlag(!flag);
 
-  let [cookies] = useCookies(["token"]);
 
 
   const callApiHandler = async () => {
@@ -163,11 +162,9 @@ export default function Product() {
             <th className="w-[50px]">Sr</th>
             <th className="w-[50px]">Action</th>
             <th className="w-[50px]">Title</th>
-            <th className="w-[50px]">Brand</th>
             <th className="w-[50px]">Gender</th>
             <th className="w-[50px]">Price</th>
-            <th>Images</th>
-            <th className="w-[150px]">Thumbnail</th>
+            <th className="w-[150px]">Images</th>
             <th className="w-[120px]">Discount %</th>
             <th className="w-[30px]">Category</th>
             <th>Color</th>
@@ -218,7 +215,7 @@ export default function Product() {
 
                           <label>size</label>
                           <div className="flex gap-2">
-                          <Input
+                            <Input
                               value={size}
                               type="checkbox"
                               checked={size.includes("xs")}
@@ -260,38 +257,81 @@ export default function Product() {
                               onChange={(e) => sizecheckBoxHandler("2xl", e)}
                             />
                             2XL
+                            <Input
+                              value={size}
+                              type="checkbox"
+                              checked={size.includes("3xl")}
+                              onChange={(e) => sizecheckBoxHandler("3xl", e)}
+                            />
+                            3XL
                           </div>
 
                           <label>Color</label>
-                          <div className="flex gap-2">
-
-                            <Input
-                              value={color}
-                              type="checkbox"
-                              checked={color.includes("red")}
-                              onChange={(e) => colorcheckBoxHandler("red", e)}
-                            />red
-
-                            <Input
-                              value={color}
-                              type="checkbox"
-                              checked={color.includes("yellow")}
-                              onChange={(e) => colorcheckBoxHandler("yellow", e)}
-                            />yellow
-
-                            <Input
-                              value={color}
-                              type="checkbox"
-                              checked={color.includes("black")}
-                              onChange={(e) => colorcheckBoxHandler("black", e)}
-                            />black
-
-                            <Input
-                              value={color}
-                              type="checkbox"
-                              checked={color.includes("White")}
-                              onChange={(e) => colorcheckBoxHandler("White", e)}
-                            />White
+                          <div className="grid grid-cols-4">
+                            <div>
+                              <Input
+                                value={color}
+                                type="checkbox"
+                                checked={color.includes("red")}
+                                onChange={(e) => colorcheckBoxHandler("red", e)}
+                              />red
+                            </div>
+                            <div>
+                              <Input
+                                value={color}
+                                type="checkbox"
+                                checked={color.includes("yellow")}
+                                onChange={(e) => colorcheckBoxHandler("yellow", e)}
+                              />yellow
+                            </div>
+                            <div>
+                              <Input
+                                value={color}
+                                type="checkbox"
+                                checked={color.includes("black")}
+                                onChange={(e) => colorcheckBoxHandler("black", e)}
+                              />Black
+                            </div>
+                            <div>
+                              <Input
+                                value={color}
+                                type="checkbox"
+                                checked={color.includes("blue")}
+                                onChange={(e) => colorcheckBoxHandler("blue", e)}
+                              />Blue
+                            </div>
+                            <div>
+                              <Input
+                                value={color}
+                                type="checkbox"
+                                checked={color.includes("brown")}
+                                onChange={(e) => colorcheckBoxHandler("brown", e)}
+                              />Brown
+                            </div>
+                            <div>
+                              <Input
+                                value={color}
+                                type="checkbox"
+                                checked={color.includes("gray")}
+                                onChange={(e) => colorcheckBoxHandler("gray", e)}
+                              />Gray
+                            </div>
+                            <div>
+                              <Input
+                                value={color}
+                                type="checkbox"
+                                checked={color.includes("orange")}
+                                onChange={(e) => colorcheckBoxHandler("orange", e)}
+                              />Orange
+                            </div>
+                            <div>
+                              <Input
+                                value={color}
+                                type="checkbox"
+                                checked={color.includes("green")}
+                                onChange={(e) => colorcheckBoxHandler("green", e)}
+                              />Green
+                            </div>
                           </div>
 
                           <br />
@@ -353,15 +393,11 @@ export default function Product() {
                   </div>
                 </td>
                 <td>{e.title}</td>
-                <td>{e.brand}</td>
                 <td>{e.gender}</td>
                 <td>{e.price}</td>
                 <td>
-                  <img className="h-[50px]" src={e.image} alt="" srcset="" />
-                </td>
-                <td>
-                  <img className="w-[130px] h-[130px]" src={e?.thumbnail || "https://static.thenounproject.com/png/2932881-200.png"} alt="" onError={(e) => {
-                    e.target.src = "https://static.thenounproject.com/png/2932881-200.png"
+                  <img className="w-[130px] h-[130px]" src={e?.thumbnail || "https://static.thenounproject.com/png/2932881-200.png"} alt="" onError={(ele) => {
+                    ele.target.src = "https://static.thenounproject.com/png/2932881-200.png"
                   }} />
                 </td>
                 <td>{e.discountPercentage}</td>

@@ -14,11 +14,12 @@ const categoryselecthandler = [
 const alldata = {
   title: "",
   description: "",
+  gender:"",
+  price: "",
+  image: "",
   size: "",
   color: [],
   category: "",
-  price: "",
-  image: "",
   stock: "",
   discountPercentage: "",
 };
