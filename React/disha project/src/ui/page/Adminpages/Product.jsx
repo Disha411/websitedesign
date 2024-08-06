@@ -20,10 +20,10 @@ const alldata = {
   description: "",
   size: "",
   color: [],
-  mainCategorie: "",
+  mainCategory: "",
   price: "",
-  image: "",
-  stock: "",
+  thumbnail: "",
+  availableStock: "",
   discountPercentage: "",
 };
 
@@ -38,6 +38,7 @@ export default function Product() {
   let [data, setdata] = useState(alldata);
   let [color, setcolor] = useState([])
   let [size, setsize] = useState([])
+  let [id, setId] = useState("")
   let [cookies] = useCookies(["token"]);
 
   const navigate = useNavigate();
@@ -62,14 +63,14 @@ export default function Product() {
 
   const Updatehandler = async (e) => {
     e.preventDefault();
-
     try {
-      let response = await axios.post(
-        "http://localhost:9999/product/create",
-        data
+      let response = await axios.put(
+        `http://localhost:9999/product/update/${id}`,
+        {...data,color:color,size:size}
       );
       setdata(alldata);
-      navigate("/product");
+      toggle()
+      refetch()
     } catch (error) {
       console.log("-----------  error----------->", error);
     }
@@ -80,14 +81,13 @@ export default function Product() {
 
   const editHandler = (e) => {
     setdata(e)
+    setId(e._id)
     setsize(e.size)
     toggle()
     setcolor(e.color)
   }
 
   const refetch = () => setFlag(!flag);
-
-
 
   const callApiHandler = async () => {
     try {
@@ -132,7 +132,7 @@ export default function Product() {
     <div>
       <div className="d-flex justify-between my-3 px-3">
         <h1>Product count : {count}</h1>
-        <Input placeholder="Search your text here..." className="w-[250px]" onChange={(e) => setsearchText(e.target.value)} />
+        <Input placeholder="Search your text here..." className="w-[250px]" onChange={(e) => setsearchText(e.target.value)} onPageChange={(e) => setPage(e.selected + 1)} forcePage={page - 1}/>
         <div className="flex gap-3">
           <ReactSelect
             options={[
@@ -166,7 +166,7 @@ export default function Product() {
             <th className="w-[50px]">Price</th>
             <th className="w-[150px]">Images</th>
             <th className="w-[120px]">Discount %</th>
-            <th className="w-[30px]">Category</th>
+            <th className="w-[30px]">Main Category</th>
             <th>Color</th>
             <th>Size</th>
             <th className="w-[50px]">Available Stock</th>
@@ -338,9 +338,9 @@ export default function Product() {
 
                           <label>Category</label>
                           <Select
-                            value={{ value: data.mainCategorie, label: data.mainCategorie }}
+                            value={{ value: data.mainCategory, label: data.mainCategory }}
                             options={maincategoryselecthandler}
-                            onChange={(e) => setdata({ ...data, mainCategorie: e.value })}
+                            onChange={(e) => setdata({ ...data, mainCategory: e.value })}
                           />
 
                           <label>Price</label>
@@ -354,20 +354,20 @@ export default function Product() {
 
                           <label>Image</label>
                           <Input
-                            value={data.image}
+                            value={data.thumbnail}
                             type="text"
                             placeholder="Enter a ImageURL"
                             className="bg-slate-100"
-                            onChange={(e) => setdata({ ...data, image: e.target?.value })}
+                            onChange={(e) => setdata({ ...data, thumbnail: e.target?.value })}
                           />
 
                           <label>Stock</label>
                           <Input
-                            value={data.stock}
+                            value={data.availableStock}
                             type="text"
                             placeholder="Enter a available stock"
                             className="bg-slate-100"
-                            onChange={(e) => setdata({ ...data, stock: e.target?.value })}
+                            onChange={(e) => setdata({ ...data, availableStock: e.target?.value })}
                           />
 
                           <label>Discount</label>
@@ -402,9 +402,7 @@ export default function Product() {
                 </td>
                 <td>{e.discountPercentage}</td>
                 <td>
-                  {e?.category?.map?.((e) => {
-                    return <p>{e}</p>
-                  })}
+                  {e.mainCategory}
                 </td>
                 <td>
                   {e?.color?.map?.((ele) => {

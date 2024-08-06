@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import logoImg from "../../Images/logo.svg";
 import { NavLink, useNavigate } from "react-router-dom";
 import { Heart, Search, ShoppingCart } from "lucide-react";
 import { useCookies } from "react-cookie";
 
 export default function Header() {
-  const navigate = useNavigate();
-
+  let [searchtext, setsearchText] = useState("")
+  console.log("🚀 ~ Header ~ searchtext:", searchtext)
   let [cookies, setCookies, removeCookies] = useCookies(["token", "user"])
   // console.log("🚀 ~ Header ~ cookies:", cookies)
+
+  const navigate = useNavigate();
 
   const logoutHandler = () => {
     removeCookies("user");
@@ -73,7 +75,8 @@ export default function Header() {
                 type="text"
                 placeholder="Try searching “T-shirts”"
                 className="rounded-md font-medium text-sm h-full px-2 focus:outline-none focus:border-none "
-              />
+                onChange={(e) => setsearchText(e.target.value)} />
+
               <Search className="text-purple-400" />
             </div>
           )}

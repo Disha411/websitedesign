@@ -5,7 +5,7 @@ export default function Loading_animation() {
   return (
     <div className="maindiv">
         <div className="mytext">
-            <p>loading...</p>
+            <p className='p1'>loading...</p>
             <div className="lineMove"></div>
         </div>
     </div>

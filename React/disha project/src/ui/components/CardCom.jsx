@@ -2,23 +2,28 @@ import { Heart } from "lucide-react";
 import React from "react";
 import { Card, CardBody, CardText, CardTitle } from "reactstrap";
 
-export default function CardCom() {
+export default function CardCom({ product }) {
   return (
     <div>
       {" "}
       <Card className="rounded-xl p-0">
         <img
-          className="rounded-xl m-2"
+          className="rounded-xl m-2 h-[350px] cursor-pointer"
           alt="Sample"
-          src="https://veirdo.in/cdn/shop/files/Originals-Beige-Oversized-T-Shirt-Veirdo-6625.jpg?v=1707158469&width=360"
+          src={product?.thumbnail || "https://static.thenounproject.com/png/2932881-200.png"} onError={(ele) => {
+            ele.target.src = "https://static.thenounproject.com/png/2932881-200.png"
+          }}
         />
         <CardBody className="p-0">
           <div className="px-2">
-            <CardTitle tag="h5" className="mb-1">
-              499 ₹{" "}
+          <CardTitle tag="h5" className="mb-1 h5">
+              {product?.mainCategory}
+            </CardTitle>
+            <CardTitle tag="h5" className="mb-1 h4 text-blue-600">
+              {product?.price}₹
             </CardTitle>
             <CardText className="text-sm truncate mb-1">
-              Originals Beige Oversized Chest Graphic Printed Tshirt
+              {product?.description}
             </CardText>
           </div>
           <div className="border-t border-gray-300">
