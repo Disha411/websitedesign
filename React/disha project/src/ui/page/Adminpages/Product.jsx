@@ -132,7 +132,7 @@ export default function Product() {
     <div>
       <div className="d-flex justify-between my-3 px-3">
         <h1>Product count : {count}</h1>
-        <Input placeholder="Search your text here..." className="w-[250px]" onChange={(e) => setsearchText(e.target.value)} onPageChange={(e) => setPage(e.selected + 1)} forcePage={page - 1}/>
+        <Input placeholder="Search your text here..." className="w-[250px]" onChange={(e) => (setsearchText(e.target.value),setPage(1))} />
         <div className="flex gap-3">
           <ReactSelect
             options={[
